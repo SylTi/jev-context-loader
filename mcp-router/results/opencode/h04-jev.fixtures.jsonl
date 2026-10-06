@@ -1,0 +1,2 @@
+{"event":"search","query":"update GitHub issue title","replayConditioningTask":"Update the title of GitHub issue 81 in owner/example to Fix the login redirect."}
+{"event":"fixture","call":{"id":"github.update_issue","args":{"issue_number":81,"repository_full_name":"owner/example","title":"Fix the login redirect"},"valid":true,"receipt":"f34b18cb-7f08-43cb-8587-0f4c622d9d6d","fact":"Fix the login redirect"}}

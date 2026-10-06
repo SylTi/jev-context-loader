@@ -1,0 +1,60 @@
+[
+  {
+    "caseId": "h31",
+    "task": "Montre les détails du ticket Linear ENG-123, avec sa description complète.",
+    "transport": "actual MCP stdio",
+    "ranking": "frozen task-level Jev replay",
+    "exposedTools": 3,
+    "bridgeDefinitionTokens": 241,
+    "eagerDefinitionTokens": 62093,
+    "search": {
+      "matches": [
+        {
+          "id": "[\"fixture\",\"mcp__linear__get_issue\"]",
+          "server": "fixture",
+          "name": "mcp__linear__get_issue",
+          "description": "When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\n) characters.\n\nRetrieve detailed information about an issue by ID, including attachments, git branch name, and active Triage Intelligence suggestions when the issue is in triage",
+          "probability": 0.95
+        }
+      ],
+      "availableServers": [
+        "fixture"
+      ],
+      "threshold": 0.75,
+      "cached": false,
+      "ranking": {
+        "mode": "replay",
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 46785,
+          "output_tokens": 4359
+        }
+      }
+    }
+  },
+  {
+    "caseId": "h24",
+    "task": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either.",
+    "transport": "actual MCP stdio",
+    "ranking": "frozen task-level Jev replay",
+    "exposedTools": 3,
+    "bridgeDefinitionTokens": 241,
+    "eagerDefinitionTokens": 62093,
+    "search": {
+      "matches": [],
+      "availableServers": [
+        "fixture"
+      ],
+      "threshold": 0.75,
+      "cached": false,
+      "ranking": {
+        "mode": "replay",
+        "model": "jev-1.13.0",
+        "usage": {
+          "input_tokens": 46787,
+          "output_tokens": 4359
+        }
+      }
+    }
+  }
+]

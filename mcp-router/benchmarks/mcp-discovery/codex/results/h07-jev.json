@@ -1,0 +1,1074 @@
+{
+  "caseId": "h07",
+  "arm": "jev",
+  "repeatCount": 1,
+  "selected": [
+    "linear.list_issue_statuses"
+  ],
+  "definitionTokens": 131,
+  "elapsedMs": 7458,
+  "calls": [
+    {
+      "id": "linear.list_issue_statuses",
+      "args": {
+        "team": "Engineering"
+      },
+      "valid": true,
+      "receipt": "50c506b4-1c1e-44a9-bc29-ab7c9b860c87",
+      "fact": "Ready-for-release"
+    }
+  ],
+  "answer": "{\"answer\":\"Available status for the Linear Engineering team: Ready-for-release. fixtureFact: Ready-for-release\",\"receipts\":[\"50c506b4-1c1e-44a9-bc29-ab7c9b860c87\"]}",
+  "usageSamples": [
+    {
+      "totalTokens": 8151,
+      "inputTokens": 8121,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 30,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 8286,
+      "inputTokens": 8230,
+      "cachedInputTokens": 7936,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 56,
+      "reasoningOutputTokens": 0
+    }
+  ],
+  "status": "completed",
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "turns": [
+    {
+      "answer": "{\"answer\":\"Available status for the Linear Engineering team: Ready-for-release. fixtureFact: Ready-for-release\",\"receipts\":[\"50c506b4-1c1e-44a9-bc29-ab7c9b860c87\"]}",
+      "grade": {
+        "pass": true,
+        "missing": [],
+        "forbidden": [],
+        "noTool": true,
+        "arithmetic": true
+      }
+    }
+  ],
+  "jevCostUsd": 0.0019646760000000003,
+  "jevEvaluationTimeMs": 290.85644500446506,
+  "events": [
+    {
+      "id": 1,
+      "result": {
+        "userAgent": "Codex Desktop/0.160.1 (Linux Mint 22.3.0; x86_64) dumb (jev_discovery_benchmark; 0.1.0)",
+        "codexHome": "/home/syl/.codex",
+        "platformFamily": "unix",
+        "platformOs": "linux"
+      }
+    },
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "syl-NucBox-EVO-X1",
+        "installationId": "0e15d181-4ae1-4241-87bb-c8b8d54e2644",
+        "environmentId": null
+      },
+      "emittedAtMs": 1791280798049
+    },
+    {
+      "id": 2,
+      "result": {
+        "configuredMcpServerNames": [
+          "node_repl",
+          "secret",
+          "pending-provider-write",
+          "private-mcp",
+          "safe",
+          "github",
+          "linear"
+        ]
+      }
+    },
+    {
+      "method": "benchmark/isolation",
+      "params": {
+        "disabledMcpServerNames": [
+          "node_repl",
+          "secret",
+          "pending-provider-write",
+          "private-mcp",
+          "safe",
+          "github",
+          "linear"
+        ],
+        "apps": false,
+        "plugins": false
+      }
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /home/syl/.codex/config.toml."
+      },
+      "emittedAtMs": 1791280798175
+    },
+    {
+      "id": 3,
+      "result": {
+        "thread": {
+          "id": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280798,
+          "updatedAt": 1791280798,
+          "recencyAt": 1791280798,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        },
+        "model": "gpt-6.1-sol",
+        "modelProvider": "openai",
+        "serviceTier": "default",
+        "disabledPluginIds": [],
+        "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+        "runtimeWorkspaceRoots": [],
+        "instructionSources": [
+          "/home/syl/.codex/AGENTS.md"
+        ],
+        "approvalPolicy": "never",
+        "approvalsReviewer": "auto_review",
+        "sandbox": {
+          "type": "readOnly",
+          "networkAccess": false
+        },
+        "activePermissionProfile": null,
+        "reasoningEffort": "medium",
+        "multiAgentMode": "explicitRequestOnly"
+      }
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280798,
+          "updatedAt": 1791280798,
+          "recencyAt": 1791280798,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1791280798175
+    },
+    {
+      "id": 4,
+      "result": {
+        "turn": {
+          "id": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": null,
+          "completedAt": null,
+          "durationMs": null
+        }
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1791280798180
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turn": {
+          "id": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1791280798,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1791280798180
+    },
+    {
+      "method": "hook/started",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "running",
+          "statusMessage": null,
+          "startedAt": 1791280799,
+          "completedAt": null,
+          "durationMs": null,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280799348
+    },
+    {
+      "method": "hook/completed",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "completed",
+          "statusMessage": null,
+          "startedAt": 1791280799,
+          "completedAt": 1791280799,
+          "durationMs": 4,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280799353
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a7-de79-74d2-9ade-2996b70118c5",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "List the available status values for the Linear Engineering team.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "startedAtMs": 1791280799353
+      },
+      "emittedAtMs": 1791280799353
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a7-de79-74d2-9ade-2996b70118c5",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "List the available status values for the Linear Engineering team.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "completedAtMs": 1791280799353
+      },
+      "emittedAtMs": 1791280799353
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-28ceac94-a260-450c-be59-6896e33271dc",
+          "namespace": "linear",
+          "tool": "list_issue_statuses",
+          "arguments": {
+            "team": "Engineering"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "startedAtMs": 1791280801450
+      },
+      "emittedAtMs": 1791280801450
+    },
+    {
+      "method": "item/tool/call",
+      "id": 0,
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "callId": "exec-28ceac94-a260-450c-be59-6896e33271dc",
+        "namespace": "linear",
+        "tool": "list_issue_statuses",
+        "arguments": {
+          "team": "Engineering"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-28ceac94-a260-450c-be59-6896e33271dc",
+          "namespace": "linear",
+          "tool": "list_issue_statuses",
+          "arguments": {
+            "team": "Engineering"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"Ready-for-release\",\"receipt\":\"50c506b4-1c1e-44a9-bc29-ab7c9b860c87\",\"statuses\":[{\"id\":\"status-1\",\"name\":\"Ready-for-release\",\"team\":\"Engineering\"}]}"
+            }
+          ],
+          "success": true,
+          "durationMs": 1
+        },
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "completedAtMs": 1791280801451
+      },
+      "emittedAtMs": 1791280801451
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 8151,
+            "inputTokens": 8121,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 30,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 8151,
+            "inputTokens": 8121,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 30,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280801452
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+          "text": "",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "startedAtMs": 1791280804245
+      },
+      "emittedAtMs": 1791280804246
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "{\""
+      },
+      "emittedAtMs": 1791280804247
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "answer"
+      },
+      "emittedAtMs": 1791280804250
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "\":\""
+      },
+      "emittedAtMs": 1791280804252
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "Available"
+      },
+      "emittedAtMs": 1791280804255
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " status"
+      },
+      "emittedAtMs": 1791280804256
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " for"
+      },
+      "emittedAtMs": 1791280804259
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " the"
+      },
+      "emittedAtMs": 1791280804372
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " Linear"
+      },
+      "emittedAtMs": 1791280804372
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " Engineering"
+      },
+      "emittedAtMs": 1791280804379
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " team"
+      },
+      "emittedAtMs": 1791280804379
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280804380
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " Ready"
+      },
+      "emittedAtMs": 1791280804380
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-for"
+      },
+      "emittedAtMs": 1791280804380
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-release"
+      },
+      "emittedAtMs": 1791280804391
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280804634
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280804646
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "Fact"
+      },
+      "emittedAtMs": 1791280804650
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280804650
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": " Ready"
+      },
+      "emittedAtMs": 1791280804652
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-for"
+      },
+      "emittedAtMs": 1791280804653
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-release"
+      },
+      "emittedAtMs": 1791280804656
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "\",\""
+      },
+      "emittedAtMs": 1791280804658
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "rece"
+      },
+      "emittedAtMs": 1791280804770
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "ipts"
+      },
+      "emittedAtMs": 1791280804779
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "\":[\""
+      },
+      "emittedAtMs": 1791280804780
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "50"
+      },
+      "emittedAtMs": 1791280804792
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280804792
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "506"
+      },
+      "emittedAtMs": 1791280804792
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280804792
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280804792
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280804907
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280804913
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280804913
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280804915
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280804928
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280804929
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "44"
+      },
+      "emittedAtMs": 1791280804929
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280804929
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280805039
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-b"
+      },
+      "emittedAtMs": 1791280805045
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280805047
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "29"
+      },
+      "emittedAtMs": 1791280805047
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "-ab"
+      },
+      "emittedAtMs": 1791280805048
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "7"
+      },
+      "emittedAtMs": 1791280805050
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280805052
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280805061
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280805305
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "860"
+      },
+      "emittedAtMs": 1791280805315
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280805316
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "87"
+      },
+      "emittedAtMs": 1791280805321
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "\"]"
+      },
+      "emittedAtMs": 1791280805322
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "itemId": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+        "delta": "}"
+      },
+      "emittedAtMs": 1791280805325
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+          "text": "{\"answer\":\"Available status for the Linear Engineering team: Ready-for-release. fixtureFact: Ready-for-release\",\"receipts\":[\"50c506b4-1c1e-44a9-bc29-ab7c9b860c87\"]}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "completedAtMs": 1791280805389
+      },
+      "emittedAtMs": 1791280805389
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turnId": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 16437,
+            "inputTokens": 16351,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 86,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 8286,
+            "inputTokens": 8230,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 56,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280805398
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1791280805398
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a110a7-d975-7040-b1e6-b6fadefd2c19",
+        "turn": {
+          "id": "01a110a7-d9e0-7590-af4e-94ea3290da66",
+          "items": [
+            {
+              "type": "agentMessage",
+              "id": "msg_0c2793615c440f26016ac4c6a439c087d2aa2634359900dada",
+              "text": "{\"answer\":\"Available status for the Linear Engineering team: Ready-for-release. fixtureFact: Ready-for-release\",\"receipts\":[\"50c506b4-1c1e-44a9-bc29-ab7c9b860c87\"]}",
+              "phase": "final_answer",
+              "memoryCitation": null,
+              "delivery": null,
+              "questions": null
+            }
+          ],
+          "itemsView": "summary",
+          "status": "completed",
+          "error": null,
+          "startedAt": 1791280798,
+          "completedAt": 1791280805,
+          "durationMs": 7220
+        }
+      },
+      "emittedAtMs": 1791280805398
+    }
+  ],
+  "usage": {
+    "totalTokens": 16437,
+    "inputTokens": 16351,
+    "cachedInputTokens": 7936,
+    "cacheWriteInputTokens": 0,
+    "outputTokens": 86,
+    "reasoningOutputTokens": 0
+  },
+  "costUsd": 0.020448276
+}

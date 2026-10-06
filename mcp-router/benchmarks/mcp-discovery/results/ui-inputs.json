@@ -1,0 +1,205 @@
+{
+  "questionsHash": "17769f667113e84659e18432e533e7635b41ce8d532d9df48c194598b6423863",
+  "cases": [
+    {
+      "caseId": "d01",
+      "task": "Read the full details of Linear issue ENG-123, including its description and attachments."
+    },
+    {
+      "caseId": "d02",
+      "task": "Search GitHub issues in owner/example for reports containing login timeout. Return matching issues only."
+    },
+    {
+      "caseId": "d03",
+      "task": "Create a new Codex sidebar section named Experiments."
+    },
+    {
+      "caseId": "d04",
+      "task": "Read the existing ChatGPT Space page with ID page-example."
+    },
+    {
+      "caseId": "d05",
+      "task": "Show the discussion on GitHub pull request 42 in owner/example, including review comments."
+    },
+    {
+      "caseId": "d06",
+      "task": "Read Linear issue ENG-123 and the comments attached to that issue so I can understand its history."
+    },
+    {
+      "caseId": "d07",
+      "task": "Explain the difference between a linked list and an array. Do not look anything up or access external services."
+    },
+    {
+      "caseId": "d08",
+      "task": "Rewrite this supplied sentence more concisely: The implementation is currently in the process of being completed. Return the rewrite here without saving it."
+    },
+    {
+      "caseId": "d09",
+      "task": "Liste les tickets Linear qui me sont assignés et qui sont encore ouverts."
+    },
+    {
+      "caseId": "d10",
+      "task": "Ouvre la conversation Codex dont l'identifiant est thread-example dans l'application."
+    },
+    {
+      "caseId": "h01",
+      "task": "Find GitHub pull requests in owner/example that are still open and mention the authentication migration."
+    },
+    {
+      "caseId": "h02",
+      "task": "Get the actual changed file contents and diff for GitHub pull request 42 in owner/example."
+    },
+    {
+      "caseId": "h03",
+      "task": "Retrieve the logs for GitHub Actions job 12345 in owner/example so I can diagnose its failure."
+    },
+    {
+      "caseId": "h04",
+      "task": "Update the title of GitHub issue 81 in owner/example to Fix the login redirect."
+    },
+    {
+      "caseId": "h05",
+      "task": "Find branches in GitHub repository owner/example whose names contain billing."
+    },
+    {
+      "caseId": "h06",
+      "task": "Compare the main and release Git references in owner/example and show the commits and changed files between them."
+    },
+    {
+      "caseId": "h07",
+      "task": "List the available status values for the Linear Engineering team."
+    },
+    {
+      "caseId": "h08",
+      "task": "Move Linear issue ENG-123 to Done. The issue and team IDs are already known."
+    },
+    {
+      "caseId": "h09",
+      "task": "Show the milestones configured for the Linear project with ID project-example."
+    },
+    {
+      "caseId": "h10",
+      "task": "Look up the next scheduled triage shifts for the Linear Engineering team."
+    },
+    {
+      "caseId": "h11",
+      "task": "Rename this Codex chat to MCP discovery experiment. Apply the change to the current chat."
+    },
+    {
+      "caseId": "h12",
+      "task": "Check whether an update is available for the installed Codex desktop app."
+    },
+    {
+      "caseId": "h13",
+      "task": "Read my current Codex account usage limits and reset times."
+    },
+    {
+      "caseId": "h14",
+      "task": "Create a managed Git worktree for this chat starting from origin/main."
+    },
+    {
+      "caseId": "h15",
+      "task": "Find ChatGPT Pages in my Space whose content mentions quarterly planning."
+    },
+    {
+      "caseId": "h16",
+      "task": "Read the sharing permissions of the ChatGPT Page with ID page-example."
+    },
+    {
+      "caseId": "h17",
+      "task": "Inspect GitHub PR 42 in owner/example to tell me whether it is a draft, who authored it, and whether it has merged. I do not need its patch."
+    },
+    {
+      "caseId": "h18",
+      "task": "Give me the comments on Linear issue ENG-123. Do not post anything."
+    },
+    {
+      "caseId": "h19",
+      "task": "Create a separate Codex task to investigate the repository's build failure. Do not create a Linear ticket or a GitHub issue."
+    },
+    {
+      "caseId": "h20",
+      "task": "I want the repositories accessible through my connected GitHub account, not the projects configured in Codex or Linear."
+    },
+    {
+      "caseId": "h21",
+      "task": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit."
+    },
+    {
+      "caseId": "h22",
+      "task": "Read Linear project project-example and its current milestones to understand the delivery plan."
+    },
+    {
+      "caseId": "h23",
+      "task": "List existing Codex tasks, then open task thread-example in the app. Do not start or message any task."
+    },
+    {
+      "caseId": "h24",
+      "task": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "caseId": "h25",
+      "task": "What is 17 multiplied by 23? Calculate it directly without tools."
+    },
+    {
+      "caseId": "h26",
+      "task": "Translate the supplied phrase 'good morning' into French. Answer here; no lookup or saved document is needed."
+    },
+    {
+      "caseId": "h27",
+      "task": "Write a fictional dialogue between a developer and a rubber duck. Do not create tasks, issues, pages, or files."
+    },
+    {
+      "caseId": "h28",
+      "task": "Explain why fewer tool definitions could reduce context usage. This is a conceptual discussion; do not inspect my account or configuration."
+    },
+    {
+      "caseId": "h29",
+      "task": "Cherche dans les tickets GitHub du dépôt owner/example ceux qui parlent d'une erreur de connexion."
+    },
+    {
+      "caseId": "h30",
+      "task": "Récupère les journaux du job GitHub Actions 12345 dans owner/example pour comprendre pourquoi il a échoué."
+    },
+    {
+      "caseId": "h31",
+      "task": "Montre les détails du ticket Linear ENG-123, avec sa description complète."
+    },
+    {
+      "caseId": "h32",
+      "task": "Quels utilisateurs existent dans mon espace Linear ? Liste-les, sans modifier leurs comptes."
+    },
+    {
+      "caseId": "h33",
+      "task": "Crée une section nommée Archives de recherche dans la barre latérale de Codex."
+    },
+    {
+      "caseId": "h34",
+      "task": "Vérifie s'il existe une mise à jour pour l'application de bureau Codex installée."
+    },
+    {
+      "caseId": "h35",
+      "task": "Archive la conversation Codex thread-example, sans supprimer son worktree et sans fermer une pull request."
+    },
+    {
+      "caseId": "h36",
+      "task": "Récupère le document Linear document-example. Il ne s'agit pas d'une Page ChatGPT."
+    },
+    {
+      "caseId": "h37",
+      "task": "Lis le ticket Linear ENG-123 et tous ses commentaires pour comprendre les décisions prises."
+    },
+    {
+      "caseId": "h38",
+      "task": "Montre les détails de la PR GitHub 42 dans owner/example et les commentaires laissés dessus. Ne publie rien."
+    },
+    {
+      "caseId": "h39",
+      "task": "Reformule cette phrase ici : Le développement de cette fonctionnalité est actuellement en cours. Ne sauvegarde rien."
+    },
+    {
+      "caseId": "h40",
+      "task": "Explique simplement le principe d'une recherche lexicale. N'utilise aucun service externe et ne consulte aucun document."
+    }
+  ]
+}

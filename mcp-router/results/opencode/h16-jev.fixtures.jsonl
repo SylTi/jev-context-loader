@@ -1,0 +1,2 @@
+{"event":"search","query":"read sharing permissions of ChatGPT Page","replayConditioningTask":"Read the sharing permissions of the ChatGPT Page with ID page-example."}
+{"event":"fixture","call":{"id":"spaces.get_page_sharing","args":{"page_id":"page-example"},"valid":true,"receipt":"eca6e6ff-c161-42ef-b30a-ecc5bb61b823","fact":"reader@example.test"}}

@@ -1,0 +1,1 @@
+{"event":"fixture","call":{"id":"github.get_pr_info","args":{"pr_number":42,"repository_full_name":"owner/example"},"valid":true,"receipt":"1d938e5e-55e4-4303-b55c-6d728f0c3248","fact":"fixture-author-alice"}}

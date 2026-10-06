@@ -1,0 +1,3 @@
+{"event":"search","query":"Linear ticket issue read comments","replayConditioningTask":"Lis le ticket Linear ENG-123 et tous ses commentaires pour comprendre les décisions prises."}
+{"event":"fixture","call":{"id":"linear.get_issue","args":{"id":"ENG-123"},"valid":true,"receipt":"4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f","fact":"token-expiry-race-condition"}}
+{"event":"fixture","call":{"id":"linear.list_comments","args":{"issueId":"ENG-123"},"valid":true,"receipt":"c9db034f-3261-40c5-81a8-2089f48c739a","fact":"Refresh-token-mutex-approved"}}

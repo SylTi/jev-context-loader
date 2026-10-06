@@ -1,0 +1,3 @@
+{"event":"search","query":"Linear project read milestones","replayConditioningTask":"Read Linear project project-example and its current milestones to understand the delivery plan."}
+{"event":"fixture","call":{"id":"linear.get_project","args":{"query":"project-example"},"valid":true,"receipt":"d8f193ea-055f-41fe-9580-d98538b3f5ef","fact":"Release-Phoenix"}}
+{"event":"fixture","call":{"id":"linear.list_milestones","args":{"project":"project-example"},"valid":true,"receipt":"d18bcec9-ce21-4291-b18f-21ea7bc07a8b","fact":"GA-2026-11-15"}}

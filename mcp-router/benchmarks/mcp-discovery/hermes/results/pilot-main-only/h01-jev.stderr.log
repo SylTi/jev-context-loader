@@ -1,0 +1,3 @@
+✓ Home Assistant moved out of core — installed the 'homeassistant' plugin from the catalog (HASS_TOKEN/HASS_URL, platforms.homeassistant and the ha_* tool names are unchanged).
+🔁 Transient APIConnectionError on zai — rebuilt client, waiting 6s before one last primary attempt.
+  ┊ 🔌 GitHub · search prs  authentication migration  0.0s

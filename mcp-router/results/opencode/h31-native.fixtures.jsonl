@@ -1,0 +1,1 @@
+{"event":"fixture","call":{"id":"linear.get_issue","args":{"id":"ENG-123"},"valid":true,"receipt":"97911984-b418-46d5-83f3-cf43123f5180","fact":"token-expiry-race-condition"}}

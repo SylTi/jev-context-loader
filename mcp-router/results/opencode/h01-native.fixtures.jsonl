@@ -1,0 +1,2 @@
+{"event":"fixture","call":{"id":"github.search_prs","args":{"query":"repo:owner/example is:pr is:open authentication migration"},"valid":true,"receipt":"feb0ee56-a833-44a7-89d5-42bfd293caa4","fact":"auth-migration-pr-42"}}
+{"event":"fixture","call":{"id":"github.search_prs","args":{"query":"repo:owner/example is:pr is:open auth migration"},"valid":true,"receipt":"c769cb83-7b59-4f61-a9a7-824b4e76dd85","fact":"auth-migration-pr-42"}}

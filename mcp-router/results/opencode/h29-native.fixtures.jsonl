@@ -1,0 +1,2 @@
+{"event":"fixture","call":{"id":"github.search_issues","args":{"query":"repo:owner/example erreur de connexion"},"valid":true,"receipt":"7194b3bd-799c-4ee2-a710-1e896a598b03","fact":"login-error-issue-81"}}
+{"event":"fixture","call":{"id":"github.search_issues","args":{"query":"repo:owner/example connection error"},"valid":true,"receipt":"7de6b3a4-c5cd-4e72-9ea3-3c15630036ac","fact":"login-error-issue-81"}}

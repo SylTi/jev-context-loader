@@ -1,0 +1,2609 @@
+{
+  "caseId": "h21",
+  "arm": "native",
+  "repeatCount": 1,
+  "selected": [
+    "codex.archive_worktree",
+    "codex.attach_artifact",
+    "codex.attach_worktree",
+    "codex.automation_update",
+    "codex.check_app_update",
+    "codex.compile_latex_document",
+    "codex.connect_spaces_artifact",
+    "codex.create_sidebar_section",
+    "codex.create_spaces_artifact",
+    "codex.create_thread",
+    "codex.create_worktree",
+    "codex.delete_sidebar_section",
+    "codex.end_realtime_voice_call",
+    "codex.fork_thread",
+    "codex.get_handoff_status",
+    "codex.get_usage_limits",
+    "codex.get_worktree_creation_status",
+    "codex.handoff_thread",
+    "codex.list_archived_threads",
+    "codex.list_artifacts",
+    "codex.list_projects",
+    "codex.list_threads",
+    "codex.load_workspace_dependencies",
+    "codex.move_project_to_sidebar_section",
+    "codex.move_thread_to_sidebar_section",
+    "codex.navigate_to_codex_page",
+    "codex.open_in_codex",
+    "codex.read_page_reference",
+    "codex.read_thread",
+    "codex.read_thread_terminal",
+    "codex.remove_artifact",
+    "codex.rename_sidebar_section",
+    "codex.reorder_section",
+    "codex.reorder_sidebar_projects",
+    "codex.reorder_sidebar_sections",
+    "codex.restore_worktree",
+    "codex.send_message_to_thread",
+    "codex.set_thread_archived",
+    "codex.set_thread_read_state",
+    "codex.set_thread_title",
+    "codex.share_thread",
+    "codex.uninstall_plugin",
+    "codex.update_sidebar_preferences",
+    "codex.wait_threads",
+    "github.add_comment_to_issue",
+    "github.add_issue_assignees",
+    "github.add_issue_labels",
+    "github.add_reaction_to_issue_comment",
+    "github.add_reaction_to_pr",
+    "github.add_reaction_to_pr_review_comment",
+    "github.add_review_to_pr",
+    "github.compare_commits",
+    "github.convert_pull_request_to_draft",
+    "github.create_blob",
+    "github.create_branch",
+    "github.create_commit",
+    "github.create_file",
+    "github.create_issue",
+    "github.create_pull_request",
+    "github.create_tree",
+    "github.delete_file",
+    "github.dismiss_pull_request_review",
+    "github.download_user_content",
+    "github.download_workflow_artifact",
+    "github.enable_auto_merge",
+    "github.fetch",
+    "github.fetch_blob",
+    "github.fetch_commit",
+    "github.fetch_commit_workflow_runs",
+    "github.fetch_file",
+    "github.fetch_issue",
+    "github.fetch_issue_comments",
+    "github.fetch_pr",
+    "github.fetch_pr_comments",
+    "github.fetch_pr_file_patch",
+    "github.fetch_pr_patch",
+    "github.fetch_workflow_job_logs",
+    "github.fetch_workflow_job_steps",
+    "github.fetch_workflow_run_artifacts",
+    "github.fetch_workflow_run_jobs",
+    "github.get_commit_combined_status",
+    "github.get_issue_comment_reactions",
+    "github.get_pr_diff",
+    "github.get_pr_info",
+    "github.get_pr_reactions",
+    "github.get_pr_review_comment_reactions",
+    "github.get_profile",
+    "github.get_repo",
+    "github.get_repo_collaborator_permission",
+    "github.get_user_login",
+    "github.get_users_recent_prs_in_repo",
+    "github.label_pr",
+    "github.list_installations",
+    "github.list_installed_accounts",
+    "github.list_pr_changed_filenames",
+    "github.list_pull_request_review_threads",
+    "github.list_pull_request_reviews",
+    "github.list_recent_issues",
+    "github.list_repositories",
+    "github.list_repositories_by_affiliation",
+    "github.list_repositories_by_installation",
+    "github.list_user_org_memberships",
+    "github.list_user_orgs",
+    "github.lock_issue_conversation",
+    "github.mark_pull_request_ready_for_review",
+    "github.merge_pull_request",
+    "github.remove_issue_assignees",
+    "github.remove_issue_label",
+    "github.remove_pull_request_reviewers",
+    "github.remove_reaction_from_issue_comment",
+    "github.remove_reaction_from_pr",
+    "github.remove_reaction_from_pr_review_comment",
+    "github.reply_to_review_comment",
+    "github.request_pull_request_reviewers",
+    "github.rerun_failed_workflow_run_jobs",
+    "github.rerun_workflow_job",
+    "github.resolve_review_thread",
+    "github.search",
+    "github.search_branches",
+    "github.search_commits",
+    "github.search_installed_repositories_streaming",
+    "github.search_installed_repositories_v2",
+    "github.search_issues",
+    "github.search_prs",
+    "github.search_repositories",
+    "github.unlock_issue_conversation",
+    "github.unresolve_review_thread",
+    "github.update_file",
+    "github.update_issue",
+    "github.update_issue_comment",
+    "github.update_pull_request",
+    "github.update_ref",
+    "github.update_review_comment",
+    "linear.create_attachment",
+    "linear.create_attachment_from_upload",
+    "linear.create_issue_label",
+    "linear.delete_attachment",
+    "linear.delete_comment",
+    "linear.delete_diff_comment",
+    "linear.delete_status_update",
+    "linear.extract_images",
+    "linear.get_agent_skill",
+    "linear.get_attachment",
+    "linear.get_diff",
+    "linear.get_diff_threads",
+    "linear.get_document",
+    "linear.get_issue",
+    "linear.get_issue_status",
+    "linear.get_milestone",
+    "linear.get_notifications",
+    "linear.get_project",
+    "linear.get_release",
+    "linear.get_release_note",
+    "linear.get_status_updates",
+    "linear.get_team",
+    "linear.get_template",
+    "linear.get_triage_responsibility",
+    "linear.get_user",
+    "linear.get_workspace",
+    "linear.list_agent_skills",
+    "linear.list_comments",
+    "linear.list_custom_views",
+    "linear.list_cycles",
+    "linear.list_diffs",
+    "linear.list_documents",
+    "linear.list_issue_labels",
+    "linear.list_issue_statuses",
+    "linear.list_issues",
+    "linear.list_milestones",
+    "linear.list_project_labels",
+    "linear.list_projects",
+    "linear.list_release_notes",
+    "linear.list_release_pipelines",
+    "linear.list_releases",
+    "linear.list_teams",
+    "linear.list_templates",
+    "linear.list_users",
+    "linear.mark_notification",
+    "linear.merge_diff",
+    "linear.prepare_attachment_upload",
+    "linear.resolve_diff_thread",
+    "linear.restore_issue_label",
+    "linear.restore_project_label",
+    "linear.retire_issue_label",
+    "linear.retire_project_label",
+    "linear.save_comment",
+    "linear.save_diff_comment",
+    "linear.save_document",
+    "linear.save_issue",
+    "linear.save_issue_label",
+    "linear.save_milestone",
+    "linear.save_project",
+    "linear.save_project_label",
+    "linear.save_release",
+    "linear.save_release_note",
+    "linear.save_status_update",
+    "linear.search_documentation",
+    "linear.share_issue",
+    "linear.submit_diff_review",
+    "linear.unshare_issue",
+    "linear.update_diff",
+    "spaces.attach_automation_to_page",
+    "spaces.create_controller_automation",
+    "spaces.create_page",
+    "spaces.create_page_visualization",
+    "spaces.create_space",
+    "spaces.edit_page",
+    "spaces.find_pages",
+    "spaces.get_artifact_execution_status",
+    "spaces.get_page_auto_update",
+    "spaces.get_page_sharing",
+    "spaces.get_sharing_availability",
+    "spaces.get_space",
+    "spaces.get_space_sharing",
+    "spaces.inspect_page_reference",
+    "spaces.list_page_automations",
+    "spaces.list_page_comments",
+    "spaces.list_pages",
+    "spaces.list_spaces",
+    "spaces.manage_page_comment",
+    "spaces.move_page",
+    "spaces.patch_page",
+    "spaces.progress_update",
+    "spaces.read_page",
+    "spaces.read_page_changes",
+    "spaces.read_page_reference",
+    "spaces.read_page_transcript",
+    "spaces.reply_page_comment",
+    "spaces.run_page_auto_update",
+    "spaces.search_sharing_recipients",
+    "spaces.set_page_auto_update",
+    "spaces.trash_page",
+    "spaces.update_page_sharing",
+    "spaces.update_space_sharing",
+    "spaces.write_page_reference"
+  ],
+  "definitionTokens": 62583,
+  "elapsedMs": 20592,
+  "calls": [
+    {
+      "id": "github.get_pr_info",
+      "args": {
+        "pr_number": 42,
+        "repository_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "cc8a1314-4b6d-474f-92e8-2244c533f4f4",
+      "fact": "fixture-author-alice"
+    },
+    {
+      "id": "github.fetch_pr_patch",
+      "args": {
+        "pr_number": 42,
+        "repo_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "4cf8ffb8-c7d4-4ebf-bf23-1aff76e575cd",
+      "fact": "fixture-auth-patch"
+    },
+    {
+      "id": "github.fetch_commit_workflow_runs",
+      "args": {
+        "commit_sha": "abc123fixture",
+        "repo_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "e966a01b-29ea-407a-9d72-73a2ced05910",
+      "fact": "fixture-ci-run-9001"
+    }
+  ],
+  "answer": "{\"answer\":\"PR 42: “Authentication migration,” authored by fixture-author-alice; not draft or merged. Head commit: abc123fixture. Patch: fixture-auth-patch adds a comment to auth.ts. Workflow run 9001 (fixture-ci-run-9001) completed successfully for that commit. The workflow tool returns only the first page of pull-request-triggered runs.\",\"receipts\":[\"cc8a1314-4b6d-474f-92e8-2244c533f4f4\",\"4cf8ffb8-c7d4-4ebf-bf23-1aff76e575cd\",\"e966a01b-29ea-407a-9d72-73a2ced05910\"]}",
+  "usageSamples": [
+    {
+      "totalTokens": 8118,
+      "inputTokens": 8071,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 47,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 18050,
+      "inputTokens": 17979,
+      "cachedInputTokens": 7936,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 71,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 19894,
+      "inputTokens": 19840,
+      "cachedInputTokens": 17792,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 54,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 20074,
+      "inputTokens": 20038,
+      "cachedInputTokens": 19712,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 36,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 20328,
+      "inputTokens": 20168,
+      "cachedInputTokens": 19840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 160,
+      "reasoningOutputTokens": 0
+    }
+  ],
+  "status": "completed",
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "turns": [
+    {
+      "answer": "{\"answer\":\"PR 42: “Authentication migration,” authored by fixture-author-alice; not draft or merged. Head commit: abc123fixture. Patch: fixture-auth-patch adds a comment to auth.ts. Workflow run 9001 (fixture-ci-run-9001) completed successfully for that commit. The workflow tool returns only the first page of pull-request-triggered runs.\",\"receipts\":[\"cc8a1314-4b6d-474f-92e8-2244c533f4f4\",\"4cf8ffb8-c7d4-4ebf-bf23-1aff76e575cd\",\"e966a01b-29ea-407a-9d72-73a2ced05910\"]}",
+      "grade": {
+        "pass": true,
+        "missing": [],
+        "forbidden": [],
+        "noTool": true,
+        "arithmetic": true
+      }
+    }
+  ],
+  "jevCostUsd": 0,
+  "jevEvaluationTimeMs": 0,
+  "events": [
+    {
+      "id": 1,
+      "result": {
+        "userAgent": "Codex Desktop/0.160.1 (Linux Mint 22.3.0; x86_64) dumb (jev_discovery_benchmark; 0.1.0)",
+        "codexHome": "/home/syl/.codex",
+        "platformFamily": "unix",
+        "platformOs": "linux"
+      }
+    },
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "syl-NucBox-EVO-X1",
+        "installationId": "0e15d181-4ae1-4241-87bb-c8b8d54e2644",
+        "environmentId": null
+      },
+      "emittedAtMs": 1791280933476
+    },
+    {
+      "id": 2,
+      "result": {
+        "configuredMcpServerNames": [
+          "private-mcp",
+          "linear",
+          "pending-provider-write",
+          "safe",
+          "secret",
+          "github",
+          "node_repl"
+        ]
+      }
+    },
+    {
+      "method": "benchmark/isolation",
+      "params": {
+        "disabledMcpServerNames": [
+          "private-mcp",
+          "linear",
+          "pending-provider-write",
+          "safe",
+          "secret",
+          "github",
+          "node_repl"
+        ],
+        "apps": false,
+        "plugins": false
+      }
+    },
+    {
+      "id": 3,
+      "result": {
+        "thread": {
+          "id": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280933,
+          "updatedAt": 1791280933,
+          "recencyAt": 1791280933,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        },
+        "model": "gpt-6.1-sol",
+        "modelProvider": "openai",
+        "serviceTier": "default",
+        "disabledPluginIds": [],
+        "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+        "runtimeWorkspaceRoots": [],
+        "instructionSources": [
+          "/home/syl/.codex/AGENTS.md"
+        ],
+        "approvalPolicy": "never",
+        "approvalsReviewer": "auto_review",
+        "sandbox": {
+          "type": "readOnly",
+          "networkAccess": false
+        },
+        "activePermissionProfile": null,
+        "reasoningEffort": "medium",
+        "multiAgentMode": "explicitRequestOnly"
+      }
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280933,
+          "updatedAt": 1791280933,
+          "recencyAt": 1791280933,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1791280933609
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /home/syl/.codex/config.toml."
+      },
+      "emittedAtMs": 1791280933609
+    },
+    {
+      "id": 4,
+      "result": {
+        "turn": {
+          "id": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": null,
+          "completedAt": null,
+          "durationMs": null
+        }
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1791280933625
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turn": {
+          "id": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1791280933,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1791280933625
+    },
+    {
+      "method": "hook/started",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "running",
+          "statusMessage": null,
+          "startedAt": 1791280934,
+          "completedAt": null,
+          "durationMs": null,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280934920
+    },
+    {
+      "method": "hook/completed",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "completed",
+          "statusMessage": null,
+          "startedAt": 1791280934,
+          "completedAt": 1791280934,
+          "durationMs": 2,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280934922
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a9-f00a-7ed1-b1dd-eb300625676a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "startedAtMs": 1791280934922
+      },
+      "emittedAtMs": 1791280934922
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a9-f00a-7ed1-b1dd-eb300625676a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "completedAtMs": 1791280934922
+      },
+      "emittedAtMs": 1791280934922
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 8118,
+            "inputTokens": 8071,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 47,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 8118,
+            "inputTokens": 8071,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 47,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280937731
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 26168,
+            "inputTokens": 26050,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 118,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 18050,
+            "inputTokens": 17979,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 71,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280942282
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-dc285f3b-60d2-49b5-a402-eaed6f112152",
+          "namespace": "github",
+          "tool": "get_pr_info",
+          "arguments": {
+            "pr_number": 42,
+            "repository_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "startedAtMs": 1791280946168
+      },
+      "emittedAtMs": 1791280946168
+    },
+    {
+      "method": "item/tool/call",
+      "id": 0,
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "callId": "exec-dc285f3b-60d2-49b5-a402-eaed6f112152",
+        "namespace": "github",
+        "tool": "get_pr_info",
+        "arguments": {
+          "pr_number": 42,
+          "repository_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-dc285f3b-60d2-49b5-a402-eaed6f112152",
+          "namespace": "github",
+          "tool": "get_pr_info",
+          "arguments": {
+            "pr_number": 42,
+            "repository_full_name": "owner/example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-author-alice\",\"receipt\":\"cc8a1314-4b6d-474f-92e8-2244c533f4f4\",\"author\":\"fixture-author-alice\",\"draft\":false,\"merged\":false,\"head_sha\":\"abc123fixture\",\"title\":\"Authentication migration\"}"
+            }
+          ],
+          "success": true,
+          "durationMs": 1
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "completedAtMs": 1791280946169
+      },
+      "emittedAtMs": 1791280946169
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-205d6b03-e20f-4a7a-9dd5-88a8a545cb23",
+          "namespace": "github",
+          "tool": "fetch_pr_patch",
+          "arguments": {
+            "pr_number": 42,
+            "repo_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "startedAtMs": 1791280946170
+      },
+      "emittedAtMs": 1791280946170
+    },
+    {
+      "method": "item/tool/call",
+      "id": 1,
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "callId": "exec-205d6b03-e20f-4a7a-9dd5-88a8a545cb23",
+        "namespace": "github",
+        "tool": "fetch_pr_patch",
+        "arguments": {
+          "pr_number": 42,
+          "repo_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-205d6b03-e20f-4a7a-9dd5-88a8a545cb23",
+          "namespace": "github",
+          "tool": "fetch_pr_patch",
+          "arguments": {
+            "pr_number": 42,
+            "repo_full_name": "owner/example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-auth-patch\",\"receipt\":\"4cf8ffb8-c7d4-4ebf-bf23-1aff76e575cd\",\"patch\":\"diff --git a/auth.ts b/auth.ts\\n+// fixture-auth-patch\\n\"}"
+            }
+          ],
+          "success": true,
+          "durationMs": 0
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "completedAtMs": 1791280946170
+      },
+      "emittedAtMs": 1791280946171
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 46062,
+            "inputTokens": 45890,
+            "cachedInputTokens": 25728,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 172,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 19894,
+            "inputTokens": 19840,
+            "cachedInputTokens": 17792,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 54,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280946183
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-a7aad790-a5e9-47c0-8d03-1a500a51dd2e",
+          "namespace": "github",
+          "tool": "fetch_commit_workflow_runs",
+          "arguments": {
+            "commit_sha": "abc123fixture",
+            "repo_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "startedAtMs": 1791280948702
+      },
+      "emittedAtMs": 1791280948702
+    },
+    {
+      "method": "item/tool/call",
+      "id": 2,
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "callId": "exec-a7aad790-a5e9-47c0-8d03-1a500a51dd2e",
+        "namespace": "github",
+        "tool": "fetch_commit_workflow_runs",
+        "arguments": {
+          "commit_sha": "abc123fixture",
+          "repo_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-a7aad790-a5e9-47c0-8d03-1a500a51dd2e",
+          "namespace": "github",
+          "tool": "fetch_commit_workflow_runs",
+          "arguments": {
+            "commit_sha": "abc123fixture",
+            "repo_full_name": "owner/example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-ci-run-9001\",\"receipt\":\"e966a01b-29ea-407a-9d72-73a2ced05910\",\"workflow_runs\":[{\"id\":9001,\"name\":\"fixture-ci-run-9001\",\"head_sha\":\"abc123fixture\",\"status\":\"completed\",\"conclusion\":\"success\"}]}"
+            }
+          ],
+          "success": true,
+          "durationMs": 1
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "completedAtMs": 1791280948703
+      },
+      "emittedAtMs": 1791280948703
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 66136,
+            "inputTokens": 65928,
+            "cachedInputTokens": 45440,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 208,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 20074,
+            "inputTokens": 20038,
+            "cachedInputTokens": 19712,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 36,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280948717
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+          "text": "",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "startedAtMs": 1791280951091
+      },
+      "emittedAtMs": 1791280951091
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "{\""
+      },
+      "emittedAtMs": 1791280951091
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "answer"
+      },
+      "emittedAtMs": 1791280951091
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "\":\""
+      },
+      "emittedAtMs": 1791280951091
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "PR"
+      },
+      "emittedAtMs": 1791280951091
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " "
+      },
+      "emittedAtMs": 1791280951091
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "42"
+      },
+      "emittedAtMs": 1791280951197
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280951197
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " “"
+      },
+      "emittedAtMs": 1791280951197
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "Authentication"
+      },
+      "emittedAtMs": 1791280951326
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " migration"
+      },
+      "emittedAtMs": 1791280951329
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ",”"
+      },
+      "emittedAtMs": 1791280951329
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " authored"
+      },
+      "emittedAtMs": 1791280951329
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " by"
+      },
+      "emittedAtMs": 1791280951337
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280951337
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-author"
+      },
+      "emittedAtMs": 1791280951337
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-al"
+      },
+      "emittedAtMs": 1791280951455
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "ice"
+      },
+      "emittedAtMs": 1791280951465
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ";"
+      },
+      "emittedAtMs": 1791280951466
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " not"
+      },
+      "emittedAtMs": 1791280951469
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " draft"
+      },
+      "emittedAtMs": 1791280951469
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " or"
+      },
+      "emittedAtMs": 1791280951477
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " merged"
+      },
+      "emittedAtMs": 1791280951477
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280951477
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " Head"
+      },
+      "emittedAtMs": 1791280951583
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " commit"
+      },
+      "emittedAtMs": 1791280951588
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280951588
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " abc"
+      },
+      "emittedAtMs": 1791280951593
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "123"
+      },
+      "emittedAtMs": 1791280951594
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "fixture"
+      },
+      "emittedAtMs": 1791280951605
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280951605
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " Patch"
+      },
+      "emittedAtMs": 1791280951605
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280951711
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280951718
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-auth"
+      },
+      "emittedAtMs": 1791280951719
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-p"
+      },
+      "emittedAtMs": 1791280951719
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "atch"
+      },
+      "emittedAtMs": 1791280951733
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " adds"
+      },
+      "emittedAtMs": 1791280951834
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " a"
+      },
+      "emittedAtMs": 1791280951847
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " comment"
+      },
+      "emittedAtMs": 1791280951847
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " to"
+      },
+      "emittedAtMs": 1791280951962
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " auth"
+      },
+      "emittedAtMs": 1791280951978
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ".ts"
+      },
+      "emittedAtMs": 1791280951978
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280951980
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " Workflow"
+      },
+      "emittedAtMs": 1791280951980
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " run"
+      },
+      "emittedAtMs": 1791280951983
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " "
+      },
+      "emittedAtMs": 1791280951983
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "900"
+      },
+      "emittedAtMs": 1791280951992
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280952094
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " ("
+      },
+      "emittedAtMs": 1791280952100
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "fixture"
+      },
+      "emittedAtMs": 1791280952100
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-ci"
+      },
+      "emittedAtMs": 1791280952102
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-run"
+      },
+      "emittedAtMs": 1791280952103
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280952104
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "900"
+      },
+      "emittedAtMs": 1791280952106
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280952106
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ")"
+      },
+      "emittedAtMs": 1791280952223
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " completed"
+      },
+      "emittedAtMs": 1791280952237
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " successfully"
+      },
+      "emittedAtMs": 1791280952237
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " for"
+      },
+      "emittedAtMs": 1791280952237
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " that"
+      },
+      "emittedAtMs": 1791280952237
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " commit"
+      },
+      "emittedAtMs": 1791280952241
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280952241
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " The"
+      },
+      "emittedAtMs": 1791280952349
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " workflow"
+      },
+      "emittedAtMs": 1791280952354
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " tool"
+      },
+      "emittedAtMs": 1791280952476
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " returns"
+      },
+      "emittedAtMs": 1791280952486
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " only"
+      },
+      "emittedAtMs": 1791280952486
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " the"
+      },
+      "emittedAtMs": 1791280952488
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " first"
+      },
+      "emittedAtMs": 1791280952500
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " page"
+      },
+      "emittedAtMs": 1791280952501
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " of"
+      },
+      "emittedAtMs": 1791280952501
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " pull"
+      },
+      "emittedAtMs": 1791280952501
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-request"
+      },
+      "emittedAtMs": 1791280952599
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-trigger"
+      },
+      "emittedAtMs": 1791280952611
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "ed"
+      },
+      "emittedAtMs": 1791280952613
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": " runs"
+      },
+      "emittedAtMs": 1791280952618
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": ".\",\""
+      },
+      "emittedAtMs": 1791280952619
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "rece"
+      },
+      "emittedAtMs": 1791280952625
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "ipts"
+      },
+      "emittedAtMs": 1791280952627
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "\":[\""
+      },
+      "emittedAtMs": 1791280952630
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "cc"
+      },
+      "emittedAtMs": 1791280952728
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "8"
+      },
+      "emittedAtMs": 1791280952739
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280952741
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "131"
+      },
+      "emittedAtMs": 1791280952749
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280952749
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280952749
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280952751
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280952754
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "6"
+      },
+      "emittedAtMs": 1791280952858
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280952868
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280952870
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "474"
+      },
+      "emittedAtMs": 1791280952871
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "f"
+      },
+      "emittedAtMs": 1791280952872
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280952873
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "92"
+      },
+      "emittedAtMs": 1791280952874
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280952875
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "8"
+      },
+      "emittedAtMs": 1791280953013
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953046
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "224"
+      },
+      "emittedAtMs": 1791280953115
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280953129
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280953172
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "533"
+      },
+      "emittedAtMs": 1791280953181
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "f"
+      },
+      "emittedAtMs": 1791280953193
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280953196
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "f"
+      },
+      "emittedAtMs": 1791280953213
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280953217
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "\",\""
+      },
+      "emittedAtMs": 1791280953218
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280953222
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "cf"
+      },
+      "emittedAtMs": 1791280953225
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "8"
+      },
+      "emittedAtMs": 1791280953231
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "ff"
+      },
+      "emittedAtMs": 1791280953232
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280953234
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "8"
+      },
+      "emittedAtMs": 1791280953309
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-c"
+      },
+      "emittedAtMs": 1791280953332
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "7"
+      },
+      "emittedAtMs": 1791280953334
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280953337
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280953340
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953340
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280953343
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "eb"
+      },
+      "emittedAtMs": 1791280953344
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "f"
+      },
+      "emittedAtMs": 1791280953374
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-b"
+      },
+      "emittedAtMs": 1791280953387
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "f"
+      },
+      "emittedAtMs": 1791280953387
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "23"
+      },
+      "emittedAtMs": 1791280953387
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953387
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280953388
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "aff"
+      },
+      "emittedAtMs": 1791280953388
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "76"
+      },
+      "emittedAtMs": 1791280953388
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280953496
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "575"
+      },
+      "emittedAtMs": 1791280953510
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "cd"
+      },
+      "emittedAtMs": 1791280953510
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "\",\""
+      },
+      "emittedAtMs": 1791280953510
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280953515
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "966"
+      },
+      "emittedAtMs": 1791280953515
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280953518
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "01"
+      },
+      "emittedAtMs": 1791280953518
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280953623
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953634
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "29"
+      },
+      "emittedAtMs": 1791280953636
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "ea"
+      },
+      "emittedAtMs": 1791280953639
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953640
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "407"
+      },
+      "emittedAtMs": 1791280953643
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280953655
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953655
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280953752
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280953762
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "72"
+      },
+      "emittedAtMs": 1791280953764
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280953767
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "73"
+      },
+      "emittedAtMs": 1791280953769
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280953770
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "2"
+      },
+      "emittedAtMs": 1791280953774
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "ced"
+      },
+      "emittedAtMs": 1791280953776
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "059"
+      },
+      "emittedAtMs": 1791280953882
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "10"
+      },
+      "emittedAtMs": 1791280953885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "\"]"
+      },
+      "emittedAtMs": 1791280953888
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "itemId": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+        "delta": "}"
+      },
+      "emittedAtMs": 1791280953888
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+          "text": "{\"answer\":\"PR 42: “Authentication migration,” authored by fixture-author-alice; not draft or merged. Head commit: abc123fixture. Patch: fixture-auth-patch adds a comment to auth.ts. Workflow run 9001 (fixture-ci-run-9001) completed successfully for that commit. The workflow tool returns only the first page of pull-request-triggered runs.\",\"receipts\":[\"cc8a1314-4b6d-474f-92e8-2244c533f4f4\",\"4cf8ffb8-c7d4-4ebf-bf23-1aff76e575cd\",\"e966a01b-29ea-407a-9d72-73a2ced05910\"]}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "completedAtMs": 1791280953949
+      },
+      "emittedAtMs": 1791280953949
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turnId": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 86464,
+            "inputTokens": 86096,
+            "cachedInputTokens": 65280,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 368,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 20328,
+            "inputTokens": 20168,
+            "cachedInputTokens": 19840,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 160,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280953960
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1791280953960
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a110a9-ea7e-7db2-a541-74002f4573e1",
+        "turn": {
+          "id": "01a110a9-eaf2-77d1-84de-5972f5a1d3ab",
+          "items": [
+            {
+              "type": "agentMessage",
+              "id": "msg_04168f6ce6d26206016ac4c7370e1087d2ad3f7b64bfa55849",
+              "text": "{\"answer\":\"PR 42: “Authentication migration,” authored by fixture-author-alice; not draft or merged. Head commit: abc123fixture. Patch: fixture-auth-patch adds a comment to auth.ts. Workflow run 9001 (fixture-ci-run-9001) completed successfully for that commit. The workflow tool returns only the first page of pull-request-triggered runs.\",\"receipts\":[\"cc8a1314-4b6d-474f-92e8-2244c533f4f4\",\"4cf8ffb8-c7d4-4ebf-bf23-1aff76e575cd\",\"e966a01b-29ea-407a-9d72-73a2ced05910\"]}",
+              "phase": "final_answer",
+              "memoryCitation": null,
+              "delivery": null,
+              "questions": null
+            }
+          ],
+          "itemsView": "summary",
+          "status": "completed",
+          "error": null,
+          "startedAt": 1791280933,
+          "completedAt": 1791280953,
+          "durationMs": 20336
+        }
+      },
+      "emittedAtMs": 1791280953960
+    }
+  ],
+  "usage": {
+    "totalTokens": 86464,
+    "inputTokens": 86096,
+    "cachedInputTokens": 65280,
+    "cacheWriteInputTokens": 0,
+    "outputTokens": 368,
+    "reasoningOutputTokens": 0
+  },
+  "costUsd": 0.05184
+}

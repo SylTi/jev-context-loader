@@ -1,0 +1,1713 @@
+{
+  "caseId": "h37",
+  "arm": "jev",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 32721,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/replay-server.ts",
+            "h37",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h37-jev.fixtures.jsonl"
+          ],
+          "codemode": false
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eeda75815ffend6h9Gidg4yr56",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-IdHZd5/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-IdHZd5",
+        "project": {
+          "id": "5a548e78421c7ca8e24e1e92c1b69b07b3faee43",
+          "directory": "/tmp/jev-mcp-bench-IdHZd5",
+          "canonical": "/tmp/jev-mcp-bench-IdHZd5"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "msg_11258a803001E74Ek3Njurjagj",
+      "time": {
+        "created": 1791309162514
+      },
+      "text": "Lis le ticket Linear ENG-123 et tous ses commentaires pour comprendre les décisions prises.",
+      "type": "user"
+    },
+    {
+      "id": "msg_11258a81e001VOn77TWITqBEwC",
+      "time": {
+        "created": 1791309167550,
+        "streamed": 1791309167604,
+        "completed": 1791309167650
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants me to read Linear ticket ENG-123 and all its comments to understand decisions made. Let me search for the relevant tools first.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309167556,
+            "completed": 1791309167591
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_36c2778cde694e438a2c4741",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "Linear ticket issue read comments"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[{\"id\":\"[\\\"fixture\\\",\\\"mcp__linear__get_issue\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__linear__get_issue\",\"description\":\"When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\\\n) characters.\\n\\nRetrieve detailed information about an issue by ID, including attachments, git branch name, and active Triage Intelligence suggestions when the issue is in triage\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__linear__list_comments\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__linear__list_comments\",\"description\":\"When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\\\n) characters.\\n\\nList comments on a Linear issue, project, initiative, document, project milestone, or project/initiative status update. Provide exactly one of `issueId`, `projectId`, `initiativeId`, `documentId`, `milestoneId`, or `statusUpdateId`. For issues, projects, and initiatives this returns both top-level discussion threads and inline description comments. Inline (anchored) comments carry a non-null `quotedText` set to the snippet of description text they reference. Returned comments include `author` and nullable `onBehalfOf`; when set, `onBehalfOf` identifies the user the agent author acted for. Files uploaded in comment bodies are returned in `attachments` with titles and download URLs, not issue attachment IDs. Signed upload URLs expire after five minutes; call list_comments again to refresh them. Download documents using these URLs and process them with your own file tools.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__linear__get_document\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__linear__get_document\",\"description\":\"When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\\\n) characters.\\n\\nRetrieve a Linear document by ID or slug\",\"probability\":0.89}],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46786,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309167577,
+            "ran": 1791309167599,
+            "completed": 1791309167644
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 606,
+        "output": 16,
+        "reasoning": 29,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11258bc3b0011y8uFd6AIOjQCi",
+      "time": {
+        "created": 1791309172568,
+        "streamed": 1791309172604,
+        "completed": 1791309172625
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "I found two relevant tools: `mcp__linear__get_issue` and `mcp__linear__list_comments`. Let me load their schemas to know the exact parameters.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309172573,
+            "completed": 1791309172596
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_fd01fd4f028e46b1a3a42c14",
+          "name": "fixture_describe",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "ids": [
+                "[\"fixture\",\"mcp__linear__get_issue\"]",
+                "[\"fixture\",\"mcp__linear__list_comments\"]"
+              ]
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[{\"name\":\"mcp__linear__get_issue\",\"description\":\"When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\\\n) characters.\\n\\nRetrieve detailed information about an issue by ID, including attachments, git branch name, and active Triage Intelligence suggestions when the issue is in triage\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"Issue ID or identifier (e.g., LIN-123). P-prefixed identifiers (e.g., P-ENG-123) are projects, not issues\"},\"includeCustomerNeeds\":{\"type\":\"boolean\",\"description\":\"Include associated customer needs\"},\"includeRelations\":{\"type\":\"boolean\",\"description\":\"Include blocking/related/duplicate relations\"},\"includeReleases\":{\"type\":\"boolean\",\"description\":\"Include associated releases\"}},\"required\":[\"id\"],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__linear__get_issue\\\"]\",\"server\":\"fixture\"},{\"name\":\"mcp__linear__list_comments\",\"description\":\"When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\\\n) characters.\\n\\nList comments on a Linear issue, project, initiative, document, project milestone, or project/initiative status update. Provide exactly one of `issueId`, `projectId`, `initiativeId`, `documentId`, `milestoneId`, or `statusUpdateId`. For issues, projects, and initiatives this returns both top-level discussion threads and inline description comments. Inline (anchored) comments carry a non-null `quotedText` set to the snippet of description text they reference. Returned comments include `author` and nullable `onBehalfOf`; when set, `onBehalfOf` identifies the user the agent author acted for. Files uploaded in comment bodies are returned in `attachments` with titles and download URLs, not issue attachment IDs. Signed upload URLs expire after five minutes; call list_comments again to refresh them. Download documents using these URLs and process them with your own file tools.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"cursor\":{\"type\":\"string\",\"description\":\"Next page cursor\"},\"documentId\":{\"type\":\"string\",\"description\":\"Document ID or slug (provide exactly one parent)\"},\"initiativeId\":{\"type\":\"string\",\"description\":\"Initiative name, ID, identifier (e.g., I-123), or slug (provide exactly one parent)\"},\"issueId\":{\"type\":\"string\",\"description\":\"Issue ID or identifier (e.g., LIN-123). P-prefixed identifiers (e.g., P-ENG-123) are projects, not issues (provide exactly one parent)\"},\"limit\":{\"type\":\"number\",\"description\":\"Max results (default 50, max 250)\"},\"milestoneId\":{\"type\":\"string\",\"description\":\"Milestone UUID (provide exactly one parent). Resolve milestone names via `list_milestones` first.\"},\"orderBy\":{\"type\":\"string\",\"enum\":[\"createdAt\",\"updatedAt\"],\"description\":\"Sort: createdAt | updatedAt\"},\"projectId\":{\"type\":\"string\",\"description\":\"Project name, ID, identifier (e.g., P-ENG-123), or slug (provide exactly one parent)\"},\"statusUpdateId\":{\"type\":\"string\",\"description\":\"Status update UUID (provide exactly one parent). Resolve status updates via `get_status_updates` first.\"},\"statusUpdateType\":{\"type\":\"string\",\"enum\":[\"project\",\"initiative\"],\"description\":\"Type of status update named by `statusUpdateId`, as returned by `get_status_updates`. Only valid together with `statusUpdateId`; omit to check both project and initiative status updates.\"}},\"required\":[],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__linear__list_comments\\\"]\",\"server\":\"fixture\"}]"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309172583,
+            "ran": 1791309172601,
+            "completed": 1791309172621
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 580,
+        "output": 39,
+        "reasoning": 36,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11258cfa0001U6Z2mtpDuAol8s",
+      "time": {
+        "created": 1791309177741,
+        "streamed": 1791309178031,
+        "completed": 1791309178058
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now I can call both tools. The comments list depends on the issue ID (ENG-123), but since the identifier is known, I can call both in parallel using \"ENG-123\" as the identifier.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309177745,
+            "completed": 1791309178013
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_a659c2ebe30e4b759d7bdde8",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__linear__get_issue\"]",
+              "arguments": {
+                "id": "ENG-123"
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"token-expiry-race-condition\",\"receipt\":\"4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f\",\"id\":\"ENG-123\",\"title\":\"Fix authentication refresh\",\"description\":\"token-expiry-race-condition\",\"status\":\"In Progress\",\"attachments\":[]}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309177750,
+            "ran": 1791309178021,
+            "completed": 1791309178050
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_94ee698a71af4c6788496d03",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__linear__list_comments\"]",
+              "arguments": {
+                "issueId": "ENG-123"
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"Refresh-token-mutex-approved\",\"receipt\":\"c9db034f-3261-40c5-81a8-2089f48c739a\",\"comments\":[{\"id\":\"comment-1\",\"body\":\"Refresh-token-mutex-approved\",\"author\":\"Alice\"}]}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309178003,
+            "ran": 1791309178027,
+            "completed": 1791309178054
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 867,
+        "output": 69,
+        "reasoning": 43,
+        "cache": {
+          "read": 1152,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11258e4d9001SK4e2JVI4RQ6VG",
+      "time": {
+        "created": 1791309182786,
+        "streamed": 1791309192121,
+        "completed": 1791309192123
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "I have both results. Let me summarize what I found:\n\nIssue ENG-123:\n- Title: \"Fix authentication refresh\"\n- Description: \"token-expiry-race-condition\"\n- Status: \"In Progress\"\n- fixtureFact: \"token-expiry-race-condition\"\n- Receipt: 4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f\n\nComments (1 comment):\n- comment-1 by Alice: \"Refresh-token-mutex-approved\"\n- fixtureFact: \"Refresh-token-mutex-approved\"\n- Receipt: c9db034f-3261-40c5-81a8-2089f48c739a\n\nDecisions to understand: The ticket is about fixing the authentication refresh, describing a token expiry race condition. The comment from Alice approves a \"refresh token mutex\" approach — that's the decision taken.\n\nNow I need to finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309182791,
+            "completed": 1791309192115
+          }
+        },
+        {
+          "type": "text",
+          "text": "J'ai lu le ticket ENG-123 et tous ses commentaires. Voici ce que j'ai trouvé :\n\n## Ticket ENG-123 — « Fix authentication refresh »\n\n- **Statut** : In Progress\n- **Description** : le problème identifié est une **race condition à l'expiration du token** (*token-expiry-race-condition*) : le mécanisme de rafraîchissement de l'authentification souffre d'une condition de course lorsque le token expire.\n- **Pièces jointes** : aucune\n\n## Commentaires (1 au total)\n\n- **Alice** : « Refresh-token-mutex-approved » — la décision retenue est d'approuver l'approche d'un **mutex sur le refresh token** (verrou pour éviter les rafraîchissements concurrents).\n\n## Synthèse des décisions\n\nLe ticket porte sur la correction d'une race condition lors de l'expiration du token d'authentification. La décision clé prise dans les discussions est l'approbation (par Alice) d'une solution basée sur un **mutex autour du rafraîchissement du token**, afin qu'un seul rafraîchissement s'exécute à la fois et élimine la condition de course. Le ticket est encore en cours (« In Progress ») : l'implémentation reste à faire.\n\n```json\n{\"answer\":\"ENG-123 « Fix authentication refresh » (In Progress) traite d'une race condition à l'expiration du token (token-expiry-race-condition). Un seul commentaire, d'Alice : « Refresh-token-mutex-approved » — la décision retenue est d'utiliser un mutex sur le rafraîchissement du token pour empêcher les rafraîchissements concurrents. Aucune pièce jointe, et le travail reste en cours.\",\"receipts\":[\"4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f\",\"c9db034f-3261-40c5-81a8-2089f48c739a\"]}\n```"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 279,
+        "output": 443,
+        "reasoning": 207,
+        "cache": {
+          "read": 1984,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "id": "linear.get_issue",
+      "args": {
+        "id": "ENG-123"
+      },
+      "valid": true,
+      "receipt": "4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f",
+      "fact": "token-expiry-race-condition"
+    },
+    {
+      "id": "linear.list_comments",
+      "args": {
+        "issueId": "ENG-123"
+      },
+      "valid": true,
+      "receipt": "c9db034f-3261-40c5-81a8-2089f48c739a",
+      "fact": "Refresh-token-mutex-approved"
+    }
+  ],
+  "answer": "J'ai lu le ticket ENG-123 et tous ses commentaires. Voici ce que j'ai trouvé :\n\n## Ticket ENG-123 — « Fix authentication refresh »\n\n- **Statut** : In Progress\n- **Description** : le problème identifié est une **race condition à l'expiration du token** (*token-expiry-race-condition*) : le mécanisme de rafraîchissement de l'authentification souffre d'une condition de course lorsque le token expire.\n- **Pièces jointes** : aucune\n\n## Commentaires (1 au total)\n\n- **Alice** : « Refresh-token-mutex-approved » — la décision retenue est d'approuver l'approche d'un **mutex sur le refresh token** (verrou pour éviter les rafraîchissements concurrents).\n\n## Synthèse des décisions\n\nLe ticket porte sur la correction d'une race condition lors de l'expiration du token d'authentification. La décision clé prise dans les discussions est l'approbation (par Alice) d'une solution basée sur un **mutex autour du rafraîchissement du token**, afin qu'un seul rafraîchissement s'exécute à la fois et élimine la condition de course. Le ticket est encore en cours (« In Progress ») : l'implémentation reste à faire.\n\n```json\n{\"answer\":\"ENG-123 « Fix authentication refresh » (In Progress) traite d'une race condition à l'expiration du token (token-expiry-race-condition). Un seul commentaire, d'Alice : « Refresh-token-mutex-approved » — la décision retenue est d'utiliser un mutex sur le rafraîchissement du token pour empêcher les rafraîchissements concurrents. Aucune pièce jointe, et le travail reste en cours.\",\"receipts\":[\"4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f\",\"c9db034f-3261-40c5-81a8-2089f48c739a\"]}\n```",
+  "usage": [
+    {
+      "tokens": {
+        "input": 606,
+        "output": 16,
+        "reasoning": 29,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 580,
+        "output": 39,
+        "reasoning": 36,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 867,
+        "output": 69,
+        "reasoning": 43,
+        "cache": {
+          "read": 1152,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 279,
+        "output": 443,
+        "reasoning": 207,
+        "cache": {
+          "read": 1984,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "search",
+      "query": "Linear ticket issue read comments",
+      "replayConditioningTask": "Lis le ticket Linear ENG-123 et tous ses commentaires pour comprendre les décisions prises."
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_issue",
+        "args": {
+          "id": "ENG-123"
+        },
+        "valid": true,
+        "receipt": "4cce30f2-bdda-46cd-a9d7-ab3b8ccbb08f",
+        "fact": "token-expiry-race-condition"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.list_comments",
+        "args": {
+          "issueId": "ENG-123"
+        },
+        "valid": true,
+        "receipt": "c9db034f-3261-40c5-81a8-2089f48c739a",
+        "fact": "Refresh-token-mutex-approved"
+      }
+    }
+  ],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "fixed task-level Jev replay",
+  "modelCostUsd": 0.0009021599999999999,
+  "jevCostUsd": 0.0019650120000000004,
+  "totalCostUsd": 0.0028671720000000003
+}

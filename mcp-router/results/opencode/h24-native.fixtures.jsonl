@@ -1,0 +1,4 @@
+{"event":"fixture","call":{"id":"spaces.find_pages","args":{"query":"page-example"},"valid":false,"receipt":"749fd045-08c9-4c06-96c0-2468735e93d5","fact":"unexpected-fixture-call"}}
+{"event":"fixture","call":{"id":"spaces.list_pages","args":{"limit":50},"valid":false,"receipt":"dcb2967a-7e02-4905-9c21-cadb7531a116","fact":"unexpected-fixture-call"}}
+{"event":"fixture","call":{"id":"spaces.read_page","args":{"page_id":"page-example"},"valid":true,"receipt":"322b5360-8ee2-4ae0-a509-5cd07669498a","fact":"Quarterly-plan-Phoenix"}}
+{"event":"fixture","call":{"id":"spaces.list_page_automations","args":{"page_id":"page-example"},"valid":true,"receipt":"d855f678-2a3e-437b-82f1-727267233bc3","fact":"automation-fixture-730"}}

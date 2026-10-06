@@ -1,0 +1,3 @@
+{"event":"fixture","call":{"id":"github.fetch_pr","args":{"pr_number":42,"repo_full_name":"owner/example"},"valid":true,"receipt":"f32cbc1e-8ef8-4505-9f9a-4b17df15347a","fact":"fixture-author-alice"}}
+{"event":"fixture","call":{"id":"github.fetch_pr_patch","args":{"pr_number":42,"repo_full_name":"owner/example"},"valid":true,"receipt":"30830cd7-f69c-46fe-87fd-ff7c0ec88089","fact":"fixture-auth-patch"}}
+{"event":"fixture","call":{"id":"github.fetch_commit_workflow_runs","args":{"commit_sha":"abc123fixture","repo_full_name":"owner/example"},"valid":true,"receipt":"313ab1d7-e484-4972-ad6c-b2af558d47ac","fact":"fixture-ci-run-9001"}}

@@ -1,0 +1,17 @@
+{
+  "version": "opencode2 v0.0.0-beta-19059",
+  "binarySha256": "47e52cb98fee8318ee57942e67bcc58aff52cb1328444db460e128d7a0f64955",
+  "executable": "/home/syl/.local/share/fnm/node-versions/v24.16.0/installation/lib/node_modules/@opencode-ai/cli/bin/opencode2.exe",
+  "platform": "Linux",
+  "servedModel": "zai-coding-plan/glm-5.3-flash",
+  "accountingEvidence": {
+    "source": "installed executable byte excerpt",
+    "offset": 93121100,
+    "excerpt": "input:Zs(e?.nonCachedInputTokens),output:Zs(e?.visibleOutputTokens),reasoning:Zs(e?.reasoningTokens),cache:{read:Zs(e?.cacheReadInputTokens),write:Zs(e?.cacheWriteInputTokens)}});function c5(e,t){let o=t.input+t.cache.read+t.cache.write,n=e.filter((r",
+    "publicSourceReference": "https://github.com/anomalyco/opencode/blob/4ac0d9c3d169bbe81d9570013effdda3fe24d36e/packages/core/src/session/runner/publish-llm-event.ts",
+    "referenceIsExactInstalledCommit": false
+  },
+  "authentication": "Existing OpenCode provider storage. Credentials not read or copied into results.",
+  "auxiliaryUsage": "Assistant-loop message accounting only; hidden retries and auxiliary requests not independently captured.",
+  "claudeInference": false
+}

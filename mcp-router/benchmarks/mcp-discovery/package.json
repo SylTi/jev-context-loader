@@ -1,0 +1,30 @@
+{
+  "name": "mcp-discovery-benchmark",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test benchmark.test.ts",
+    "prepare": "node --import tsx benchmark.ts prepare",
+    "report": "node --import tsx benchmark.ts report",
+    "codex:test": "node --import tsx --test codex/support.test.ts",
+    "codex:typecheck": "tsc --noEmit --project codex/tsconfig.json",
+    "codex:run": "node --import tsx codex/run.ts run",
+    "codex:long": "node --import tsx codex/run.ts long",
+    "codex:report": "node --import tsx codex/run.ts report",
+    "hermes:test": "node --import tsx --test hermes/support.test.ts",
+    "hermes:typecheck": "tsc --noEmit --project hermes/tsconfig.json",
+    "hermes:run": "node --import tsx hermes/run.ts run",
+    "hermes:long": "node --import tsx hermes/run.ts long",
+    "hermes:report": "node --import tsx hermes/run.ts report",
+    "hermes:audit": "node --import tsx hermes/audit.ts"
+  },
+  "dependencies": {
+    "js-tiktoken": "1.0.21"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

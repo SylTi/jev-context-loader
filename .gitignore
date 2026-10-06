@@ -3,7 +3,8 @@ dist/
 .env
 .env.*
 !.env.example
-/skills/
-/.jev-skills-router-cache.json
+/skills-router/skills/
+/skills-router/.jev-skills-router-cache.json
 /.agents/jev-skills-router/
-/jev-skills-router-*.tgz
+/skills-router/.agents/jev-skills-router/
+jev-skills-router-*.tgz

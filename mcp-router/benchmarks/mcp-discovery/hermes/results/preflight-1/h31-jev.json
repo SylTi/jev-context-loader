@@ -1,0 +1,24 @@
+{
+  "caseId": "h31",
+  "arm": "jev",
+  "repeatCount": 1,
+  "selected": [
+    "linear.get_issue"
+  ],
+  "status": "error",
+  "initialTools": [],
+  "usageSamples": [],
+  "calls": [],
+  "turns": [],
+  "events": [
+    {
+      "event": "error",
+      "error": "TypeError"
+    }
+  ],
+  "elapsedMs": 7037,
+  "costUsd": null,
+  "jevCostUsd": 0.00196497,
+  "jevEvaluationTimeMs": 272.5699220027309,
+  "error": "TypeError"
+}

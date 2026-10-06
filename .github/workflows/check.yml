@@ -1,30 +1,49 @@
-name: Check jev-skills-router
+name: Check jev-context-loader
 on: [push, pull_request, workflow_dispatch]
 jobs:
   check:
+    name: ${{ matrix.component }} / ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
+        component: [skills-router, mcp-router]
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: ${{ matrix.component }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: ${{ matrix.component }}/package-lock.json
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
       - run: npm exec --yes --package=skills -- skills --help
+        if: matrix.component == 'skills-router'
       - run: npm run test:install
+        if: matrix.component == 'skills-router'
+      - run: npm run demo
+        if: matrix.component == 'mcp-router'
+      - run: npm run compare
+        if: matrix.component == 'mcp-router'
+      - run: npm run audit
+        if: matrix.component == 'mcp-router'
   wsl:
+    name: ${{ matrix.component }} / WSL 2
+    strategy:
+      fail-fast: false
+      matrix:
+        component: [skills-router, mcp-router]
     runs-on: windows-2022
     defaults:
       run:
         shell: wsl-bash {0}
+        working-directory: ${{ matrix.component }}
     steps:
       - uses: actions/checkout@v4
       - uses: Vampire/setup-wsl@v7
@@ -37,4 +56,12 @@ jobs:
       - run: npm exec --yes --package=node@22 -- npm test
       - run: npm exec --yes --package=node@22 -- npm run build
       - run: npm exec --yes --package=node@22 -- npm exec --yes --package=skills -- skills --help
+        if: matrix.component == 'skills-router'
       - run: npm exec --yes --package=node@22 -- npm run test:install
+        if: matrix.component == 'skills-router'
+      - run: npm exec --yes --package=node@22 -- npm run demo
+        if: matrix.component == 'mcp-router'
+      - run: npm exec --yes --package=node@22 -- npm run compare
+        if: matrix.component == 'mcp-router'
+      - run: npm exec --yes --package=node@22 -- npm run audit
+        if: matrix.component == 'mcp-router'

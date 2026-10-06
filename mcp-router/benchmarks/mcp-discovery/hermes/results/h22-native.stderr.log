@@ -1,0 +1,5 @@
+⚠ Home Assistant moved out of core and its 'homeassistant' plugin could not be installed automatically: unable to access 'https://github.com/NousResearch/hermes-homeassistant/': Could not resolve host: github.com. Run `hermes plugins install homeassistant`.
+  ┊ 📖 Reading tool details · 4 tools  0.0s
+  ┊ 🔌 Linear · get project  project-example  0.0s
+  ┊ 🔌 Linear · list milestones  0.0s
+  ┊ 🔌 Linear · get milestone  GA-2026-11-15  0.0s [Unexpected tool or incorrect fixture argument...]

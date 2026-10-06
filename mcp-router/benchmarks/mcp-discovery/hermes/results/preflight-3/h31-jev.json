@@ -1,0 +1,243 @@
+{
+  "caseId": "h31",
+  "arm": "jev",
+  "repeatCount": 1,
+  "selected": [
+    "linear.get_issue"
+  ],
+  "status": "error",
+  "initialTools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "mcp__linear__get_issue",
+        "description": "When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\n) characters.\n\nRetrieve detailed information about an issue by ID, including attachments, git branch name, and active Triage Intelligence suggestions when the issue is in triage",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Issue ID or identifier (e.g., LIN-123). P-prefixed identifiers (e.g., P-ENG-123) are projects, not issues"
+            },
+            "includeCustomerNeeds": {
+              "type": "boolean",
+              "description": "Include associated customer needs"
+            },
+            "includeRelations": {
+              "type": "boolean",
+              "description": "Include blocking/related/duplicate relations"
+            },
+            "includeReleases": {
+              "type": "boolean",
+              "description": "Include associated releases"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "usageSamples": [
+    {
+      "inputTokens": 2477,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 123,
+      "reasoningOutputTokens": 97
+    },
+    {
+      "inputTokens": 2679,
+      "cachedInputTokens": 2432,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 247,
+      "reasoningOutputTokens": 228
+    }
+  ],
+  "calls": [
+    {
+      "id": "linear.get_issue",
+      "args": {
+        "task_id": "4d9f329a-61a9-454a-9bad-840240f3c072",
+        "session_id": "20261006_181937_023570",
+        "user_task": null
+      },
+      "valid": false,
+      "receipt": "d8c5e284-2796-4990-b75c-938917d79042",
+      "fact": "token-expiry-race-condition"
+    },
+    {
+      "id": "linear.get_issue",
+      "args": {
+        "task_id": "4d9f329a-61a9-454a-9bad-840240f3c072",
+        "session_id": "20261006_181937_023570",
+        "user_task": null
+      },
+      "valid": false,
+      "receipt": "30c20fbb-2418-4306-b714-43eb46872e3d",
+      "fact": "token-expiry-race-condition"
+    }
+  ],
+  "turns": [],
+  "events": [
+    {
+      "event": "ready",
+      "metadata": {
+        "commit": "79af3f6cea8067284a7ea5725078578b3f790adb",
+        "model": "glm-5.3-flash",
+        "provider": "zai",
+        "apiMode": "chat_completions",
+        "baseUrl": "https://api.z.ai/api/coding/paas/v4",
+        "toolSearch": {
+          "enabled": "off",
+          "threshold_pct": 5,
+          "search_default_limit": 5,
+          "max_search_limit": 25,
+          "listing": "auto",
+          "listing_max_tokens": 4000,
+          "defer_tools": [
+            "annotate_preview",
+            "apply_layout",
+            "close_terminal",
+            "computer_use",
+            "cronjob_manage",
+            "desktop_preview",
+            "desktop_project",
+            "drive_preview",
+            "focus_pane",
+            "gui_tour",
+            "image_generate",
+            "process_manage",
+            "read_terminal",
+            "read_window_below",
+            "session_search",
+            "show_tip",
+            "todo_list"
+          ]
+        },
+        "reasoningConfig": null,
+        "fixtureCount": 1,
+        "isolated": true
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "mcp__linear__get_issue",
+            "description": "When passing string values to tools, send the content directly without escape sequences. For example, use real newlines in markdown content rather than literal backslash-n (\\n) characters.\n\nRetrieve detailed information about an issue by ID, including attachments, git branch name, and active Triage Intelligence suggestions when the issue is in triage",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Issue ID or identifier (e.g., LIN-123). P-prefixed identifiers (e.g., P-ENG-123) are projects, not issues"
+                },
+                "includeCustomerNeeds": {
+                  "type": "boolean",
+                  "description": "Include associated customer needs"
+                },
+                "includeRelations": {
+                  "type": "boolean",
+                  "description": "Include blocking/related/duplicate relations"
+                },
+                "includeReleases": {
+                  "type": "boolean",
+                  "description": "Include associated releases"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "event": "usage",
+      "usage": {
+        "inputTokens": 2477,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 123,
+        "reasoningOutputTokens": 97
+      },
+      "apiDurationMs": 8497.057437896729,
+      "servedModel": "glm-5.3-flash"
+    },
+    {
+      "event": "call",
+      "name": "mcp__linear__get_issue",
+      "args": {
+        "task_id": "4d9f329a-61a9-454a-9bad-840240f3c072",
+        "session_id": "20261006_181937_023570",
+        "user_task": null
+      }
+    },
+    {
+      "event": "usage",
+      "usage": {
+        "inputTokens": 2679,
+        "cachedInputTokens": 2432,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 247,
+        "reasoningOutputTokens": 228
+      },
+      "apiDurationMs": 8936.386346817017,
+      "servedModel": "glm-5.3-flash"
+    },
+    {
+      "event": "call",
+      "name": "mcp__linear__get_issue",
+      "args": {
+        "task_id": "4d9f329a-61a9-454a-9bad-840240f3c072",
+        "session_id": "20261006_181937_023570",
+        "user_task": null
+      }
+    }
+  ],
+  "elapsedMs": 74410,
+  "costUsd": 0.00263153,
+  "jevCostUsd": 0.00196497,
+  "jevEvaluationTimeMs": 272.5699220027309,
+  "metadata": {
+    "commit": "79af3f6cea8067284a7ea5725078578b3f790adb",
+    "model": "glm-5.3-flash",
+    "provider": "zai",
+    "apiMode": "chat_completions",
+    "baseUrl": "https://api.z.ai/api/coding/paas/v4",
+    "toolSearch": {
+      "enabled": "off",
+      "threshold_pct": 5,
+      "search_default_limit": 5,
+      "max_search_limit": 25,
+      "listing": "auto",
+      "listing_max_tokens": 4000,
+      "defer_tools": [
+        "annotate_preview",
+        "apply_layout",
+        "close_terminal",
+        "computer_use",
+        "cronjob_manage",
+        "desktop_preview",
+        "desktop_project",
+        "drive_preview",
+        "focus_pane",
+        "gui_tour",
+        "image_generate",
+        "process_manage",
+        "read_terminal",
+        "read_window_below",
+        "session_search",
+        "show_tip",
+        "todo_list"
+      ]
+    },
+    "reasoningConfig": null,
+    "fixtureCount": 1,
+    "isolated": true
+  }
+}

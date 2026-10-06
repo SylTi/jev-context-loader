@@ -1,0 +1,4 @@
+{"event":"fixture","call":{"id":"linear.get_project","args":{"query":"project-example"},"valid":true,"receipt":"46ade82d-2ca0-485d-be4e-6259ac177f4c","fact":"Release-Phoenix"}}
+{"event":"fixture","call":{"id":"linear.list_milestones","args":{"project":"project-example"},"valid":true,"receipt":"88e9f60b-ed37-4228-a855-cfc8e2994509","fact":"GA-2026-11-15"}}
+{"event":"fixture","call":{"id":"linear.get_milestone","args":{"project":"project-example","query":"milestone-1"},"valid":false,"receipt":"30156c82-4969-4e87-97d6-e99b155d8d63","fact":"unexpected-fixture-call"}}
+{"event":"fixture","call":{"id":"linear.get_milestone","args":{"project":"project-example","query":"GA-2026-11-15"},"valid":false,"receipt":"00731e86-6633-4b84-a487-3e54ea6338fb","fact":"unexpected-fixture-call"}}

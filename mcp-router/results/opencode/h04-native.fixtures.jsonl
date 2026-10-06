@@ -1,0 +1,4 @@
+{"event":"fixture","call":{"id":"github.fetch_issue","args":{"issue_number":81},"valid":false,"receipt":"24f02156-3195-4ff0-b94e-89cfa333bf71","fact":"unexpected-fixture-call"}}
+{"event":"fixture","call":{"id":"github.fetch_issue","args":{"issue_number":81},"valid":false,"receipt":"2c102b3b-3b09-44d2-b061-2775b54fc7f2","fact":"unexpected-fixture-call"}}
+{"event":"fixture","call":{"id":"github.list_recent_issues","args":{"top_k":10},"valid":false,"receipt":"94860193-abfd-4d46-91b3-f5442bc9e892","fact":"unexpected-fixture-call"}}
+{"event":"fixture","call":{"id":"github.update_issue","args":{"issue_number":81,"repository_full_name":"owner/example","title":"Fix the login redirect"},"valid":true,"receipt":"2b347094-db8c-4efc-ad0d-f150736ca27f","fact":"Fix the login redirect"}}

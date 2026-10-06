@@ -1,0 +1,18 @@
+{
+  "catalogHash": "04e04b67965e60958b5e548d1afdd1e091311751c9713235beed757386fd80ca",
+  "casesHash": "90e7b668f9e11cf5d5a3bc7e611f7cc1f59b414f9eb945b85d99419dc8c5a50d",
+  "caseCount": 50,
+  "toolCount": 235,
+  "fullCatalogTokens": 67719,
+  "sumPerToolTokens": 67485,
+  "budgets": [
+    2000,
+    5000
+  ],
+  "threshold": 0.75,
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "tokenization": "Unicode words, lowercase and remove diacritics; no stemming, synonyms or translation"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "hermesCommit": "79af3f6cea8067284a7ea5725078578b3f790adb",
+  "dashboardVersion": "v0.21.5",
+  "capturedAt": "2026-10-06",
+  "sources": [
+    {
+      "path": "sources/LICENSE",
+      "sha256": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+      "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/79af3f6cea8067284a7ea5725078578b3f790adb/LICENSE"
+    },
+    {
+      "path": "sources/tool_search.py",
+      "sha256": "1b189c8209d51374bda6da3e9610f5634f43fa49bc3fbc614cf9076dec0573a9",
+      "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/79af3f6cea8067284a7ea5725078578b3f790adb/tools/tool_search.py"
+    },
+    {
+      "path": "sources/tool_search_catalog.py",
+      "sha256": "7ecbeef40ce88a2932fc261b881923a808004876d8425e668c3c829162552722",
+      "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/79af3f6cea8067284a7ea5725078578b3f790adb/tools/tool_search_catalog.py"
+    },
+    {
+      "path": "sources/tool_search_livetest.py",
+      "sha256": "7d3d4e2386492cee41f47e9cd52e0dee8f98af5ba03c0142f48d6c7ae47f64c5",
+      "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/79af3f6cea8067284a7ea5725078578b3f790adb/evals/tool_search/tool_search_livetest.py"
+    },
+    {
+      "path": "sources/sdk_transform_bypass.py",
+      "sha256": "6887046105bd5e666631aa9a0d0a81488392ba8978ede650ae4e31abc36ccbd6",
+      "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/79af3f6cea8067284a7ea5725078578b3f790adb/agent/sdk_transform_bypass.py"
+    }
+  ]
+}

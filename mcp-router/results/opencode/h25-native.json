@@ -1,0 +1,902 @@
+{
+  "caseId": "h25",
+  "arm": "native",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 11014,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/fixture-server.ts",
+            "h25",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h25-native.fixtures.jsonl"
+          ],
+          "codemode": true
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eeda7c3f5ffeO2VD5EOvVAvyRx",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-iKFN6w/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-iKFN6w",
+        "project": {
+          "id": "cfd5db300ffc268ec7e042cc32da65bf77b87c0a",
+          "directory": "/tmp/jev-mcp-bench-iKFN6w",
+          "canonical": "/tmp/jev-mcp-bench-iKFN6w"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-iKFN6w",
+        "project": {
+          "id": "cfd5db300ffc268ec7e042cc32da65bf77b87c0a",
+          "directory": "/tmp/jev-mcp-bench-iKFN6w",
+          "canonical": "/tmp/jev-mcp-bench-iKFN6w"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-iKFN6w",
+        "project": {
+          "id": "cfd5db300ffc268ec7e042cc32da65bf77b87c0a",
+          "directory": "/tmp/jev-mcp-bench-iKFN6w",
+          "canonical": "/tmp/jev-mcp-bench-iKFN6w"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-iKFN6w",
+        "project": {
+          "id": "cfd5db300ffc268ec7e042cc32da65bf77b87c0a",
+          "directory": "/tmp/jev-mcp-bench-iKFN6w",
+          "canonical": "/tmp/jev-mcp-bench-iKFN6w"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "msg_112583c170015DNLmoWREz9YoY",
+      "time": {
+        "created": 1791309134901
+      },
+      "text": "What is 17 multiplied by 23? Calculate it directly without tools.",
+      "type": "user"
+    },
+    {
+      "id": "msg_112583c46001pjSclsMFqF8COq",
+      "time": {
+        "created": 1791309141404,
+        "streamed": 1791309144004,
+        "completed": 1791309144007
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user asks: what is 17 multiplied by 23? Calculate directly without tools. 17 * 23 = 391. Simple. Answer directly, no tool call. The system prompt says finish with JSON {\"answer\":string,\"receipts\":string[]}. But that instruction is for tasks using fixture tools. The user explicitly asks to calculate without tools. I should provide the answer. Should I include the JSON? The instruction says finish with JSON containing receipts from results actually used. No tools used, so receipts empty. I can provide answer and receipts [].",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309141411,
+            "completed": 1791309143993
+          }
+        },
+        {
+          "type": "text",
+          "text": "17 × 23 = 391\n\n(Calculated directly: 17 × 20 = 340, plus 17 × 3 = 51, and 340 + 51 = 391.)\n\n{\"answer\":\"17 × 23 = 391\",\"receipts\":[]}"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 2725,
+        "output": 62,
+        "reasoning": 114,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [],
+  "answer": "17 × 23 = 391\n\n(Calculated directly: 17 × 20 = 340, plus 17 × 3 = 51, and 340 + 51 = 391.)\n\n{\"answer\":\"17 × 23 = 391\",\"receipts\":[]}",
+  "usage": [
+    {
+      "tokens": {
+        "input": 2725,
+        "output": 62,
+        "reasoning": 114,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "native OpenCode V2 Code Mode",
+  "modelCostUsd": 0.00049675,
+  "jevCostUsd": 0,
+  "totalCostUsd": 0.00049675
+}

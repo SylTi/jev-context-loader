@@ -1,0 +1,1172 @@
+{
+  "caseId": "h16",
+  "arm": "jev",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 23982,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/replay-server.ts",
+            "h16",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h16-jev.fixtures.jsonl"
+          ],
+          "codemode": false
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eedacedefffeVTmGFF3Cq6PRaw",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-dluZb9/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-dluZb9",
+        "project": {
+          "id": "7be3d441185f8cee09c61c44cb203b56af7e6505",
+          "directory": "/tmp/jev-mcp-bench-dluZb9",
+          "canonical": "/tmp/jev-mcp-bench-dluZb9"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "msg_11253121a001yX1rvYIlxe1N9R",
+      "time": {
+        "created": 1791308796457
+      },
+      "text": "Read the sharing permissions of the ChatGPT Page with ID page-example.",
+      "type": "user"
+    },
+    {
+      "id": "msg_112531238001Wv8zCo4b8Bg1rb",
+      "time": {
+        "created": 1791308801548,
+        "streamed": 1791308801572,
+        "completed": 1791308801600
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants to read the sharing permissions of a \"ChatGPT Page\" with ID \"page-example\". I need to search for relevant tools using fixture_search.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308801552,
+            "completed": 1791308801567
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_77dc0018bd414494977d3a46",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "read sharing permissions of ChatGPT Page"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__chatgpt_space_get_page_sharing\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__chatgpt_space_get_page_sharing\",\"description\":\"Read, search, create, and edit pages and spaces in ChatGPT Space, within your current account.\\n\\nRead a Page's sharing policy and your permissions. If the full roster is unavailable, the canonical owner can still receive scope=page_owner with sharing_available=false and a fresh owner_only observation: true means only owner grants were found, false means nonowner grants exist, and null means unknown. This limited result contains no collaborator roster and does not authorize sharing changes. It remains available to the owner even if get_sharing_availability reports management disabled. Drive sharing returns direct and read-only inherited grants and visible sources; complete=false never means no access. A Space-root Page returns its Space sharing snapshot and space_id; use get_space_sharing and update_space_sharing for changes. Library child Pages return canonical Library shares and workspace_id for workspace sharing, even before a workspace grant exists. They have no revision precondition. This tool is part of plugin `Pages`.\",\"probability\":0.96},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__chatgpt_space_get_space_sharing\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__chatgpt_space_get_space_sharing\",\"description\":\"Read, search, create, and edit pages and spaces in ChatGPT Space, within your current account.\\n\\nCall get_sharing_availability first. If disabled, explain the account restriction and stop sharing management. get_page_sharing can still check your own Page's owner-only access; this does not authorize sharing changes or reveal a collaborator roster. If the check fails or is unsupported, try get_page_sharing or get_space_sharing for the requested resource. Resource permissions still apply. Read whole-Space sharing for a Space and its backing Drive Library folder. Drive shares include pending and active invitations and workspace_id for workspace sharing, even before a workspace grant exists. inherited_access lists read-only ancestor grants and visible sources. Missing or incomplete inherited access is not proof of no access. Missing sharing information means it is unavailable, not that the Space is private or unshared. This tool is part of plugin `Pages`.\",\"probability\":0.91},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__chatgpt_space_update_page_sharing\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__chatgpt_space_update_page_sharing\",\"description\":\"Read, search, create, and edit pages and spaces in ChatGPT Space, within your current account.\\n\\nCall get_sharing_availability first. If disabled, explain the account restriction and stop sharing management. get_page_sharing can still check your own Page's owner-only access; this does not authorize sharing changes or reveal a collaborator roster. If the check fails or is unsupported, try get_page_sharing or get_space_sharing for the requested resource. Resource permissions still apply. Change Page collaborator access only when explicitly requested by the user. Read get_page_sharing first and provide verified recipient IDs. Preserves owner grants. Never blindly retry an uncertain write; read sharing again before deciding what remains to change. Pages accept one user, group, or workspace change per call. Workspace grants support viewer/editor; user/group grants support viewer/commenter/editor, subject to allowed_roles and backend recipient restrictions. Edits change direct grants only; inherited access must be edited at its source. Explain that a Page or Space grant also affects descendants and all members of a shared group. A parent grant may absorb equal or weaker descendant grants for the same recipient. Rejected redundant grants are not successful writes. Report accepted, completed, and uncertain outcomes as returned; a roster refresh does not prove an uncertain write completed. Use workspace_id from get_page_sharing to create, change, or remove a whole-workspace grant. This tool is part of plugin `Pages`.\",\"probability\":0.86},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__chatgpt_space_update_space_sharing\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__chatgpt_space_update_space_sharing\",\"description\":\"Read, search, create, and edit pages and spaces in ChatGPT Space, within your current account.\\n\\nCall get_sharing_availability first. If disabled, explain the account restriction and stop sharing management. get_page_sharing can still check your own Page's owner-only access; this does not authorize sharing changes or reveal a collaborator roster. If the check fails or is unsupported, try get_page_sharing or get_space_sharing for the requested resource. Resource permissions still apply. Change collaborators for a whole Space and its backing Drive Library folder only when explicitly requested by the user. Read get_space_sharing first and use exact user/group IDs verified with search_sharing_recipients. Drive supports one user, group, or workspace change per call. Workspace grants support viewer/editor; user/group grants support viewer/commenter/editor. Roles must be in allowed_roles. Edits change direct grants only; inherited access must be edited at its source. Explain that a Space grant also affects descendants and all members of a shared group. A parent grant may absorb equal or weaker descendant grants for the same recipient. Rejected redundant grants are not successful writes. Report accepted, completed, and uncertain outcomes as returned; a roster refresh does not prove an uncertain write completed. Preserves visibility and owner grants. Use workspace_id from get_space_sharing to create, change, or remove a whole-workspace grant. This API has no revision precondition. Removing a direct share may leave access through other grants. Never blindly retry an uncertain write; read sharing again first. This tool is part of plugin `Pages`.\",\"probability\":0.81}],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46781,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308801561,
+            "ran": 1791308801570,
+            "completed": 1791308801593
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 600,
+        "output": 19,
+        "reasoning": 33,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112532659001ZLYFaMtih8Tc6i",
+      "time": {
+        "created": 1791308806574,
+        "streamed": 1791308806612,
+        "completed": 1791308806623
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The relevant tool is `mcp__codex_apps__chatgpt_space_get_page_sharing`. Let me load its schema to see the arguments.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308806580,
+            "completed": 1791308806602
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_317d02f17ef848f098843e33",
+          "name": "fixture_describe",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "ids": [
+                "[\"fixture\",\"mcp__codex_apps__chatgpt_space_get_page_sharing\"]"
+              ]
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[{\"name\":\"mcp__codex_apps__chatgpt_space_get_page_sharing\",\"description\":\"Read, search, create, and edit pages and spaces in ChatGPT Space, within your current account.\\n\\nRead a Page's sharing policy and your permissions. If the full roster is unavailable, the canonical owner can still receive scope=page_owner with sharing_available=false and a fresh owner_only observation: true means only owner grants were found, false means nonowner grants exist, and null means unknown. This limited result contains no collaborator roster and does not authorize sharing changes. It remains available to the owner even if get_sharing_availability reports management disabled. Drive sharing returns direct and read-only inherited grants and visible sources; complete=false never means no access. A Space-root Page returns its Space sharing snapshot and space_id; use get_space_sharing and update_space_sharing for changes. Library child Pages return canonical Library shares and workspace_id for workspace sharing, even before a workspace grant exists. They have no revision precondition. This tool is part of plugin `Pages`.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"page_id\":{\"type\":\"string\",\"description\":\"Exact Page ID, including any prefix. For a Space's home Page, use its root_page_id. For a page_space_ Space ID, use get_space_sharing with space_id instead.\"}},\"required\":[\"page_id\"],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__chatgpt_space_get_page_sharing\\\"]\",\"server\":\"fixture\"}]"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308806589,
+            "ran": 1791308806609,
+            "completed": 1791308806621
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1345,
+        "output": 34,
+        "reasoning": 31,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125339e6001w0EsWGxZssTUZa",
+      "time": {
+        "created": 1791308811147,
+        "streamed": 1791308811171,
+        "completed": 1791308811191
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_da95f08e144545fe9a9414ff",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "arguments": {
+                "page_id": "page-example"
+              },
+              "id": "[\"fixture\",\"mcp__codex_apps__chatgpt_space_get_page_sharing\"]"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"reader@example.test\",\"receipt\":\"eca6e6ff-c161-42ef-b30a-ecc5bb61b823\",\"page_id\":\"page-example\",\"permissions\":[{\"email\":\"reader@example.test\",\"role\":\"reader\"}]}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308811152,
+            "ran": 1791308811167,
+            "completed": 1791308811188
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 386,
+        "output": 43,
+        "reasoning": 0,
+        "cache": {
+          "read": 1920,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112534bca001MjSwrQSFhMXN95",
+      "time": {
+        "created": 1791308816172,
+        "streamed": 1791308817890,
+        "completed": 1791308817893
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The tool returned the sharing permissions for page-example. There's one collaborator: reader@example.test with role \"reader\". The fixtureFact is \"reader@example.test\" which I need to include verbatim. The receipt is \"eca6e6ff-c161-42ef-b30a-ecc5bb61b823\".\n\nLet me finish with the JSON answer and receipts.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308816177,
+            "completed": 1791308817880
+          }
+        },
+        {
+          "type": "text",
+          "text": "I read the sharing permissions for the Page `page-example` using the ChatGPT Space `get_page_sharing` tool.\n\n**Sharing permissions:**\n- **reader@example.test** — role: **reader** (the only grant on this Page)\n\nThe fixture fact returned: reader@example.test\n\n```json\n{\"answer\":\"Page page-example has one sharing grant: reader@example.test with role reader. fixtureFact: reader@example.test\",\"receipts\":[\"eca6e6ff-c161-42ef-b30a-ecc5bb61b823\"]}\n```"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 100,
+        "output": 116,
+        "reasoning": 77,
+        "cache": {
+          "read": 2304,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "id": "spaces.get_page_sharing",
+      "args": {
+        "page_id": "page-example"
+      },
+      "valid": true,
+      "receipt": "eca6e6ff-c161-42ef-b30a-ecc5bb61b823",
+      "fact": "reader@example.test"
+    }
+  ],
+  "answer": "I read the sharing permissions for the Page `page-example` using the ChatGPT Space `get_page_sharing` tool.\n\n**Sharing permissions:**\n- **reader@example.test** — role: **reader** (the only grant on this Page)\n\nThe fixture fact returned: reader@example.test\n\n```json\n{\"answer\":\"Page page-example has one sharing grant: reader@example.test with role reader. fixtureFact: reader@example.test\",\"receipts\":[\"eca6e6ff-c161-42ef-b30a-ecc5bb61b823\"]}\n```",
+  "usage": [
+    {
+      "tokens": {
+        "input": 600,
+        "output": 19,
+        "reasoning": 33,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 1345,
+        "output": 34,
+        "reasoning": 31,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 386,
+        "output": 43,
+        "reasoning": 0,
+        "cache": {
+          "read": 1920,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 100,
+        "output": 116,
+        "reasoning": 77,
+        "cache": {
+          "read": 2304,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "search",
+      "query": "read sharing permissions of ChatGPT Page",
+      "replayConditioningTask": "Read the sharing permissions of the ChatGPT Page with ID page-example."
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "spaces.get_page_sharing",
+        "args": {
+          "page_id": "page-example"
+        },
+        "valid": true,
+        "receipt": "eca6e6ff-c161-42ef-b30a-ecc5bb61b823",
+        "fact": "reader@example.test"
+      }
+    }
+  ],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "fixed task-level Jev replay",
+  "modelCostUsd": 0.00068515,
+  "jevCostUsd": 0.0019648020000000003,
+  "totalCostUsd": 0.0026499520000000006
+}

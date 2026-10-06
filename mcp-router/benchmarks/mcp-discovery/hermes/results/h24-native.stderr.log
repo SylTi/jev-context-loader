@@ -1,0 +1,5 @@
+✓ Home Assistant moved out of core — installed the 'homeassistant' plugin from the catalog (HASS_TOKEN/HASS_URL, platforms.homeassistant and the ha_* tool names are unchanged).
+  ┊ 📖 Reading tool details · 2 tools  0.0s
+  ┊ 🔌 Spaces · read page  0.0s
+  ┊ ⚡ TOOL NAME  0.0s ['___TOOL_NAME__' is not a known tool name. De...]
+  ┊ 🔌 Spaces · list page automations  0.0s

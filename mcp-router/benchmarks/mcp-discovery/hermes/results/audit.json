@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "mainRuns": 28,
+  "longRuns": 2,
+  "userTurns": 38,
+  "modelRequests": 91,
+  "fixtureCalls": 48,
+  "auxiliaryRequests": 0,
+  "searchCalls": 0
+}

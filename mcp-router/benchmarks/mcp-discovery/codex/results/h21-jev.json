@@ -1,0 +1,2269 @@
+{
+  "caseId": "h21",
+  "arm": "jev",
+  "repeatCount": 1,
+  "selected": [
+    "github.fetch",
+    "github.fetch_commit",
+    "github.fetch_commit_workflow_runs",
+    "github.fetch_pr",
+    "github.fetch_pr_file_patch",
+    "github.fetch_pr_patch",
+    "github.get_pr_diff",
+    "github.get_pr_info"
+  ],
+  "definitionTokens": 1794,
+  "elapsedMs": 19340,
+  "calls": [
+    {
+      "id": "github.get_pr_info",
+      "args": {
+        "pr_number": 42,
+        "repository_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "83814616-72a9-4bee-8df4-af70805bc4cb",
+      "fact": "fixture-author-alice"
+    },
+    {
+      "id": "github.fetch_pr_patch",
+      "args": {
+        "pr_number": 42,
+        "repo_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "c56e564b-cfe3-4b71-90fc-bb7275b29dd9",
+      "fact": "fixture-auth-patch"
+    },
+    {
+      "id": "github.fetch_commit_workflow_runs",
+      "args": {
+        "repo_full_name": "owner/example"
+      },
+      "valid": false,
+      "receipt": "241a943b-59e7-474f-8825-a329a8ba6c14",
+      "fact": "fixture-ci-run-9001"
+    },
+    {
+      "id": "github.fetch_commit_workflow_runs",
+      "args": {
+        "commit_sha": "abc123fixture",
+        "repo_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "cd66fcdd-d32f-4d28-9b46-3c1319b5c64d",
+      "fact": "fixture-ci-run-9001"
+    }
+  ],
+  "answer": "{\"answer\":\"PR #42: Authentication migration. Author: fixture-author-alice. Not draft or merged. Head commit: abc123fixture.\\nPatch: auth.ts adds `// fixture-auth-patch`.\\nHead commit workflow: fixture-ci-run-9001 (ID 9001), completed successfully.\",\"receipts\":[\"83814616-72a9-4bee-8df4-af70805bc4cb\",\"c56e564b-cfe3-4b71-90fc-bb7275b29dd9\",\"cd66fcdd-d32f-4d28-9b46-3c1319b5c64d\"]}",
+  "usageSamples": [
+    {
+      "totalTokens": 9783,
+      "inputTokens": 9708,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 75,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 9959,
+      "inputTokens": 9920,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 39,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 10151,
+      "inputTokens": 10069,
+      "cachedInputTokens": 9728,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 82,
+      "reasoningOutputTokens": 44
+    },
+    {
+      "totalTokens": 10390,
+      "inputTokens": 10248,
+      "cachedInputTokens": 9472,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 142,
+      "reasoningOutputTokens": 0
+    }
+  ],
+  "status": "completed",
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "turns": [
+    {
+      "answer": "{\"answer\":\"PR #42: Authentication migration. Author: fixture-author-alice. Not draft or merged. Head commit: abc123fixture.\\nPatch: auth.ts adds `// fixture-auth-patch`.\\nHead commit workflow: fixture-ci-run-9001 (ID 9001), completed successfully.\",\"receipts\":[\"83814616-72a9-4bee-8df4-af70805bc4cb\",\"c56e564b-cfe3-4b71-90fc-bb7275b29dd9\",\"cd66fcdd-d32f-4d28-9b46-3c1319b5c64d\"]}",
+      "grade": {
+        "pass": true,
+        "missing": [],
+        "forbidden": [],
+        "noTool": true,
+        "arithmetic": true
+      }
+    }
+  ],
+  "jevCostUsd": 0.001965348,
+  "jevEvaluationTimeMs": 270.9911319998355,
+  "events": [
+    {
+      "id": 1,
+      "result": {
+        "userAgent": "Codex Desktop/0.160.1 (Linux Mint 22.3.0; x86_64) dumb (jev_discovery_benchmark; 0.1.0)",
+        "codexHome": "/home/syl/.codex",
+        "platformFamily": "unix",
+        "platformOs": "linux"
+      }
+    },
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "syl-NucBox-EVO-X1",
+        "installationId": "0e15d181-4ae1-4241-87bb-c8b8d54e2644",
+        "environmentId": null
+      },
+      "emittedAtMs": 1791280896374
+    },
+    {
+      "id": 2,
+      "result": {
+        "configuredMcpServerNames": [
+          "secret",
+          "pending-provider-write",
+          "safe",
+          "private-mcp",
+          "github",
+          "linear",
+          "node_repl"
+        ]
+      }
+    },
+    {
+      "method": "benchmark/isolation",
+      "params": {
+        "disabledMcpServerNames": [
+          "secret",
+          "pending-provider-write",
+          "safe",
+          "private-mcp",
+          "github",
+          "linear",
+          "node_repl"
+        ],
+        "apps": false,
+        "plugins": false
+      }
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /home/syl/.codex/config.toml."
+      },
+      "emittedAtMs": 1791280896537
+    },
+    {
+      "id": 3,
+      "result": {
+        "thread": {
+          "id": "01a110a9-5993-7621-8f4a-e6190db74a29",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280896,
+          "updatedAt": 1791280896,
+          "recencyAt": 1791280896,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        },
+        "model": "gpt-6.1-sol",
+        "modelProvider": "openai",
+        "serviceTier": "default",
+        "disabledPluginIds": [],
+        "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+        "runtimeWorkspaceRoots": [],
+        "instructionSources": [
+          "/home/syl/.codex/AGENTS.md"
+        ],
+        "approvalPolicy": "never",
+        "approvalsReviewer": "auto_review",
+        "sandbox": {
+          "type": "readOnly",
+          "networkAccess": false
+        },
+        "activePermissionProfile": null,
+        "reasoningEffort": "medium",
+        "multiAgentMode": "explicitRequestOnly"
+      }
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a110a9-5993-7621-8f4a-e6190db74a29",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280896,
+          "updatedAt": 1791280896,
+          "recencyAt": 1791280896,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1791280896537
+    },
+    {
+      "id": 4,
+      "result": {
+        "turn": {
+          "id": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": null,
+          "completedAt": null,
+          "durationMs": null
+        }
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1791280896544
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turn": {
+          "id": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1791280896,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1791280896544
+    },
+    {
+      "method": "hook/started",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "running",
+          "statusMessage": null,
+          "startedAt": 1791280897,
+          "completedAt": null,
+          "durationMs": null,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280897946
+    },
+    {
+      "method": "hook/completed",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "completed",
+          "statusMessage": null,
+          "startedAt": 1791280897,
+          "completedAt": 1791280897,
+          "durationMs": 4,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280897950
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a9-5f9d-7142-8473-c21a122ed841",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280897950
+      },
+      "emittedAtMs": 1791280897950
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a9-5f9d-7142-8473-c21a122ed841",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280897950
+      },
+      "emittedAtMs": 1791280897950
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-3c11ef08-0aa0-416b-8ca1-859f54561a20",
+          "namespace": "github",
+          "tool": "get_pr_info",
+          "arguments": {
+            "pr_number": 42,
+            "repository_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280901523
+      },
+      "emittedAtMs": 1791280901523
+    },
+    {
+      "method": "item/tool/call",
+      "id": 0,
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "callId": "exec-3c11ef08-0aa0-416b-8ca1-859f54561a20",
+        "namespace": "github",
+        "tool": "get_pr_info",
+        "arguments": {
+          "pr_number": 42,
+          "repository_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-3c11ef08-0aa0-416b-8ca1-859f54561a20",
+          "namespace": "github",
+          "tool": "get_pr_info",
+          "arguments": {
+            "pr_number": 42,
+            "repository_full_name": "owner/example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-author-alice\",\"receipt\":\"83814616-72a9-4bee-8df4-af70805bc4cb\",\"author\":\"fixture-author-alice\",\"draft\":false,\"merged\":false,\"head_sha\":\"abc123fixture\",\"title\":\"Authentication migration\"}"
+            }
+          ],
+          "success": true,
+          "durationMs": 0
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280901524
+      },
+      "emittedAtMs": 1791280901524
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-8df48b78-f703-4624-815d-e3691c9a6598",
+          "namespace": "github",
+          "tool": "fetch_pr_patch",
+          "arguments": {
+            "pr_number": 42,
+            "repo_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280901524
+      },
+      "emittedAtMs": 1791280901525
+    },
+    {
+      "method": "item/tool/call",
+      "id": 1,
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "callId": "exec-8df48b78-f703-4624-815d-e3691c9a6598",
+        "namespace": "github",
+        "tool": "fetch_pr_patch",
+        "arguments": {
+          "pr_number": 42,
+          "repo_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-8df48b78-f703-4624-815d-e3691c9a6598",
+          "namespace": "github",
+          "tool": "fetch_pr_patch",
+          "arguments": {
+            "pr_number": 42,
+            "repo_full_name": "owner/example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-auth-patch\",\"receipt\":\"c56e564b-cfe3-4b71-90fc-bb7275b29dd9\",\"patch\":\"diff --git a/auth.ts b/auth.ts\\n+// fixture-auth-patch\\n\"}"
+            }
+          ],
+          "success": true,
+          "durationMs": 0
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280901525
+      },
+      "emittedAtMs": 1791280901525
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 9783,
+            "inputTokens": 9708,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 75,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9783,
+            "inputTokens": 9708,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 75,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280901580
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-5b131757-bb28-4c53-b2d5-b3371a3e706d",
+          "namespace": "github",
+          "tool": "fetch_commit_workflow_runs",
+          "arguments": {
+            "repo_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280904612
+      },
+      "emittedAtMs": 1791280904613
+    },
+    {
+      "method": "item/tool/call",
+      "id": 2,
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "callId": "exec-5b131757-bb28-4c53-b2d5-b3371a3e706d",
+        "namespace": "github",
+        "tool": "fetch_commit_workflow_runs",
+        "arguments": {
+          "repo_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-5b131757-bb28-4c53-b2d5-b3371a3e706d",
+          "namespace": "github",
+          "tool": "fetch_commit_workflow_runs",
+          "arguments": {
+            "repo_full_name": "owner/example"
+          },
+          "status": "failed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-ci-run-9001\",\"receipt\":\"241a943b-59e7-474f-8825-a329a8ba6c14\",\"workflow_runs\":[{\"id\":9001,\"name\":\"fixture-ci-run-9001\",\"head_sha\":\"abc123fixture\",\"status\":\"completed\",\"conclusion\":\"success\"}],\"error\":\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"}"
+            }
+          ],
+          "success": false,
+          "durationMs": 0
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280904613
+      },
+      "emittedAtMs": 1791280904614
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 19742,
+            "inputTokens": 19628,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 114,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9959,
+            "inputTokens": 9920,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 39,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280904622
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "reasoning",
+          "id": "rs_0a35577e30f77d5e016ac4c70b1c1c87d2a711fc3193f4f652",
+          "summary": [],
+          "content": []
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280907145
+      },
+      "emittedAtMs": 1791280907145
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "reasoning",
+          "id": "rs_0a35577e30f77d5e016ac4c70b1c1c87d2a711fc3193f4f652",
+          "summary": [],
+          "content": []
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280908595
+      },
+      "emittedAtMs": 1791280908595
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-7da48238-d01a-4044-ade2-449d36edd09f",
+          "namespace": "github",
+          "tool": "fetch_commit_workflow_runs",
+          "arguments": {
+            "commit_sha": "abc123fixture",
+            "repo_full_name": "owner/example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280909214
+      },
+      "emittedAtMs": 1791280909214
+    },
+    {
+      "method": "item/tool/call",
+      "id": 3,
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "callId": "exec-7da48238-d01a-4044-ade2-449d36edd09f",
+        "namespace": "github",
+        "tool": "fetch_commit_workflow_runs",
+        "arguments": {
+          "commit_sha": "abc123fixture",
+          "repo_full_name": "owner/example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-7da48238-d01a-4044-ade2-449d36edd09f",
+          "namespace": "github",
+          "tool": "fetch_commit_workflow_runs",
+          "arguments": {
+            "commit_sha": "abc123fixture",
+            "repo_full_name": "owner/example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"fixture-ci-run-9001\",\"receipt\":\"cd66fcdd-d32f-4d28-9b46-3c1319b5c64d\",\"workflow_runs\":[{\"id\":9001,\"name\":\"fixture-ci-run-9001\",\"head_sha\":\"abc123fixture\",\"status\":\"completed\",\"conclusion\":\"success\"}]}"
+            }
+          ],
+          "success": true,
+          "durationMs": 1
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280909215
+      },
+      "emittedAtMs": 1791280909215
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 29893,
+            "inputTokens": 29697,
+            "cachedInputTokens": 9728,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 196,
+            "reasoningOutputTokens": 44
+          },
+          "last": {
+            "totalTokens": 10151,
+            "inputTokens": 10069,
+            "cachedInputTokens": 9728,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 82,
+            "reasoningOutputTokens": 44
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280909216
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+          "text": "",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "startedAtMs": 1791280912792
+      },
+      "emittedAtMs": 1791280912793
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "{\""
+      },
+      "emittedAtMs": 1791280912793
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "answer"
+      },
+      "emittedAtMs": 1791280912793
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "\":\""
+      },
+      "emittedAtMs": 1791280912815
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "PR"
+      },
+      "emittedAtMs": 1791280912816
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " #"
+      },
+      "emittedAtMs": 1791280912816
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "42"
+      },
+      "emittedAtMs": 1791280912816
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280912885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " Authentication"
+      },
+      "emittedAtMs": 1791280912885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " migration"
+      },
+      "emittedAtMs": 1791280912885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280912885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " Author"
+      },
+      "emittedAtMs": 1791280912885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280912885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280912898
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-author"
+      },
+      "emittedAtMs": 1791280912898
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-al"
+      },
+      "emittedAtMs": 1791280913001
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "ice"
+      },
+      "emittedAtMs": 1791280913001
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280913001
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " Not"
+      },
+      "emittedAtMs": 1791280913001
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " draft"
+      },
+      "emittedAtMs": 1791280913001
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " or"
+      },
+      "emittedAtMs": 1791280913001
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " merged"
+      },
+      "emittedAtMs": 1791280913014
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280913117
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " Head"
+      },
+      "emittedAtMs": 1791280913117
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " commit"
+      },
+      "emittedAtMs": 1791280913124
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280913124
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " abc"
+      },
+      "emittedAtMs": 1791280913135
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "123"
+      },
+      "emittedAtMs": 1791280913203
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "fixture"
+      },
+      "emittedAtMs": 1791280913333
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ".\\"
+      },
+      "emittedAtMs": 1791280913334
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "n"
+      },
+      "emittedAtMs": 1791280913334
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "Patch"
+      },
+      "emittedAtMs": 1791280913334
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280913411
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " auth"
+      },
+      "emittedAtMs": 1791280913558
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ".ts"
+      },
+      "emittedAtMs": 1791280913558
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " adds"
+      },
+      "emittedAtMs": 1791280913558
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " `"
+      },
+      "emittedAtMs": 1791280913651
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "//"
+      },
+      "emittedAtMs": 1791280913651
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280913664
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-auth"
+      },
+      "emittedAtMs": 1791280913664
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-p"
+      },
+      "emittedAtMs": 1791280913664
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "atch"
+      },
+      "emittedAtMs": 1791280913664
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "`"
+      },
+      "emittedAtMs": 1791280913664
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ".\\"
+      },
+      "emittedAtMs": 1791280913665
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "n"
+      },
+      "emittedAtMs": 1791280913759
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "Head"
+      },
+      "emittedAtMs": 1791280913901
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " commit"
+      },
+      "emittedAtMs": 1791280913953
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " workflow"
+      },
+      "emittedAtMs": 1791280913953
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280913953
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-ci"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-run"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "900"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " ("
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "ID"
+      },
+      "emittedAtMs": 1791280914085
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " "
+      },
+      "emittedAtMs": 1791280914182
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "900"
+      },
+      "emittedAtMs": 1791280914182
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791280914182
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "),"
+      },
+      "emittedAtMs": 1791280914182
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " completed"
+      },
+      "emittedAtMs": 1791280914182
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": " successfully"
+      },
+      "emittedAtMs": 1791280914321
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": ".\",\""
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "rece"
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "ipts"
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "\":[\""
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "838"
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "146"
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "16"
+      },
+      "emittedAtMs": 1791280914532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280914535
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "72"
+      },
+      "emittedAtMs": 1791280914535
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280914543
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280914543
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280914543
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280914613
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "bee"
+      },
+      "emittedAtMs": 1791280914613
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280914613
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "8"
+      },
+      "emittedAtMs": 1791280914616
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "df"
+      },
+      "emittedAtMs": 1791280914674
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280914728
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-af"
+      },
+      "emittedAtMs": 1791280915011
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "708"
+      },
+      "emittedAtMs": 1791280915024
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "05"
+      },
+      "emittedAtMs": 1791280915035
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "bc"
+      },
+      "emittedAtMs": 1791280915041
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280915052
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "cb"
+      },
+      "emittedAtMs": 1791280915060
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "\",\""
+      },
+      "emittedAtMs": 1791280915124
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280915140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "56"
+      },
+      "emittedAtMs": 1791280915140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280915140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "564"
+      },
+      "emittedAtMs": 1791280915140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280915140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-c"
+      },
+      "emittedAtMs": 1791280915152
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "fe"
+      },
+      "emittedAtMs": 1791280915156
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "3"
+      },
+      "emittedAtMs": 1791280915158
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280915174
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280915176
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280915194
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "71"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "90"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "fc"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-b"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "727"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "5"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "29"
+      },
+      "emittedAtMs": 1791280915266
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "dd"
+      },
+      "emittedAtMs": 1791280915280
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280915284
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "\",\""
+      },
+      "emittedAtMs": 1791280915288
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "cd"
+      },
+      "emittedAtMs": 1791280915288
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "66"
+      },
+      "emittedAtMs": 1791280915301
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "fc"
+      },
+      "emittedAtMs": 1791280915301
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "dd"
+      },
+      "emittedAtMs": 1791280915301
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-d"
+      },
+      "emittedAtMs": 1791280915303
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "32"
+      },
+      "emittedAtMs": 1791280915306
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "f"
+      },
+      "emittedAtMs": 1791280915311
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280915318
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280915318
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280915327
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "28"
+      },
+      "emittedAtMs": 1791280915330
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280915335
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280915349
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280915383
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "46"
+      },
+      "emittedAtMs": 1791280915383
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280915397
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "3"
+      },
+      "emittedAtMs": 1791280915407
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280915408
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "131"
+      },
+      "emittedAtMs": 1791280915409
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280915414
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280915414
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "5"
+      },
+      "emittedAtMs": 1791280915414
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791280915416
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "64"
+      },
+      "emittedAtMs": 1791280915515
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280915515
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "\"]"
+      },
+      "emittedAtMs": 1791280915522
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "itemId": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+        "delta": "}"
+      },
+      "emittedAtMs": 1791280915522
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+          "text": "{\"answer\":\"PR #42: Authentication migration. Author: fixture-author-alice. Not draft or merged. Head commit: abc123fixture.\\nPatch: auth.ts adds `// fixture-auth-patch`.\\nHead commit workflow: fixture-ci-run-9001 (ID 9001), completed successfully.\",\"receipts\":[\"83814616-72a9-4bee-8df4-af70805bc4cb\",\"c56e564b-cfe3-4b71-90fc-bb7275b29dd9\",\"cd66fcdd-d32f-4d28-9b46-3c1319b5c64d\"]}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "completedAtMs": 1791280915580
+      },
+      "emittedAtMs": 1791280915580
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turnId": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 40283,
+            "inputTokens": 39945,
+            "cachedInputTokens": 19200,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 338,
+            "reasoningOutputTokens": 44
+          },
+          "last": {
+            "totalTokens": 10390,
+            "inputTokens": 10248,
+            "cachedInputTokens": 9472,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 142,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280915597
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1791280915597
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a110a9-5993-7621-8f4a-e6190db74a29",
+        "turn": {
+          "id": "01a110a9-5a1b-74c0-9dfe-d41888a458a3",
+          "items": [
+            {
+              "type": "agentMessage",
+              "id": "msg_0a35577e30f77d5e016ac4c710bbac87d2902361819c948fa4",
+              "text": "{\"answer\":\"PR #42: Authentication migration. Author: fixture-author-alice. Not draft or merged. Head commit: abc123fixture.\\nPatch: auth.ts adds `// fixture-auth-patch`.\\nHead commit workflow: fixture-ci-run-9001 (ID 9001), completed successfully.\",\"receipts\":[\"83814616-72a9-4bee-8df4-af70805bc4cb\",\"c56e564b-cfe3-4b71-90fc-bb7275b29dd9\",\"cd66fcdd-d32f-4d28-9b46-3c1319b5c64d\"]}",
+              "phase": "final_answer",
+              "memoryCitation": null,
+              "delivery": null,
+              "questions": null
+            }
+          ],
+          "itemsView": "summary",
+          "status": "completed",
+          "error": null,
+          "startedAt": 1791280896,
+          "completedAt": 1791280915,
+          "durationMs": 19055
+        }
+      },
+      "emittedAtMs": 1791280915597
+    }
+  ],
+  "usage": {
+    "totalTokens": 40283,
+    "inputTokens": 39945,
+    "cachedInputTokens": 19200,
+    "cacheWriteInputTokens": 0,
+    "outputTokens": 338,
+    "reasoningOutputTokens": 44
+  },
+  "costUsd": 0.048755348
+}

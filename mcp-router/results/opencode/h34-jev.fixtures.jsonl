@@ -1,0 +1,2 @@
+{"event":"search","query":"check for update installed desktop application","replayConditioningTask":"Vérifie s'il existe une mise à jour pour l'application de bureau Codex installée."}
+{"event":"fixture","call":{"id":"codex.check_app_update","args":{},"valid":true,"receipt":"fecf04b4-246d-4474-b4d7-287a941e219f","fact":"up_to_date"}}

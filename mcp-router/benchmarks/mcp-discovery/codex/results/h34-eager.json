@@ -1,0 +1,1320 @@
+{
+  "caseId": "h34",
+  "arm": "eager",
+  "repeatCount": 1,
+  "selected": [
+    "codex.archive_worktree",
+    "codex.attach_artifact",
+    "codex.attach_worktree",
+    "codex.automation_update",
+    "codex.check_app_update",
+    "codex.compile_latex_document",
+    "codex.connect_spaces_artifact",
+    "codex.create_sidebar_section",
+    "codex.create_spaces_artifact",
+    "codex.create_thread",
+    "codex.create_worktree",
+    "codex.delete_sidebar_section",
+    "codex.end_realtime_voice_call",
+    "codex.fork_thread",
+    "codex.get_handoff_status",
+    "codex.get_usage_limits",
+    "codex.get_worktree_creation_status",
+    "codex.handoff_thread",
+    "codex.list_archived_threads",
+    "codex.list_artifacts",
+    "codex.list_projects",
+    "codex.list_threads",
+    "codex.load_workspace_dependencies",
+    "codex.move_project_to_sidebar_section",
+    "codex.move_thread_to_sidebar_section",
+    "codex.navigate_to_codex_page",
+    "codex.open_in_codex",
+    "codex.read_page_reference",
+    "codex.read_thread",
+    "codex.read_thread_terminal",
+    "codex.remove_artifact",
+    "codex.rename_sidebar_section",
+    "codex.reorder_section",
+    "codex.reorder_sidebar_projects",
+    "codex.reorder_sidebar_sections",
+    "codex.restore_worktree",
+    "codex.send_message_to_thread",
+    "codex.set_thread_archived",
+    "codex.set_thread_read_state",
+    "codex.set_thread_title",
+    "codex.share_thread",
+    "codex.uninstall_plugin",
+    "codex.update_sidebar_preferences",
+    "codex.wait_threads",
+    "github.add_comment_to_issue",
+    "github.add_issue_assignees",
+    "github.add_issue_labels",
+    "github.add_reaction_to_issue_comment",
+    "github.add_reaction_to_pr",
+    "github.add_reaction_to_pr_review_comment",
+    "github.add_review_to_pr",
+    "github.compare_commits",
+    "github.convert_pull_request_to_draft",
+    "github.create_blob",
+    "github.create_branch",
+    "github.create_commit",
+    "github.create_file",
+    "github.create_issue",
+    "github.create_pull_request",
+    "github.create_tree",
+    "github.delete_file",
+    "github.dismiss_pull_request_review",
+    "github.download_user_content",
+    "github.download_workflow_artifact",
+    "github.enable_auto_merge",
+    "github.fetch",
+    "github.fetch_blob",
+    "github.fetch_commit",
+    "github.fetch_commit_workflow_runs",
+    "github.fetch_file",
+    "github.fetch_issue",
+    "github.fetch_issue_comments",
+    "github.fetch_pr",
+    "github.fetch_pr_comments",
+    "github.fetch_pr_file_patch",
+    "github.fetch_pr_patch",
+    "github.fetch_workflow_job_logs",
+    "github.fetch_workflow_job_steps",
+    "github.fetch_workflow_run_artifacts",
+    "github.fetch_workflow_run_jobs",
+    "github.get_commit_combined_status",
+    "github.get_issue_comment_reactions",
+    "github.get_pr_diff",
+    "github.get_pr_info",
+    "github.get_pr_reactions",
+    "github.get_pr_review_comment_reactions",
+    "github.get_profile",
+    "github.get_repo",
+    "github.get_repo_collaborator_permission",
+    "github.get_user_login",
+    "github.get_users_recent_prs_in_repo",
+    "github.label_pr",
+    "github.list_installations",
+    "github.list_installed_accounts",
+    "github.list_pr_changed_filenames",
+    "github.list_pull_request_review_threads",
+    "github.list_pull_request_reviews",
+    "github.list_recent_issues",
+    "github.list_repositories",
+    "github.list_repositories_by_affiliation",
+    "github.list_repositories_by_installation",
+    "github.list_user_org_memberships",
+    "github.list_user_orgs",
+    "github.lock_issue_conversation",
+    "github.mark_pull_request_ready_for_review",
+    "github.merge_pull_request",
+    "github.remove_issue_assignees",
+    "github.remove_issue_label",
+    "github.remove_pull_request_reviewers",
+    "github.remove_reaction_from_issue_comment",
+    "github.remove_reaction_from_pr",
+    "github.remove_reaction_from_pr_review_comment",
+    "github.reply_to_review_comment",
+    "github.request_pull_request_reviewers",
+    "github.rerun_failed_workflow_run_jobs",
+    "github.rerun_workflow_job",
+    "github.resolve_review_thread",
+    "github.search",
+    "github.search_branches",
+    "github.search_commits",
+    "github.search_installed_repositories_streaming",
+    "github.search_installed_repositories_v2",
+    "github.search_issues",
+    "github.search_prs",
+    "github.search_repositories",
+    "github.unlock_issue_conversation",
+    "github.unresolve_review_thread",
+    "github.update_file",
+    "github.update_issue",
+    "github.update_issue_comment",
+    "github.update_pull_request",
+    "github.update_ref",
+    "github.update_review_comment",
+    "linear.create_attachment",
+    "linear.create_attachment_from_upload",
+    "linear.create_issue_label",
+    "linear.delete_attachment",
+    "linear.delete_comment",
+    "linear.delete_diff_comment",
+    "linear.delete_status_update",
+    "linear.extract_images",
+    "linear.get_agent_skill",
+    "linear.get_attachment",
+    "linear.get_diff",
+    "linear.get_diff_threads",
+    "linear.get_document",
+    "linear.get_issue",
+    "linear.get_issue_status",
+    "linear.get_milestone",
+    "linear.get_notifications",
+    "linear.get_project",
+    "linear.get_release",
+    "linear.get_release_note",
+    "linear.get_status_updates",
+    "linear.get_team",
+    "linear.get_template",
+    "linear.get_triage_responsibility",
+    "linear.get_user",
+    "linear.get_workspace",
+    "linear.list_agent_skills",
+    "linear.list_comments",
+    "linear.list_custom_views",
+    "linear.list_cycles",
+    "linear.list_diffs",
+    "linear.list_documents",
+    "linear.list_issue_labels",
+    "linear.list_issue_statuses",
+    "linear.list_issues",
+    "linear.list_milestones",
+    "linear.list_project_labels",
+    "linear.list_projects",
+    "linear.list_release_notes",
+    "linear.list_release_pipelines",
+    "linear.list_releases",
+    "linear.list_teams",
+    "linear.list_templates",
+    "linear.list_users",
+    "linear.mark_notification",
+    "linear.merge_diff",
+    "linear.prepare_attachment_upload",
+    "linear.resolve_diff_thread",
+    "linear.restore_issue_label",
+    "linear.restore_project_label",
+    "linear.retire_issue_label",
+    "linear.retire_project_label",
+    "linear.save_comment",
+    "linear.save_diff_comment",
+    "linear.save_document",
+    "linear.save_issue",
+    "linear.save_issue_label",
+    "linear.save_milestone",
+    "linear.save_project",
+    "linear.save_project_label",
+    "linear.save_release",
+    "linear.save_release_note",
+    "linear.save_status_update",
+    "linear.search_documentation",
+    "linear.share_issue",
+    "linear.submit_diff_review",
+    "linear.unshare_issue",
+    "linear.update_diff",
+    "spaces.attach_automation_to_page",
+    "spaces.create_controller_automation",
+    "spaces.create_page",
+    "spaces.create_page_visualization",
+    "spaces.create_space",
+    "spaces.edit_page",
+    "spaces.find_pages",
+    "spaces.get_artifact_execution_status",
+    "spaces.get_page_auto_update",
+    "spaces.get_page_sharing",
+    "spaces.get_sharing_availability",
+    "spaces.get_space",
+    "spaces.get_space_sharing",
+    "spaces.inspect_page_reference",
+    "spaces.list_page_automations",
+    "spaces.list_page_comments",
+    "spaces.list_pages",
+    "spaces.list_spaces",
+    "spaces.manage_page_comment",
+    "spaces.move_page",
+    "spaces.patch_page",
+    "spaces.progress_update",
+    "spaces.read_page",
+    "spaces.read_page_changes",
+    "spaces.read_page_reference",
+    "spaces.read_page_transcript",
+    "spaces.reply_page_comment",
+    "spaces.run_page_auto_update",
+    "spaces.search_sharing_recipients",
+    "spaces.set_page_auto_update",
+    "spaces.trash_page",
+    "spaces.update_page_sharing",
+    "spaces.update_space_sharing",
+    "spaces.write_page_reference"
+  ],
+  "definitionTokens": 62583,
+  "elapsedMs": 8590,
+  "calls": [
+    {
+      "id": "codex.check_app_update",
+      "args": {},
+      "valid": true,
+      "receipt": "ce502141-28fb-4b26-a894-64c48cf741b8",
+      "fact": "up_to_date"
+    }
+  ],
+  "answer": "{\"answer\":\"L’application Codex installée (version 1.0.0) est à jour. Résultat : up_to_date.\",\"receipts\":[\"ce502141-28fb-4b26-a894-64c48cf741b8\"]}",
+  "usageSamples": [
+    {
+      "totalTokens": 62499,
+      "inputTokens": 62473,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 26,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 62635,
+      "inputTokens": 62577,
+      "cachedInputTokens": 62336,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 58,
+      "reasoningOutputTokens": 0
+    }
+  ],
+  "status": "completed",
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "turns": [
+    {
+      "answer": "{\"answer\":\"L’application Codex installée (version 1.0.0) est à jour. Résultat : up_to_date.\",\"receipts\":[\"ce502141-28fb-4b26-a894-64c48cf741b8\"]}",
+      "grade": {
+        "pass": true,
+        "missing": [],
+        "forbidden": [],
+        "noTool": true,
+        "arithmetic": true
+      }
+    }
+  ],
+  "jevCostUsd": 0,
+  "jevEvaluationTimeMs": 0,
+  "events": [
+    {
+      "id": 1,
+      "result": {
+        "userAgent": "Codex Desktop/0.160.1 (Linux Mint 22.3.0; x86_64) dumb (jev_discovery_benchmark; 0.1.0)",
+        "codexHome": "/home/syl/.codex",
+        "platformFamily": "unix",
+        "platformOs": "linux"
+      }
+    },
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "syl-NucBox-EVO-X1",
+        "installationId": "0e15d181-4ae1-4241-87bb-c8b8d54e2644",
+        "environmentId": null
+      },
+      "emittedAtMs": 1791281110031
+    },
+    {
+      "id": 2,
+      "result": {
+        "configuredMcpServerNames": [
+          "safe",
+          "pending-provider-write",
+          "secret",
+          "linear",
+          "private-mcp",
+          "github",
+          "node_repl"
+        ]
+      }
+    },
+    {
+      "method": "benchmark/isolation",
+      "params": {
+        "disabledMcpServerNames": [
+          "safe",
+          "pending-provider-write",
+          "secret",
+          "linear",
+          "private-mcp",
+          "github",
+          "node_repl"
+        ],
+        "apps": false,
+        "plugins": false
+      }
+    },
+    {
+      "id": 3,
+      "result": {
+        "thread": {
+          "id": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791281110,
+          "updatedAt": 1791281110,
+          "recencyAt": 1791281110,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        },
+        "model": "gpt-6.1-sol",
+        "modelProvider": "openai",
+        "serviceTier": "default",
+        "disabledPluginIds": [],
+        "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+        "runtimeWorkspaceRoots": [],
+        "instructionSources": [
+          "/home/syl/.codex/AGENTS.md"
+        ],
+        "approvalPolicy": "never",
+        "approvalsReviewer": "auto_review",
+        "sandbox": {
+          "type": "readOnly",
+          "networkAccess": false
+        },
+        "activePermissionProfile": null,
+        "reasoningEffort": "medium",
+        "multiAgentMode": "explicitRequestOnly"
+      }
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791281110,
+          "updatedAt": 1791281110,
+          "recencyAt": 1791281110,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1791281110238
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /home/syl/.codex/config.toml."
+      },
+      "emittedAtMs": 1791281110238
+    },
+    {
+      "id": 4,
+      "result": {
+        "turn": {
+          "id": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": null,
+          "completedAt": null,
+          "durationMs": null
+        }
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1791281110260
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turn": {
+          "id": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1791281110,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1791281110260
+    },
+    {
+      "method": "hook/started",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "running",
+          "statusMessage": null,
+          "startedAt": 1791281111,
+          "completedAt": null,
+          "durationMs": null,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791281111966
+    },
+    {
+      "method": "hook/completed",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "completed",
+          "statusMessage": null,
+          "startedAt": 1791281111,
+          "completedAt": 1791281111,
+          "durationMs": 4,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791281111970
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110ac-a3a2-7fa3-94ea-34c4f7ee492a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Vérifie s'il existe une mise à jour pour l'application de bureau Codex installée.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "startedAtMs": 1791281111970
+      },
+      "emittedAtMs": 1791281111970
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110ac-a3a2-7fa3-94ea-34c4f7ee492a",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Vérifie s'il existe une mise à jour pour l'application de bureau Codex installée.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "completedAtMs": 1791281111970
+      },
+      "emittedAtMs": 1791281111970
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-d0c4f0f4-3512-4aa0-b9db-16ed6ac0d7df",
+          "namespace": "codex",
+          "tool": "check_app_update",
+          "arguments": {},
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "startedAtMs": 1791281114889
+      },
+      "emittedAtMs": 1791281114889
+    },
+    {
+      "method": "item/tool/call",
+      "id": 0,
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "callId": "exec-d0c4f0f4-3512-4aa0-b9db-16ed6ac0d7df",
+        "namespace": "codex",
+        "tool": "check_app_update",
+        "arguments": {}
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-d0c4f0f4-3512-4aa0-b9db-16ed6ac0d7df",
+          "namespace": "codex",
+          "tool": "check_app_update",
+          "arguments": {},
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"up_to_date\",\"receipt\":\"ce502141-28fb-4b26-a894-64c48cf741b8\",\"status\":\"up_to_date\",\"installed_version\":\"1.0.0\",\"latest_version\":\"1.0.0\"}"
+            }
+          ],
+          "success": true,
+          "durationMs": 1
+        },
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "completedAtMs": 1791281114890
+      },
+      "emittedAtMs": 1791281114891
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 62499,
+            "inputTokens": 62473,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 26,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 62499,
+            "inputTokens": 62473,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 26,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791281114922
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+          "text": "",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "startedAtMs": 1791281117404
+      },
+      "emittedAtMs": 1791281117404
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "{\""
+      },
+      "emittedAtMs": 1791281117405
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "answer"
+      },
+      "emittedAtMs": 1791281117407
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "\":\""
+      },
+      "emittedAtMs": 1791281117409
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "L"
+      },
+      "emittedAtMs": 1791281117414
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "’application"
+      },
+      "emittedAtMs": 1791281117414
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " Cod"
+      },
+      "emittedAtMs": 1791281117414
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "ex"
+      },
+      "emittedAtMs": 1791281117528
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " install"
+      },
+      "emittedAtMs": 1791281117528
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "ée"
+      },
+      "emittedAtMs": 1791281117532
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " ("
+      },
+      "emittedAtMs": 1791281117537
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "version"
+      },
+      "emittedAtMs": 1791281117537
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " "
+      },
+      "emittedAtMs": 1791281117537
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "1"
+      },
+      "emittedAtMs": 1791281117537
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "."
+      },
+      "emittedAtMs": 1791281117540
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "0"
+      },
+      "emittedAtMs": 1791281117661
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "."
+      },
+      "emittedAtMs": 1791281117662
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "0"
+      },
+      "emittedAtMs": 1791281117665
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": ")"
+      },
+      "emittedAtMs": 1791281117665
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " est"
+      },
+      "emittedAtMs": 1791281117670
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " à"
+      },
+      "emittedAtMs": 1791281117671
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " jour"
+      },
+      "emittedAtMs": 1791281117671
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "."
+      },
+      "emittedAtMs": 1791281117796
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " Rés"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "ultat"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " :"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": " up"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "_to"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "_date"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": ".\",\""
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "rece"
+      },
+      "emittedAtMs": 1791281118009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "ipts"
+      },
+      "emittedAtMs": 1791281118061
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "\":[\""
+      },
+      "emittedAtMs": 1791281118064
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "ce"
+      },
+      "emittedAtMs": 1791281118070
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "502"
+      },
+      "emittedAtMs": 1791281118070
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "141"
+      },
+      "emittedAtMs": 1791281118074
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791281118079
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "28"
+      },
+      "emittedAtMs": 1791281118088
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "fb"
+      },
+      "emittedAtMs": 1791281118089
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791281118183
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791281118201
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791281118210
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "26"
+      },
+      "emittedAtMs": 1791281118227
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "-a"
+      },
+      "emittedAtMs": 1791281118228
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "894"
+      },
+      "emittedAtMs": 1791281118228
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791281118228
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "64"
+      },
+      "emittedAtMs": 1791281118228
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "c"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "48"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "cf"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "741"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "8"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "\"]"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "itemId": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+        "delta": "}"
+      },
+      "emittedAtMs": 1791281118420
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+          "text": "{\"answer\":\"L’application Codex installée (version 1.0.0) est à jour. Résultat : up_to_date.\",\"receipts\":[\"ce502141-28fb-4b26-a894-64c48cf741b8\"]}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "completedAtMs": 1791281118452
+      },
+      "emittedAtMs": 1791281118453
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turnId": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 125134,
+            "inputTokens": 125050,
+            "cachedInputTokens": 62336,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 84,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 62635,
+            "inputTokens": 62577,
+            "cachedInputTokens": 62336,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 58,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791281118497
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1791281118497
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a110ac-9c41-7961-bef1-23eaae8000b0",
+        "turn": {
+          "id": "01a110ac-9ce8-71f0-ab88-12096fe8ec40",
+          "items": [
+            {
+              "type": "agentMessage",
+              "id": "msg_01360ee9ad0963f9016ac4c7dd63a087d2aaa0d14d5ae45653",
+              "text": "{\"answer\":\"L’application Codex installée (version 1.0.0) est à jour. Résultat : up_to_date.\",\"receipts\":[\"ce502141-28fb-4b26-a894-64c48cf741b8\"]}",
+              "phase": "final_answer",
+              "memoryCitation": null,
+              "delivery": null,
+              "questions": null
+            }
+          ],
+          "itemsView": "summary",
+          "status": "completed",
+          "error": null,
+          "startedAt": 1791281110,
+          "completedAt": 1791281118,
+          "durationMs": 8238
+        }
+      },
+      "emittedAtMs": 1791281118497
+    }
+  ],
+  "usage": {
+    "totalTokens": 125134,
+    "inputTokens": 125050,
+    "cachedInputTokens": 62336,
+    "cacheWriteInputTokens": 0,
+    "outputTokens": 84,
+    "reasoningOutputTokens": 0
+  },
+  "costUsd": 0.1325016
+}

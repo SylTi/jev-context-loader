@@ -1,0 +1,3 @@
+{"event":"search","query":"search GitHub issues in repository","replayConditioningTask":"Cherche dans les tickets GitHub du dépôt owner/example ceux qui parlent d'une erreur de connexion."}
+{"event":"fixture","call":{"id":"github.search_issues","args":{"query":"repo:owner/example \"connection error\" OR \"connexion error\"","topn":20},"valid":true,"receipt":"42d52bae-178c-461d-afcd-67afb4b19aa8","fact":"login-error-issue-81"}}
+{"event":"fixture","call":{"id":"github.search_issues","args":{"query":"repo:owner/example \"erreur de connexion\"","topn":20},"valid":true,"receipt":"e90d8e4f-7546-406b-b585-58a50d5b8123","fact":"login-error-issue-81"}}

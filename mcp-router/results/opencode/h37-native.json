@@ -1,0 +1,1421 @@
+{
+  "caseId": "h37",
+  "arm": "native",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 79506,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/fixture-server.ts",
+            "h37",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h37-native.fixtures.jsonl"
+          ],
+          "codemode": true
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eeda6dc8bffeTct9joXeJZ1nNs",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-gdPwMe/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-gdPwMe",
+        "project": {
+          "id": "6bf6f25444722dd981047850212164ccc6934c54",
+          "directory": "/tmp/jev-mcp-bench-gdPwMe",
+          "canonical": "/tmp/jev-mcp-bench-gdPwMe"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-gdPwMe",
+        "project": {
+          "id": "6bf6f25444722dd981047850212164ccc6934c54",
+          "directory": "/tmp/jev-mcp-bench-gdPwMe",
+          "canonical": "/tmp/jev-mcp-bench-gdPwMe"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-gdPwMe",
+        "project": {
+          "id": "6bf6f25444722dd981047850212164ccc6934c54",
+          "directory": "/tmp/jev-mcp-bench-gdPwMe",
+          "canonical": "/tmp/jev-mcp-bench-gdPwMe"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-gdPwMe",
+        "project": {
+          "id": "6bf6f25444722dd981047850212164ccc6934c54",
+          "directory": "/tmp/jev-mcp-bench-gdPwMe",
+          "canonical": "/tmp/jev-mcp-bench-gdPwMe"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "msg_11259237d001DwJa9Xh6t7OXCp",
+      "time": {
+        "created": 1791309194137
+      },
+      "text": "Lis le ticket Linear ENG-123 et tous ses commentaires pour comprendre les décisions prises.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1125923a7001XhztT8AfOPUcUo",
+      "time": {
+        "created": 1791309203043,
+        "streamed": 1791309203752,
+        "completed": 1791309203868
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants me to read Linear ticket ENG-123 and all its comments to understand decisions made. I have a Code Mode environment with fixture tools. I need to search for Linear tools to find the right ones for getting an issue and its comments.\n\nLet me search for Linear tools related to issues and comments.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309203049,
+            "completed": 1791309203742
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_66950a0a409b4543b5c950b1",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const [issues, comments] = await Promise.all([\n  tools.search({ query: \"linear issue\", limit: 20 }),\n  tools.search({ query: \"linear comment\", limit: 20 }),\n]);\nreturn { issues, comments };"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Unknown tool 'search'.\nThe tool may have been removed or renamed. Use search to find available tools."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309203075,
+            "ran": 1791309203749,
+            "completed": 1791309203863
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2730,
+        "output": 58,
+        "reasoning": 62,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125949bb001zz4ZDj1wjx6tn6",
+      "time": {
+        "created": 1791309209317,
+        "streamed": 1791309209649,
+        "completed": 1791309209684
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Interesting — the search tool isn't available inside execute? The instructions say search is available. But the error says \"Unknown tool 'search'\". Let me try calling the full path `tools.search`.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309209324,
+            "completed": 1791309209637
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_c5cdd2dd0a334fa79c7be095",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const [issues, comments] = await Promise.all([\n  tools.search({ query: \"linear issue\", limit: 20 }),\n  tools.search({ query: \"linear comment\", limit: 20 }),\n]);\nreturn { issues, comments };"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Unknown tool 'search'.\nThe tool may have been removed or renamed. Use search to find available tools."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309209339,
+            "ran": 1791309209644,
+            "completed": 1791309209679
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 187,
+        "output": 58,
+        "reasoning": 40,
+        "cache": {
+          "read": 2688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11259606d001UyT7FTT4PeB8Nn",
+      "time": {
+        "created": 1791309215523,
+        "streamed": 1791309222371,
+        "completed": 1791309222404
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The search tool isn't callable inside execute. Maybe search is only available outside Code Mode. But I only have the `execute` tool directly. Hmm. The system prompt says the Code Mode tool catalog instructions or returned by `search` are callable inside execute. But the search itself seems unavailable within execute.\n\nWait — the error message says \"The tool may have been removed or renamed. Use search to find available tools.\" This is confusing. Perhaps search is available as a direct tool outside execute. But the only function I have listed in the JSONSchema is `execute`. Hmm.\n\nActually, maybe I can try calling tools.fixture tools directly by their exact paths inside execute, since they're listed in the catalog. The catalog lists 42 of 235 fixture tools. Linear tools listed include: delete_attachment, delete_comment, get_agent_skill, get_document, get_team, get_template, get_workspace. But I need get_issue / list_comments or similar. Those may exist in the un-shown 193 tools. Without search, I can't discover them... but maybe I can try common names: tools.fixture.mcp__linear__get_issue, tools.fixture.mcp__linear__list_comments, tools.fixture.mcp__linear__create_comment, etc.\n\nLet me try calling tools.fixture.mcp__linear__get_issue with { id: \"ENG-123\" } or the issue might need a team/key resolution. Linear MCP tools often have `get_issue` that accepts an id like \"ENG-123\".\n\nLet me try.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309215526,
+            "completed": 1791309222363
+          }
+        },
+        {
+          "type": "text",
+          "text": "The `search` helper isn't callable inside the runtime, but the catalog shows fixture tools can be called by their exact paths. Let me try the standard Linear issue tools directly."
+        },
+        {
+          "type": "tool",
+          "id": "call_bafed78efdda409797d30e41",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const issue = await tools.fixture.mcp__linear__get_issue({ id: \"ENG-123\" });\nreturn issue;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"token-expiry-race-condition\",\"receipt\":\"b5c48925-2a6d-4366-81c5-9db70d30ccaa\",\"id\":\"ENG-123\",\"title\":\"Fix authentication refresh\",\"description\":\"token-expiry-race-condition\",\"status\":\"In Progress\",\"attachments\":[]}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__get_issue",
+                  "status": "completed",
+                  "input": {
+                    "id": "ENG-123"
+                  }
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309222350,
+            "ran": 1791309222368,
+            "completed": 1791309222400
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 182,
+        "output": 71,
+        "reasoning": 309,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112599229001phbO98phfxYS4W",
+      "time": {
+        "created": 1791309228682,
+        "streamed": 1791309230081,
+        "completed": 1791309230132
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "I got the issue. Now I need comments. Common Linear MCP tool names: `get_comments`, `list_comments`, `create_comment`... The catalog showed `delete_comment`. Let me try `get_comments` or `list_comments`.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309228686,
+            "completed": 1791309230068
+          }
+        },
+        {
+          "type": "text",
+          "text": "The issue loaded. Now let me fetch its comments — trying the standard Linear tool names."
+        },
+        {
+          "type": "tool",
+          "id": "call_a4e84984d5f546b586fdc55c",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "let comments;\ntry {\n  comments = await tools.fixture.mcp__linear__get_comments({ issue_id: \"ENG-123\" });\n} catch (e) {\n  try {\n    comments = await tools.fixture.mcp__linear__list_comments({ issue_id: \"ENG-123\" });\n  } catch (e2) {\n    return { error1: String(e), error2: String(e2) };\n  }\n}\nreturn comments;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"error1\": \"Error: Unknown tool 'fixture.mcp__linear__get_comments'.\",\n  \"error2\": \"Error: {\\\"fixtureFact\\\":\\\"Refresh-token-mutex-approved\\\",\\\"receipt\\\":\\\"f7fad5cc-56c6-4029-9dd7-83ca7a097966\\\",\\\"comments\\\":[{\\\"id\\\":\\\"comment-1\\\",\\\"body\\\":\\\"Refresh-token-mutex-approved\\\",\\\"author\\\":\\\"Alice\\\"}],\\\"error\\\":\\\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\\\"}\"\n}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__list_comments",
+                  "status": "error",
+                  "input": {
+                    "issue_id": "ENG-123"
+                  }
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309228703,
+            "ran": 1791309230074,
+            "completed": 1791309230128
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 508,
+        "output": 119,
+        "reasoning": 48,
+        "cache": {
+          "read": 2944,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11259b05a001QqBRoAolrksDmD",
+      "time": {
+        "created": 1791309236138,
+        "streamed": 1791309241272,
+        "completed": 1791309241306
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Interesting. The `list_comments` tool exists but my arguments were wrong (\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"). The fixtureFact \"Refresh-token-mutex-approved\" came through though — but the result says the requested action was not applied due to incorrect arguments. Hmm, actually wait — it returned a fixtureFact and a comment. But it also says \"error\": \"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"\n\nHmm, that's ambiguous. It seems `list_comments` accepted something but the arguments were wrong. Wait, but it returned a comment with body \"Refresh-token-mutex-approved\" by Alice. The error says the requested action was not applied. That might be a trap — perhaps the correct argument name is different (e.g., `id` or `issueId`). The returned data might be a decoy or partial.\n\nLet me retry with different argument names to find the correct signature. Try `issueId`, then `id`.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309236140,
+            "completed": 1791309241261
+          }
+        },
+        {
+          "type": "text",
+          "text": "The tool exists but rejected my argument name (`issue_id`) — it explicitly says the action was not applied. Let me retry with the correct parameter name."
+        },
+        {
+          "type": "tool",
+          "id": "call_b85eab39a45d43569584bcd4",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const attempts = {};\ntry { attempts.issueId = await tools.fixture.mcp__linear__list_comments({ issueId: \"ENG-123\" }); } catch (e) { attempts.issueId = String(e); }\nreturn attempts;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"issueId\": \"{\\\"fixtureFact\\\":\\\"Refresh-token-mutex-approved\\\",\\\"receipt\\\":\\\"91c14fac-33df-4455-bdb6-c9a8bb245892\\\",\\\"comments\\\":[{\\\"id\\\":\\\"comment-1\\\",\\\"body\\\":\\\"Refresh-token-mutex-approved\\\",\\\"author\\\":\\\"Alice\\\"}]}\"\n}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__list_comments",
+                  "status": "completed",
+                  "input": {
+                    "issueId": "ENG-123"
+                  }
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309239998,
+            "ran": 1791309241267,
+            "completed": 1791309241304
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 342,
+        "output": 88,
+        "reasoning": 199,
+        "cache": {
+          "read": 3392,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11259dbe9001D4SD2Qc931MMbw",
+      "time": {
+        "created": 1791309246822,
+        "streamed": 1791309271636,
+        "completed": 1791309271638
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "`issueId` worked — no error field this time. Result:\n- fixtureFact: \"Refresh-token-mutex-approved\"\n- receipt: 91c14fac-33df-4455-bdb6-c9a8bb245892\n- comments: [{ id: \"comment-1\", body: \"Refresh-token-mutex-approved\", author: \"Alice\" }]\n\nHmm, only one comment. The task says \"tous ses commentaires\" (all its comments). Maybe there are more comments (pagination?). Let me check if there's pagination info. The result has no cursor/next. Maybe there are more comments and I should check. The response only shows one comment and no pagination token. \n\nHmm, but wait — maybe there could be additional comment pages. There's no pagination metadata in the response, so I'll assume this is all. But let me be careful: the earlier bad call also returned the same single comment with a different receipt. The valid call used `issueId`.\n\nAlso, the issue itself had fixtureFact \"token-expiry-race-condition\" with receipt b5c48925-2a6d-4366-81c5-9db70d30ccaa.\n\nNow, should I try to find more comments? Maybe there's a `get_issue_comments` or comments attached via a different tool. The catalog listed 235 fixture tools, 42 shown. I discovered get_issue and list_comments work. Perhaps pagination params exist like `limit`/`cursor`/`after`. Let me try passing a limit or check for more. Actually, let me try `list_comments` with pagination to be safe, e.g., { issueId: \"ENG-123\", limit: 50 } — unknown args might error. The error message earlier said \"Unexpected tool or incorrect fixture arguments\". Passing extra args might also trigger that. \n\nThe response contains a single comment and no cursor/hasMore. I'll treat it as complete. \n\nNow compose the final answer: summarize the ticket and decisions in French (user wrote in French), include the fixtureFact verbatim for each requested read, and finish with JSON {\"answer\": string, \"receipts\": string[]}.\n\nRequested reads: the issue (ENG-123) and its comments.\n- Issue fixtureFact: \"token-expiry-race-condition\", receipt b5c48925-2a6d-4366-81c5-9db70d30ccaa\n- Comments fixtureFact: \"Refresh-token-mutex-approved\", receipt 91c14fac-33df-4455-bdb6-c9a8bb245892\n\nI should be careful about the first attempt (receipt f7fad5cc...) — that call errored (\"requested action was not applied\"), so I should NOT include that receipt; only receipts from results actually used. The valid ones: b5c48925... and 91c14fac....\n\nAnswer in French: \n\nTicket ENG-123 \"Fix authentication refresh\", statut \"In Progress\", description \"token-expiry-race-condition\". Décisions tirées des commentaires : Alice a commenté \"Refresh-token-mutex-approved\" → décision : approuver l'approche d'un mutex sur le refresh token (pour résoudre la condition de course à l'expiration du token).\n\nLet me write the final response with the summary and the JSON.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309246826,
+            "completed": 1791309271630
+          }
+        },
+        {
+          "type": "text",
+          "text": "All reads are done. Here's the summary:\n\n## Ticket ENG-123 — « Fix authentication refresh » (In Progress)\n\n**Lecture du ticket** (fixtureFact : `token-expiry-race-condition`) : le ticket porte sur la correction du rafraîchissement d'authentification, la cause racine étant une **condition de course (race condition) à l'expiration du token**.\n\n**Commentaires (1 au total, aucun curseur de pagination renvoyé)** (fixtureFact : `Refresh-token-mutex-approved`) :\n- **Alice** : « Refresh-token-mutex-approved »\n\n**Décisions comprises** :\n1. Le problème à corriger est le *token-expiry-race-condition* (course entre l'expiration du token d'accès et son rafraîchissement).\n2. L'approche retenue et approuvée par Alice est d'utiliser un **mutex sur le refresh token** (probablement pour éviter que plusieurs requêtes ne déclenchent simultanément un refresh).\n3. Le ticket est actuellement **en cours (In Progress)**, sans pièces jointes.\n\nNote : une première tentative de lecture des commentaires avec un mauvais nom de paramètre a été rejetée par le serveur (« action non appliquée ») ; seuls les résultats de la relecture valide sont retenus ci-dessous.\n\n```json\n{\"answer\":\"Ticket ENG-123 'Fix authentication refresh' (In Progress) : le problème est une race condition à l'expiration du token (fixtureFact: token-expiry-race-condition). Le seul commentaire, d'Alice, indique la décision approuvée : 'Refresh-token-mutex-approved', c'est-à-dire utiliser un mutex sur le refresh token pour séquencer les rafraîchissements et éliminer la condition de course. Aucune pièce jointe ; un seul commentaire au total (pas de pagination).\",\"receipts\":[\"b5c48925-2a6d-4366-81c5-9db70d30ccaa\",\"91c14fac-33df-4455-bdb6-c9a8bb245892\"]}\n```"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 379,
+        "output": 462,
+        "reasoning": 700,
+        "cache": {
+          "read": 3712,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "id": "linear.get_issue",
+      "args": {
+        "id": "ENG-123"
+      },
+      "valid": true,
+      "receipt": "b5c48925-2a6d-4366-81c5-9db70d30ccaa",
+      "fact": "token-expiry-race-condition"
+    },
+    {
+      "id": "linear.list_comments",
+      "args": {},
+      "valid": false,
+      "receipt": "f7fad5cc-56c6-4029-9dd7-83ca7a097966",
+      "fact": "Refresh-token-mutex-approved"
+    },
+    {
+      "id": "linear.list_comments",
+      "args": {
+        "issueId": "ENG-123"
+      },
+      "valid": true,
+      "receipt": "91c14fac-33df-4455-bdb6-c9a8bb245892",
+      "fact": "Refresh-token-mutex-approved"
+    }
+  ],
+  "answer": "The `search` helper isn't callable inside the runtime, but the catalog shows fixture tools can be called by their exact paths. Let me try the standard Linear issue tools directly.\nThe issue loaded. Now let me fetch its comments — trying the standard Linear tool names.\nThe tool exists but rejected my argument name (`issue_id`) — it explicitly says the action was not applied. Let me retry with the correct parameter name.\nAll reads are done. Here's the summary:\n\n## Ticket ENG-123 — « Fix authentication refresh » (In Progress)\n\n**Lecture du ticket** (fixtureFact : `token-expiry-race-condition`) : le ticket porte sur la correction du rafraîchissement d'authentification, la cause racine étant une **condition de course (race condition) à l'expiration du token**.\n\n**Commentaires (1 au total, aucun curseur de pagination renvoyé)** (fixtureFact : `Refresh-token-mutex-approved`) :\n- **Alice** : « Refresh-token-mutex-approved »\n\n**Décisions comprises** :\n1. Le problème à corriger est le *token-expiry-race-condition* (course entre l'expiration du token d'accès et son rafraîchissement).\n2. L'approche retenue et approuvée par Alice est d'utiliser un **mutex sur le refresh token** (probablement pour éviter que plusieurs requêtes ne déclenchent simultanément un refresh).\n3. Le ticket est actuellement **en cours (In Progress)**, sans pièces jointes.\n\nNote : une première tentative de lecture des commentaires avec un mauvais nom de paramètre a été rejetée par le serveur (« action non appliquée ») ; seuls les résultats de la relecture valide sont retenus ci-dessous.\n\n```json\n{\"answer\":\"Ticket ENG-123 'Fix authentication refresh' (In Progress) : le problème est une race condition à l'expiration du token (fixtureFact: token-expiry-race-condition). Le seul commentaire, d'Alice, indique la décision approuvée : 'Refresh-token-mutex-approved', c'est-à-dire utiliser un mutex sur le refresh token pour séquencer les rafraîchissements et éliminer la condition de course. Aucune pièce jointe ; un seul commentaire au total (pas de pagination).\",\"receipts\":[\"b5c48925-2a6d-4366-81c5-9db70d30ccaa\",\"91c14fac-33df-4455-bdb6-c9a8bb245892\"]}\n```",
+  "usage": [
+    {
+      "tokens": {
+        "input": 2730,
+        "output": 58,
+        "reasoning": 62,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 187,
+        "output": 58,
+        "reasoning": 40,
+        "cache": {
+          "read": 2688,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 182,
+        "output": 71,
+        "reasoning": 309,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 508,
+        "output": 119,
+        "reasoning": 48,
+        "cache": {
+          "read": 2944,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 342,
+        "output": 88,
+        "reasoning": 199,
+        "cache": {
+          "read": 3392,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 379,
+        "output": 462,
+        "reasoning": 700,
+        "cache": {
+          "read": 3712,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_issue",
+        "args": {
+          "id": "ENG-123"
+        },
+        "valid": true,
+        "receipt": "b5c48925-2a6d-4366-81c5-9db70d30ccaa",
+        "fact": "token-expiry-race-condition"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.list_comments",
+        "args": {},
+        "valid": false,
+        "receipt": "f7fad5cc-56c6-4029-9dd7-83ca7a097966",
+        "fact": "Refresh-token-mutex-approved"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.list_comments",
+        "args": {
+          "issueId": "ENG-123"
+        },
+        "valid": true,
+        "receipt": "91c14fac-33df-4455-bdb6-c9a8bb245892",
+        "fact": "Refresh-token-mutex-approved"
+      }
+    }
+  ],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "native OpenCode V2 Code Mode",
+  "modelCostUsd": 0.00222276,
+  "jevCostUsd": 0,
+  "totalCostUsd": 0.00222276
+}

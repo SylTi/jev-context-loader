@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "local": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/absolute/path/to/your-mcp-server.js"],
+      "env": { "API_KEY": "YOUR_UPSTREAM_API_KEY" }
+    },
+    "remote": {
+      "type": "http",
+      "url": "https://your-server.example/mcp",
+      "headers": { "Authorization": "YOUR_UPSTREAM_AUTHORIZATION" }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+{"event":"search","query":"search GitHub pull requests open repository","replayConditioningTask":"Find GitHub pull requests in owner/example that are still open and mention the authentication migration."}
+{"event":"fixture","call":{"id":"github.search_prs","args":{"query":"authentication migration","repository_full_name":"owner/example","state":"open"},"valid":true,"receipt":"89454fd8-780c-4eeb-b56d-4138e4ab6e9d","fact":"auth-migration-pr-42"}}

@@ -1,0 +1,3190 @@
+{
+  "caseId": "h24",
+  "arm": "jev",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 65559,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/replay-server.ts",
+            "h24",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h24-jev.fixtures.jsonl"
+          ],
+          "codemode": false
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eeda4564bffeGQ72okzU0SioHl",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-5geAUr/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "project": {
+          "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+          "directory": "/tmp/jev-mcp-bench-5geAUr",
+          "canonical": "/tmp/jev-mcp-bench-5geAUr"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "pluginSnapshot": {
+    "location": {
+      "directory": "/tmp/jev-mcp-bench-5geAUr",
+      "project": {
+        "id": "312dd7229a0918aada8164b3eacf9c4df685a00b",
+        "directory": "/tmp/jev-mcp-bench-5geAUr",
+        "canonical": "/tmp/jev-mcp-bench-5geAUr"
+      }
+    },
+    "data": [
+      {
+        "id": "opencode.config.mcp",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.mcp.codemode.exclusion",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.wellknown",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.git",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.plan",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.hg",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.anthropic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.kimi",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.arcee",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.meta",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.models.dev",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.alibaba",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.amazon.bedrock",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.anthropic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.azure",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cerebras",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.ai.gateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.workers.ai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cohere",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.gateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.github.copilot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.gitlab",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.google.vertex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.kilo",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.llmgateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.lmstudio",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.mistral",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.modal",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.nvidia",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.ollama",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.opencode",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.snowflake.cortex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai.compatible",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openrouter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.perplexity",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.sap.ai.core",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.vercel",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.venice",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.vllm",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.xai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.zenmux",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.dynamic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.exa",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.firecrawl",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.parallel",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.tavily",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.patch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.edit",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.glob",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.grep",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tools",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.question",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.read",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.subagent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.webfetch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.write",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.warming",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.instruction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.reference",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.compaction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.formatter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.image",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.location-watcher",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.snapshot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.tool-output",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.provider",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.variant",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.policy",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      }
+    ]
+  },
+  "startupBarrier": "plugin activation plus 1 second catalog settle",
+  "events": [
+    {
+      "id": "msg_1125ba9c8001C9eHrq53GCX73d",
+      "time": {
+        "created": 1791309359588
+      },
+      "text": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1125ba9f1001F9OcLXqFsXxbMo",
+      "time": {
+        "created": 1791309365481,
+        "streamed": 1791309365529,
+        "completed": 1791309365555
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants me to read the ChatGPT Page page-example and its currently attached scheduled automations, without changing either. I need to find the right tools first. Let me search for relevant tools.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309365487,
+            "completed": 1791309365515
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_c7749d9c6cf04fc6942056f1",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "read page details"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309365500,
+            "ran": 1791309365521,
+            "completed": 1791309365547
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_81df0975221c42798c90c52d",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "page scheduled automations attached"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309365506,
+            "ran": 1791309365526,
+            "completed": 1791309365551
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 609,
+        "output": 28,
+        "reasoning": 41,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125bc1400019fP0jK4i1KPi2E",
+      "time": {
+        "created": 1791309370317,
+        "streamed": 1791309370368,
+        "completed": 1791309370386
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "No matches. Let me try different search queries.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309370322,
+            "completed": 1791309370346
+          }
+        },
+        {
+          "type": "text",
+          "text": "No matches yet — let me try different phrasings."
+        },
+        {
+          "type": "tool",
+          "id": "call_d097805497c540b1999fba2b",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "ChatGPT page"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309370334,
+            "ran": 1791309370354,
+            "completed": 1791309370378
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_46825230bea94051b6e886ef",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "automation"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309370339,
+            "ran": 1791309370360,
+            "completed": 1791309370383
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 214,
+        "output": 37,
+        "reasoning": 10,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125bd41f001E6nSnFQxHm7M9n",
+      "time": {
+        "created": 1791309375241,
+        "streamed": 1791309375280,
+        "completed": 1791309375298
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Still no matches. Let me try broader terms like \"get\", \"list\", \"fetch\".",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309375248,
+            "completed": 1791309375267
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_cff06e8fe493428284b2a319",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "get page by id"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309375257,
+            "ran": 1791309375272,
+            "completed": 1791309375293
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_cdad8322f0ac4cfbbe9003a7",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "list automations for page"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309375262,
+            "ran": 1791309375277,
+            "completed": 1791309375296
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 181,
+        "output": 29,
+        "reasoning": 19,
+        "cache": {
+          "read": 768,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125be755001Mt0kl7c55hOGVO",
+      "time": {
+        "created": 1791309379769,
+        "streamed": 1791309379808,
+        "completed": 1791309379831
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_a264ea5f3d364d9ba9c1b83a",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "page"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309379775,
+            "ran": 1791309379795,
+            "completed": 1791309379822
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_782e8c857ce44833bfd92cfd",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "scheduled"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309379782,
+            "ran": 1791309379804,
+            "completed": 1791309379827
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 213,
+        "output": 22,
+        "reasoning": 0,
+        "cache": {
+          "read": 896,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125bf910001FTiIGMXb3OgvI4",
+      "time": {
+        "created": 1791309386385,
+        "streamed": 1791309387853,
+        "completed": 1791309387859
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The search is returning no matches for everything. The searches seem cached — maybe the search returns nothing because there is a limited set of disclosed tools. Let me try describing the tool IDs directly, guessing? No — I should not invent IDs. But maybe fixture_describe could reveal schemas if the IDs exist. The instructions say \"Load full tool schemas by IDs returned from search or already known.\" I don't have IDs from search. All searches are empty.\n\nLet me try a couple more varied search queries — maybe the threshold 0.75 is high. Try \"fetch\", \"read\", \"retrieve\".",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309386390,
+            "completed": 1791309387849
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_869cf9c1a20244a7a1e7ea79",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "retrieve record"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309387840,
+            "ran": 1791309387851,
+            "completed": 1791309387856
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_4365cf81aeef448e9c1c3087",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "fetch content"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309387845,
+            "ran": 1791309387852,
+            "completed": 1791309387858
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 155,
+        "output": 24,
+        "reasoning": 121,
+        "cache": {
+          "read": 1088,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125c1859001Kwsc1Emhq5fACR",
+      "time": {
+        "created": 1791309393507,
+        "streamed": 1791309398323,
+        "completed": 1791309398330
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The search consistently returns no matches across many queries. The fixture server seems to have no disclosed tools matching. The guidance says \"Empty matches do not prove a capability is absent.\" But I've tried 10 queries now with different phrasings. Maybe I could try fixture_describe with plausible IDs? The instructions say to load schemas \"by IDs returned from search or already known.\" I don't have any IDs. Guessing IDs like \"fixture_read_page\" would be inventing. However, it might be acceptable to attempt a describe with a guess? That risks calling an unknown operation. fixture_describe only loads schemas, doesn't execute operations — so it's read-only and harmless. Let me try a few plausible IDs to see if any exist. Actually, \"Do not invent missing data\" — describing with guessed IDs isn't inventing data; it's probing. But it might fail. It's worth one attempt.\n\nLet me try common naming patterns: \"fixture_get_page\", \"get_page\", \"read_page\", \"page_read\", \"automation_list\".",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309393510,
+            "completed": 1791309398315
+          }
+        },
+        {
+          "type": "text",
+          "text": "Search returns no matches across many phrasings. Let me probe for tool schemas by plausible IDs (this only loads schemas, does not execute anything)."
+        },
+        {
+          "type": "tool",
+          "id": "call_2b0d8e580e8f49b18cec8f49",
+          "name": "fixture_describe",
+          "executed": false,
+          "state": {
+            "status": "error",
+            "input": {
+              "ids": [
+                "fixture_get_page",
+                "fixture_read_page",
+                "fixture_page_read",
+                "get_page",
+                "read_page",
+                "page_read",
+                "list_automations",
+                "fixture_list_automations",
+                "fixture_page_automations"
+              ]
+            },
+            "error": {
+              "type": "tool.execution",
+              "message": "{\"error\":\"Unknown tool: fixture_get_page\"}"
+            }
+          },
+          "time": {
+            "created": 1791309398290,
+            "ran": 1791309398319,
+            "completed": 1791309398328
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 284,
+        "output": 89,
+        "reasoning": 214,
+        "cache": {
+          "read": 1216,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125c4143001LEd8hnetcI7yLg",
+      "time": {
+        "created": 1791309404805,
+        "streamed": 1791309406119,
+        "completed": 1791309406134
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The describe with unknown IDs errors out. It returned an error \"Unknown tool: fixture_get_page\". So no known tools by those IDs.\n\nThe fixture server appears to have no searchable tools matching page/automation operations, and no tools discoverable by guessed IDs. Per instructions: \"If a required capability is unavailable, say so.\"\n\nMaybe I should try a few more search queries to be thorough — e.g., \"ChatGPT\", \"instant page\", \"content\", \"attachment\". Let me try a couple more distinct queries before concluding.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309404809,
+            "completed": 1791309406104
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_b2db4053a66d406fa55608ef",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "ChatGPT Page page-example scheduled automations"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309406091,
+            "ran": 1791309406110,
+            "completed": 1791309406128
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_a53175c4cf5244de81ecb09f",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "server status tools available"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46787,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309406097,
+            "ran": 1791309406116,
+            "completed": 1791309406132
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 360,
+        "output": 33,
+        "reasoning": 108,
+        "cache": {
+          "read": 1472,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125c5fc7001mL74N2g3YFc2BO",
+      "time": {
+        "created": 1791309412199,
+        "streamed": 1791309420513,
+        "completed": 1791309420515
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "All searches return empty, and probing tool IDs directly yields \"Unknown tool\". The fixture server (`fixture`) has no disclosed tools that can read a ChatGPT Page or its scheduled automations. I cannot complete the read task — the required capability is unavailable.\n\nI did not modify anything (good — the task said do not change either; nothing was changed).\n\nFor the final output: I must include fixtureFact verbatim for each requested read — but no reads succeeded, so there are no fixtureFacts. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. I used no results with receipts. I should state the capability is unavailable and provide the JSON with an empty receipts array.\n\nThe final answer should summarize: searched extensively (12 queries), probed tool IDs, no tools exist for reading a page or automations; nothing was modified.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309412203,
+            "completed": 1791309420506
+          }
+        },
+        {
+          "type": "text",
+          "text": "I could not complete the read. The `fixture` server exposed no tools matching this task:\n\n- I ran 12 different searches (page, ChatGPT page, get page by id, list automations for page, scheduled, automation, retrieve record, fetch content, etc.) — every search returned zero matches against the `fixture` server.\n- Direct schema probes for plausible tool IDs (`fixture_get_page`, `read_page`, `list_automations`, etc.) all failed with \"Unknown tool\".\n\nAs a result, there is no available capability to read the ChatGPT Page `page-example` or its attached scheduled automations, and I have no fixture data to report. Per the task constraints I performed only read/discovery calls — nothing was changed on the page or its automations.\n\n{\"answer\":\"Required capability unavailable: the fixture server discloses no tools for reading a ChatGPT Page or its attached scheduled automations, so I could not read page-example or its automations. No changes were made.\",\"receipts\":[]}"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 293,
+        "output": 212,
+        "reasoning": 178,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [],
+  "answer": "No matches yet — let me try different phrasings.\nSearch returns no matches across many phrasings. Let me probe for tool schemas by plausible IDs (this only loads schemas, does not execute anything).\nI could not complete the read. The `fixture` server exposed no tools matching this task:\n\n- I ran 12 different searches (page, ChatGPT page, get page by id, list automations for page, scheduled, automation, retrieve record, fetch content, etc.) — every search returned zero matches against the `fixture` server.\n- Direct schema probes for plausible tool IDs (`fixture_get_page`, `read_page`, `list_automations`, etc.) all failed with \"Unknown tool\".\n\nAs a result, there is no available capability to read the ChatGPT Page `page-example` or its attached scheduled automations, and I have no fixture data to report. Per the task constraints I performed only read/discovery calls — nothing was changed on the page or its automations.\n\n{\"answer\":\"Required capability unavailable: the fixture server discloses no tools for reading a ChatGPT Page or its attached scheduled automations, so I could not read page-example or its automations. No changes were made.\",\"receipts\":[]}",
+  "usage": [
+    {
+      "tokens": {
+        "input": 609,
+        "output": 28,
+        "reasoning": 41,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 214,
+        "output": 37,
+        "reasoning": 10,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 181,
+        "output": 29,
+        "reasoning": 19,
+        "cache": {
+          "read": 768,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 213,
+        "output": 22,
+        "reasoning": 0,
+        "cache": {
+          "read": 896,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 155,
+        "output": 24,
+        "reasoning": 121,
+        "cache": {
+          "read": 1088,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 284,
+        "output": 89,
+        "reasoning": 214,
+        "cache": {
+          "read": 1216,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 360,
+        "output": 33,
+        "reasoning": 108,
+        "cache": {
+          "read": 1472,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 293,
+        "output": 212,
+        "reasoning": 178,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "search",
+      "query": "read page details",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "page scheduled automations attached",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "ChatGPT page",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "automation",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "get page by id",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "list automations for page",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "page",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "scheduled",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "retrieve record",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "fetch content",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "ChatGPT Page page-example scheduled automations",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    },
+    {
+      "event": "search",
+      "query": "server status tools available",
+      "replayConditioningTask": "Read the ChatGPT Page page-example and its currently attached scheduled automations. Do not change either."
+    }
+  ],
+  "grade": {
+    "pass": false,
+    "missing": [
+      [
+        "spaces.read_page"
+      ],
+      [
+        "spaces.list_page_automations"
+      ]
+    ],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "fixed task-level Jev replay",
+  "modelCostUsd": 0.0011630899999999999,
+  "jevCostUsd": 0.001965054,
+  "totalCostUsd": 0.003128144
+}

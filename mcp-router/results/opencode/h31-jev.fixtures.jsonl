@@ -1,0 +1,2 @@
+{"event":"search","query":"Linear ticket issue details ENG-123 description","replayConditioningTask":"Montre les détails du ticket Linear ENG-123, avec sa description complète."}
+{"event":"fixture","call":{"id":"linear.get_issue","args":{"id":"ENG-123"},"valid":true,"receipt":"df4245ce-14d8-4405-bd98-c532ff5d8803","fact":"token-expiry-race-condition"}}

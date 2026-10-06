@@ -1,0 +1,1067 @@
+{
+  "caseId": "h16",
+  "arm": "jev",
+  "repeatCount": 1,
+  "selected": [
+    "spaces.get_page_sharing",
+    "spaces.get_space_sharing",
+    "spaces.update_page_sharing",
+    "spaces.update_space_sharing"
+  ],
+  "definitionTokens": 1642,
+  "elapsedMs": 11142,
+  "calls": [
+    {
+      "id": "spaces.get_page_sharing",
+      "args": {
+        "page_id": "page-example"
+      },
+      "valid": true,
+      "receipt": "fa962241-2209-4d6e-aceb-d5e2b3fe6d9a",
+      "fact": "reader@example.test"
+    }
+  ],
+  "answer": "{\"answer\":\"Page page-example grants reader access to reader@example.test. fixtureFact: reader@example.test\",\"receipts\":[\"fa962241-2209-4d6e-aceb-d5e2b3fe6d9a\"]}",
+  "usageSamples": [
+    {
+      "totalTokens": 9469,
+      "inputTokens": 9436,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 33,
+      "reasoningOutputTokens": 0
+    },
+    {
+      "totalTokens": 9603,
+      "inputTokens": 9548,
+      "cachedInputTokens": 9216,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 55,
+      "reasoningOutputTokens": 0
+    }
+  ],
+  "status": "completed",
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "turns": [
+    {
+      "answer": "{\"answer\":\"Page page-example grants reader access to reader@example.test. fixtureFact: reader@example.test\",\"receipts\":[\"fa962241-2209-4d6e-aceb-d5e2b3fe6d9a\"]}",
+      "grade": {
+        "pass": true,
+        "missing": [],
+        "forbidden": [],
+        "noTool": true,
+        "arithmetic": true
+      }
+    }
+  ],
+  "jevCostUsd": 0.0019648020000000003,
+  "jevEvaluationTimeMs": 331.77296799840406,
+  "events": [
+    {
+      "id": 1,
+      "result": {
+        "userAgent": "Codex Desktop/0.160.1 (Linux Mint 22.3.0; x86_64) dumb (jev_discovery_benchmark; 0.1.0)",
+        "codexHome": "/home/syl/.codex",
+        "platformFamily": "unix",
+        "platformOs": "linux"
+      }
+    },
+    {
+      "method": "remoteControl/status/changed",
+      "params": {
+        "status": "disabled",
+        "serverName": "syl-NucBox-EVO-X1",
+        "installationId": "0e15d181-4ae1-4241-87bb-c8b8d54e2644",
+        "environmentId": null
+      },
+      "emittedAtMs": 1791280848495
+    },
+    {
+      "id": 2,
+      "result": {
+        "configuredMcpServerNames": [
+          "node_repl",
+          "pending-provider-write",
+          "private-mcp",
+          "github",
+          "safe",
+          "linear",
+          "secret"
+        ]
+      }
+    },
+    {
+      "method": "benchmark/isolation",
+      "params": {
+        "disabledMcpServerNames": [
+          "node_repl",
+          "pending-provider-write",
+          "private-mcp",
+          "github",
+          "safe",
+          "linear",
+          "secret"
+        ],
+        "apps": false,
+        "plugins": false
+      }
+    },
+    {
+      "method": "warning",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /home/syl/.codex/config.toml."
+      },
+      "emittedAtMs": 1791280848640
+    },
+    {
+      "id": 3,
+      "result": {
+        "thread": {
+          "id": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280848,
+          "updatedAt": 1791280848,
+          "recencyAt": 1791280848,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        },
+        "model": "gpt-6.1-sol",
+        "modelProvider": "openai",
+        "serviceTier": "default",
+        "disabledPluginIds": [],
+        "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+        "runtimeWorkspaceRoots": [],
+        "instructionSources": [
+          "/home/syl/.codex/AGENTS.md"
+        ],
+        "approvalPolicy": "never",
+        "approvalsReviewer": "auto_review",
+        "sandbox": {
+          "type": "readOnly",
+          "networkAccess": false
+        },
+        "activePermissionProfile": null,
+        "reasoningEffort": "medium",
+        "multiAgentMode": "explicitRequestOnly"
+      }
+    },
+    {
+      "method": "thread/started",
+      "params": {
+        "thread": {
+          "id": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+          "environments": [],
+          "extra": null,
+          "sessionId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+          "forkedFromId": null,
+          "parentThreadId": null,
+          "preview": "",
+          "ephemeral": true,
+          "section": null,
+          "sectionEnteredAt": null,
+          "projectId": null,
+          "historyMode": "paginated",
+          "modelProvider": "openai",
+          "model": "gpt-6.1-sol",
+          "reasoningEffort": "medium",
+          "createdAt": 1791280848,
+          "updatedAt": 1791280848,
+          "recencyAt": 1791280848,
+          "status": {
+            "type": "idle"
+          },
+          "path": null,
+          "cwd": "/home/syl/work/jev-skill-router/benchmarks/mcp-discovery/codex",
+          "cliVersion": "0.160.1",
+          "originator": "Codex Desktop",
+          "source": "vscode",
+          "canAcceptDirectInput": true,
+          "threadSource": null,
+          "agentNickname": null,
+          "agentRole": null,
+          "gitInfo": null,
+          "name": null,
+          "daybreakEnabled": null,
+          "turns": []
+        }
+      },
+      "emittedAtMs": 1791280848640
+    },
+    {
+      "id": 4,
+      "result": {
+        "turn": {
+          "id": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": null,
+          "completedAt": null,
+          "durationMs": null
+        }
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1791280848647
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turn": {
+          "id": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+          "items": [],
+          "itemsView": "notLoaded",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1791280848,
+          "completedAt": null,
+          "durationMs": null
+        }
+      },
+      "emittedAtMs": 1791280848647
+    },
+    {
+      "method": "hook/started",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "running",
+          "statusMessage": null,
+          "startedAt": 1791280849,
+          "completedAt": null,
+          "durationMs": null,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280849846
+    },
+    {
+      "method": "hook/completed",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "run": {
+          "id": "session-start:1:/home/syl/.codex/hooks.json",
+          "eventName": "sessionStart",
+          "handlerType": "command",
+          "executionMode": "sync",
+          "scope": "thread",
+          "sourcePath": "/home/syl/.codex/hooks.json",
+          "source": "user",
+          "displayOrder": 1,
+          "status": "completed",
+          "statusMessage": null,
+          "startedAt": 1791280849,
+          "completedAt": 1791280849,
+          "durationMs": 3,
+          "entries": []
+        }
+      },
+      "emittedAtMs": 1791280849850
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a8-a3ba-7ab1-a00f-6b08ba3f2371",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Read the sharing permissions of the ChatGPT Page with ID page-example.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "startedAtMs": 1791280849850
+      },
+      "emittedAtMs": 1791280849850
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a110a8-a3ba-7ab1-a00f-6b08ba3f2371",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "Read the sharing permissions of the ChatGPT Page with ID page-example.",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "completedAtMs": 1791280849850
+      },
+      "emittedAtMs": 1791280849850
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-ad5309fa-28a9-4289-a4e2-15a5157825a5",
+          "namespace": "spaces",
+          "tool": "get_page_sharing",
+          "arguments": {
+            "page_id": "page-example"
+          },
+          "status": "inProgress",
+          "contentItems": null,
+          "success": null,
+          "durationMs": null
+        },
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "startedAtMs": 1791280851970
+      },
+      "emittedAtMs": 1791280851970
+    },
+    {
+      "method": "item/tool/call",
+      "id": 0,
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "callId": "exec-ad5309fa-28a9-4289-a4e2-15a5157825a5",
+        "namespace": "spaces",
+        "tool": "get_page_sharing",
+        "arguments": {
+          "page_id": "page-example"
+        }
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "dynamicToolCall",
+          "id": "exec-ad5309fa-28a9-4289-a4e2-15a5157825a5",
+          "namespace": "spaces",
+          "tool": "get_page_sharing",
+          "arguments": {
+            "page_id": "page-example"
+          },
+          "status": "completed",
+          "contentItems": [
+            {
+              "type": "inputText",
+              "text": "{\"fixtureFact\":\"reader@example.test\",\"receipt\":\"fa962241-2209-4d6e-aceb-d5e2b3fe6d9a\",\"page_id\":\"page-example\",\"permissions\":[{\"email\":\"reader@example.test\",\"role\":\"reader\"}]}"
+            }
+          ],
+          "success": true,
+          "durationMs": 0
+        },
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "completedAtMs": 1791280851971
+      },
+      "emittedAtMs": 1791280851971
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 9469,
+            "inputTokens": 9436,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 33,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9469,
+            "inputTokens": 9436,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 33,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280851971
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+          "text": "",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "startedAtMs": 1791280858353
+      },
+      "emittedAtMs": 1791280858353
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "{\""
+      },
+      "emittedAtMs": 1791280858359
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "answer"
+      },
+      "emittedAtMs": 1791280858396
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "\":\""
+      },
+      "emittedAtMs": 1791280858396
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "Page"
+      },
+      "emittedAtMs": 1791280858396
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " page"
+      },
+      "emittedAtMs": 1791280858396
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "-example"
+      },
+      "emittedAtMs": 1791280858396
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " grants"
+      },
+      "emittedAtMs": 1791280858474
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " reader"
+      },
+      "emittedAtMs": 1791280858623
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " access"
+      },
+      "emittedAtMs": 1791280858623
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " to"
+      },
+      "emittedAtMs": 1791280858737
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " reader"
+      },
+      "emittedAtMs": 1791280858737
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "@example"
+      },
+      "emittedAtMs": 1791280858737
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": ".test"
+      },
+      "emittedAtMs": 1791280858738
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "."
+      },
+      "emittedAtMs": 1791280858740
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " fixture"
+      },
+      "emittedAtMs": 1791280858867
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "Fact"
+      },
+      "emittedAtMs": 1791280858872
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": ":"
+      },
+      "emittedAtMs": 1791280858872
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": " reader"
+      },
+      "emittedAtMs": 1791280858873
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "@example"
+      },
+      "emittedAtMs": 1791280858876
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": ".test"
+      },
+      "emittedAtMs": 1791280858880
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "\",\""
+      },
+      "emittedAtMs": 1791280858885
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "rece"
+      },
+      "emittedAtMs": 1791280858895
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "ipts"
+      },
+      "emittedAtMs": 1791280858998
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "\":[\""
+      },
+      "emittedAtMs": 1791280859006
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "fa"
+      },
+      "emittedAtMs": 1791280859006
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "962"
+      },
+      "emittedAtMs": 1791280859009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "241"
+      },
+      "emittedAtMs": 1791280859009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280859009
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "220"
+      },
+      "emittedAtMs": 1791280859014
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280859021
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280859138
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "4"
+      },
+      "emittedAtMs": 1791280859138
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280859139
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "6"
+      },
+      "emittedAtMs": 1791280859140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280859140
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "-"
+      },
+      "emittedAtMs": 1791280859141
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "ace"
+      },
+      "emittedAtMs": 1791280859142
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280859148
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "-d"
+      },
+      "emittedAtMs": 1791280859252
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "5"
+      },
+      "emittedAtMs": 1791280859272
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "e"
+      },
+      "emittedAtMs": 1791280859272
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "2"
+      },
+      "emittedAtMs": 1791280859272
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "b"
+      },
+      "emittedAtMs": 1791280859272
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "3"
+      },
+      "emittedAtMs": 1791280859279
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "fe"
+      },
+      "emittedAtMs": 1791280859279
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "6"
+      },
+      "emittedAtMs": 1791280859279
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "d"
+      },
+      "emittedAtMs": 1791280859439
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "9"
+      },
+      "emittedAtMs": 1791280859439
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "a"
+      },
+      "emittedAtMs": 1791280859439
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "\"]"
+      },
+      "emittedAtMs": 1791280859449
+    },
+    {
+      "method": "item/agentMessage/delta",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "itemId": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+        "delta": "}"
+      },
+      "emittedAtMs": 1791280859449
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+          "text": "{\"answer\":\"Page page-example grants reader access to reader@example.test. fixtureFact: reader@example.test\",\"receipts\":[\"fa962241-2209-4d6e-aceb-d5e2b3fe6d9a\"]}",
+          "phase": "final_answer",
+          "memoryCitation": null,
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "completedAtMs": 1791280859505
+      },
+      "emittedAtMs": 1791280859505
+    },
+    {
+      "method": "thread/tokenUsage/updated",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turnId": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+        "tokenUsage": {
+          "total": {
+            "totalTokens": 19072,
+            "inputTokens": 18984,
+            "cachedInputTokens": 9216,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 88,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9603,
+            "inputTokens": 9548,
+            "cachedInputTokens": 9216,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 55,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 258400
+        }
+      },
+      "emittedAtMs": 1791280859517
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1791280859518
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a110a8-9e8a-79d3-a4b1-cfc73df68af3",
+        "turn": {
+          "id": "01a110a8-9f02-7cd0-9f89-6ddd095abf33",
+          "items": [
+            {
+              "type": "agentMessage",
+              "id": "msg_0c360d8b089dfcbb016ac4c6da565487d2b93130e1702ba1a2",
+              "text": "{\"answer\":\"Page page-example grants reader access to reader@example.test. fixtureFact: reader@example.test\",\"receipts\":[\"fa962241-2209-4d6e-aceb-d5e2b3fe6d9a\"]}",
+              "phase": "final_answer",
+              "memoryCitation": null,
+              "delivery": null,
+              "questions": null
+            }
+          ],
+          "itemsView": "summary",
+          "status": "completed",
+          "error": null,
+          "startedAt": 1791280848,
+          "completedAt": 1791280859,
+          "durationMs": 10872
+        }
+      },
+      "emittedAtMs": 1791280859518
+    }
+  ],
+  "usage": {
+    "totalTokens": 19072,
+    "inputTokens": 18984,
+    "cachedInputTokens": 9216,
+    "cacheWriteInputTokens": 0,
+    "outputTokens": 88,
+    "reasoningOutputTokens": 0
+  },
+  "costUsd": 0.023302402
+}

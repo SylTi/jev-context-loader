@@ -1,0 +1,215 @@
+{
+  "reviewed_at": "2026-10-06",
+  "repositories": [
+    {
+      "repo": "NousResearch/hermes-agent",
+      "branch": "main",
+      "sha": "0dbaf33f67acf1f6d8e8e6c6efe8042ef8db98c4",
+      "truncated": false,
+      "files": [
+        {
+          "path": "evals/tool_search/README.md",
+          "sha256": "c9f17db138cc269e49866be9cb3144ebf104042f11687f272391c844deca3cba",
+          "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/0dbaf33f67acf1f6d8e8e6c6efe8042ef8db98c4/evals/tool_search/README.md"
+        },
+        {
+          "path": "hermes_cli/config_defaults.py",
+          "sha256": "4b6297e977b87100bc04f4251a0569a19412113d7fa91e840a551912e5a87e3f",
+          "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/0dbaf33f67acf1f6d8e8e6c6efe8042ef8db98c4/hermes_cli/config_defaults.py"
+        },
+        {
+          "path": "tools/tool_search.py",
+          "sha256": "1b189c8209d51374bda6da3e9610f5634f43fa49bc3fbc614cf9076dec0573a9",
+          "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/0dbaf33f67acf1f6d8e8e6c6efe8042ef8db98c4/tools/tool_search.py"
+        },
+        {
+          "path": "tools/tool_search_catalog.py",
+          "sha256": "7ecbeef40ce88a2932fc261b881923a808004876d8425e668c3c829162552722",
+          "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/0dbaf33f67acf1f6d8e8e6c6efe8042ef8db98c4/tools/tool_search_catalog.py"
+        }
+      ]
+    },
+    {
+      "repo": "openclaw/openclaw",
+      "branch": "main",
+      "sha": "2e59936b6747f10c44edb76decd662c2d27305be",
+      "truncated": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9efd316ecf1c4c60f6fd5d26433142fff2b6794d7d328e9bc6179b29bf9c82a4",
+          "url": "https://raw.githubusercontent.com/openclaw/openclaw/2e59936b6747f10c44edb76decd662c2d27305be/LICENSE"
+        },
+        {
+          "path": "docs/tools/tool-search.md",
+          "sha256": "e7107276ace5cd22cdc607f6933459eab6e15afa9f52f147aabbb3b23074919b",
+          "url": "https://raw.githubusercontent.com/openclaw/openclaw/2e59936b6747f10c44edb76decd662c2d27305be/docs/tools/tool-search.md"
+        },
+        {
+          "path": "src/agents/tool-search-config.ts",
+          "sha256": "2d96c8239d191673a644e886480ac35490096de1c949b5d7e6a384a7a2a66369",
+          "url": "https://raw.githubusercontent.com/openclaw/openclaw/2e59936b6747f10c44edb76decd662c2d27305be/src/agents/tool-search-config.ts"
+        },
+        {
+          "path": "src/agents/tool-search-directory.ts",
+          "sha256": "43c1dcc7eef6361d205f05fd2c1375c0b893bce693d12156533856ddbaff7ca5",
+          "url": "https://raw.githubusercontent.com/openclaw/openclaw/2e59936b6747f10c44edb76decd662c2d27305be/src/agents/tool-search-directory.ts"
+        },
+        {
+          "path": "src/agents/tool-search-ranking.ts",
+          "sha256": "5290f74f9f8ef831d2a8ff7b24a3809505b7c167ad6da3e91081474176066171",
+          "url": "https://raw.githubusercontent.com/openclaw/openclaw/2e59936b6747f10c44edb76decd662c2d27305be/src/agents/tool-search-ranking.ts"
+        }
+      ]
+    },
+    {
+      "repo": "anomalyco/opencode",
+      "branch": "dev",
+      "sha": "3f393d78bfc3f0826b2c7080e57964c235704695",
+      "truncated": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/LICENSE"
+        },
+        {
+          "path": "packages/codemode/src/codemode.ts",
+          "sha256": "3879f24437731883f423bf249e8cf13a4fda3f14a354fc42ab390877c53d7d0d",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/codemode/src/codemode.ts"
+        },
+        {
+          "path": "packages/codemode/src/tool-runtime.ts",
+          "sha256": "4b10bd31a9c10104a0248e8f614cb7274c964eb8efddcce749382361bcd65d20",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/codemode/src/tool-runtime.ts"
+        },
+        {
+          "path": "packages/core/src/config/mcp.ts",
+          "sha256": "5e5c1ed7d3d1a786edd6acc9774f5b4c91d6487279a34a8409c4090c42f95633",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/core/src/config/mcp.ts"
+        },
+        {
+          "path": "packages/core/src/github-copilot/responses/tool/code-interpreter.ts",
+          "sha256": "749ec243931b61215a7228d02a6814f2dab985aa3eb4c555b63d77420eaf5927",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/core/src/github-copilot/responses/tool/code-interpreter.ts"
+        },
+        {
+          "path": "packages/core/src/session/prompt.ts",
+          "sha256": "f617d889d032bd762f4c8f57f0839d81d320e223139c24c4838f7992cbe1679b",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/core/src/session/prompt.ts"
+        },
+        {
+          "path": "packages/core/src/tool/registry.ts",
+          "sha256": "cf2f73a4c6ed6ede7ba1cac30dac9bdf004142461d5bbcc8d55421cb2def7254",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/core/src/tool/registry.ts"
+        },
+        {
+          "path": "packages/opencode/src/effect/runtime-flags.ts",
+          "sha256": "5b580cb96f9d5300f8ff995a29ec5e602e0e3e0200661dfff971998562f2a1a9",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/effect/runtime-flags.ts"
+        },
+        {
+          "path": "packages/opencode/src/mcp/index.ts",
+          "sha256": "82c459309dfd005d25daecfabc1007d807d4bee23f6078434974277938a1c026",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/mcp/index.ts"
+        },
+        {
+          "path": "packages/opencode/src/session/llm/native-runtime.ts",
+          "sha256": "ad7ba806e0b9d429ccd93b02b3583754254e6fc540450cb97e16393c28d394c2",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/session/llm/native-runtime.ts"
+        },
+        {
+          "path": "packages/opencode/src/session/llm/request.ts",
+          "sha256": "90077551a9a46e11a37f44279c584832918d722c0ba0407ff8cad8d3437dd0de",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/session/llm/request.ts"
+        },
+        {
+          "path": "packages/opencode/src/session/llm.ts",
+          "sha256": "5f1dcfb734853e39760e4dd05470f0c7d8752fc5dcc64e118c065149602e402d",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/session/llm.ts"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt.ts",
+          "sha256": "f0c5bc64c0f0e966693d4a57f7ede1e9d6e188b396152f04b55303dc75b9b768",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/session/prompt.ts"
+        },
+        {
+          "path": "packages/opencode/src/session/tools.ts",
+          "sha256": "5ad3f44682fc8e2bacb2222157943de8ab7dd663a1e0ddf5e4a213539b1f67d7",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/session/tools.ts"
+        },
+        {
+          "path": "packages/opencode/src/tool/code-mode.ts",
+          "sha256": "9a95ddba2ea9ef15c9276ee07cf88bf729b11ade6619ed03c5c8690b46e402aa",
+          "url": "https://raw.githubusercontent.com/anomalyco/opencode/3f393d78bfc3f0826b2c7080e57964c235704695/packages/opencode/src/tool/code-mode.ts"
+        }
+      ]
+    },
+    {
+      "repo": "CopilotKit/OpenDots",
+      "branch": "main",
+      "sha": "565bf781d654339ee1ce83b17ee00d76d679608e",
+      "truncated": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "sha256": "b45225f1d2748b969699303d4e73a089747b4a4b429c42486b6913fcc0470cde",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/README.md"
+        },
+        {
+          "path": "docs/SETUP.md",
+          "sha256": "a071b3a0030f58ec2bf78f2824a91e1b6b5fba0a4304a7f9a0f7ea6459459a0d",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/docs/SETUP.md"
+        },
+        {
+          "path": "package.json",
+          "sha256": "4143fffbcbd5497dde5c7c3ae008dd00c15a6e3d52bbf534be13994ce9fbcf5b",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/package.json"
+        },
+        {
+          "path": "src/server/computer-tools.ts",
+          "sha256": "81566e690d2a75667d20e68e3bc5a87e9d607cc01d4775cd723050df5c13dc67",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/src/server/computer-tools.ts"
+        },
+        {
+          "path": "src/server/dot-agent.ts",
+          "sha256": "0196eda30041c6a9ec91ca8aed48bcef699a662327c32cf67f221d43632078ea",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/src/server/dot-agent.ts"
+        },
+        {
+          "path": "src/server/learning.ts",
+          "sha256": "367604eeb2a9095598ee0aee65e7a447e6d93f2f6e15cbb81c46f90cd6adc6e4",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/src/server/learning.ts"
+        },
+        {
+          "path": "src/server/platform.ts",
+          "sha256": "5f316876ad3436557cbc500837d95180a3dab6c1c7200caf5ec04e7a78b19b17",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/src/server/platform.ts"
+        },
+        {
+          "path": "src/server/research.ts",
+          "sha256": "7fed1ff8d3bea8a8119231078c21d5e24d0f677afc00f53bc32e36aecbf235f1",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/src/server/research.ts"
+        },
+        {
+          "path": "src/server/tanstack-tools.ts",
+          "sha256": "71a2ffe83d9bfd034d20083319c39eb3e1f5861d94fb901a03fbff4edc43ee83",
+          "url": "https://raw.githubusercontent.com/CopilotKit/OpenDots/565bf781d654339ee1ce83b17ee00d76d679608e/src/server/tanstack-tools.ts"
+        }
+      ]
+    }
+  ],
+  "web_snapshots": [
+    {
+      "path": "sources/openai/tool-search.md",
+      "url": "https://developers.openai.com/api/docs/guides/tools-tool-search.md",
+      "retrieved_at": "2026-10-06",
+      "sha256": "9d6c3855a4cb722a98fb364618a852fb436e9822a36fe9b54650f75bbc8d1fd8"
+    }
+  ]
+}

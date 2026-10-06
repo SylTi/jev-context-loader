@@ -1,0 +1,2 @@
+{"event":"search","query":"linear team status values","replayConditioningTask":"List the available status values for the Linear Engineering team."}
+{"event":"fixture","call":{"id":"linear.list_issue_statuses","args":{"team":"Engineering"},"valid":true,"receipt":"bf4c30ab-d99d-4cf3-bf01-eaf55c4dd446","fact":"Ready-for-release"}}

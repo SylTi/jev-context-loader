@@ -1,0 +1,2 @@
+{"event":"search","query":"GitHub pull request get details draft author merged","replayConditioningTask":"Inspect GitHub PR 42 in owner/example to tell me whether it is a draft, who authored it, and whether it has merged. I do not need its patch."}
+{"event":"fixture","call":{"id":"github.get_pr_info","args":{"pr_number":42,"repository_full_name":"owner/example"},"valid":true,"receipt":"9e9785f9-87a4-4c05-9401-bbd824004db6","fact":"fixture-author-alice"}}

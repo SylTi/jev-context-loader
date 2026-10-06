@@ -1,0 +1,4 @@
+✓ Home Assistant moved out of core — installed the 'homeassistant' plugin from the catalog (HASS_TOKEN/HASS_URL, platforms.homeassistant and the ha_* tool names are unchanged).
+  ┊ 📖 Reading tool details · 1 tool  0.0s
+  ┊ 🔌 GitHub · search issues  repo:owner/example erreur de connexion  0.0s
+  ┊ 🔌 GitHub · search issues  repo:owner/example connexion OR connection  0.0s

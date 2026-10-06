@@ -1,0 +1,2408 @@
+{
+  "caseId": "h21",
+  "arm": "jev",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 38564,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/replay-server.ts",
+            "h21",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h21-jev.fixtures.jsonl"
+          ],
+          "codemode": false
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eeda4eed8ffeLyPFJ7FzFX1WZ7",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-X5xfGD/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": []
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "project": {
+          "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+          "directory": "/tmp/jev-mcp-bench-X5xfGD",
+          "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "pluginSnapshot": {
+    "location": {
+      "directory": "/tmp/jev-mcp-bench-X5xfGD",
+      "project": {
+        "id": "fd9ee971bc44e047056ec6641f56433129038d0b",
+        "directory": "/tmp/jev-mcp-bench-X5xfGD",
+        "canonical": "/tmp/jev-mcp-bench-X5xfGD"
+      }
+    },
+    "data": [
+      {
+        "id": "opencode.config.mcp",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.mcp.codemode.exclusion",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.wellknown",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.git",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.plan",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.vcs.hg",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.anthropic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.kimi",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.arcee",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.prompt.meta",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.models.dev",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.alibaba",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.amazon.bedrock",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.anthropic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.azure",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cerebras",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.ai.gateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cloudflare.workers.ai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.cohere",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.gateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.github.copilot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.gitlab",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.google.vertex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.kilo",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.llmgateway",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.lmstudio",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.mistral",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.modal",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.nvidia",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.ollama",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.opencode",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.snowflake.cortex",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai.compatible",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.openrouter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.perplexity",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.sap.ai.core",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.vercel",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.venice",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.vllm",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.xai",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.zenmux",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.provider.dynamic",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.exa",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.firecrawl",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.parallel",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.websearch.tavily",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.patch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.edit",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.glob",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.grep",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tools",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.question",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.read",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.subagent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.webfetch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.tool.write",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.warming",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.instruction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.reference",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.agent",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.command",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.compaction",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.formatter",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.image",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.location-watcher",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.shell",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.snapshot",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.tool-output",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.skill",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.provider",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.websearch",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.variant",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      },
+      {
+        "id": "opencode.config.policy",
+        "source": {
+          "type": "builtin"
+        },
+        "features": {
+          "server": true
+        },
+        "state": {
+          "status": "active"
+        }
+      }
+    ]
+  },
+  "startupBarrier": "plugin activation plus 1 second catalog settle",
+  "events": [
+    {
+      "id": "msg_1125b1139001tpPrFRgf5HUSj0",
+      "time": {
+        "created": 1791309320520
+      },
+      "text": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1125b1154001mE8PKy9XwTT1Ir",
+      "time": {
+        "created": 1791309325879,
+        "streamed": 1791309325902,
+        "completed": 1791309325917
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants me to inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit.\n\nLet me search for relevant tools first.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309325882,
+            "completed": 1791309325896
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_7f12c5b91d6347fe8e25ac0d",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "GitHub pull request metadata and patch"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch approved public GitHub repository resources and repository files. Supports repositories, directories, code and issue search, and blob or raw file URLs. Pull requests, issues, commits, branches, workflow runs, releases, Git data, commit statuses, and rulesets include their collections and subresources via GET only, including branch-protection and ruleset reads. The active connection's repository permissions still apply. Managed GitHub App installation connections exclude administration access, so they cannot read branch-protection endpoints that require that permission. Unlisted API endpoints and non-public-GitHub hosts are rejected. Sensitive endpoint families, such as user, organization, and secrets APIs, are not supported. Contents URLs without a ref use the repository's default branch. JSON responses are returned unchanged; oversized or non-UTF-8 responses are rejected, so binary downloads are not supported. This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_pr\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch a pull request with its diff, metadata, and optionally comments. This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_get_pr_info\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_get_pr_info\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nGet metadata (title, description, refs, and status) for a pull request. This action does *not* include the actual code changes. If you need the diff or per-file patches, call `fetch_pr_patch` instead (or use `get_users_recent_prs_in_repo` with ``include_diff=True`` when listing the user's own PRs). This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr_patch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_pr_patch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch the patch for a GitHub pull request across all changed-file pages. This tool is part of plugin `Codex Security`.\",\"probability\":0.92},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_commit_workflow_runs\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_commit_workflow_runs\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch GitHub Actions workflow runs associated with a commit SHA. This wrapper currently filters to pull-request-triggered runs and returns the first page only. Docs: https://docs.github.com/en/rest/actions/workflow-runs?apiVersion=2022-11-28#list-workflow-runs-for-a-repository. This tool is part of plugin `Codex Security`.\",\"probability\":0.9},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_get_pr_diff\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_get_pr_diff\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch just the diff or patch text for a pull request. This tool is part of plugin `Codex Security`.\",\"probability\":0.88},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr_file_patch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_pr_file_patch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch the patch for one validated changed file in an accessible pull request. Call `list_pr_changed_filenames` first, then pass an exact returned path. A valid pull request that does not contain the path returns `patch=null`. A 404 means GitHub could not resolve the repository or pull request; do not retry other paths. This tool is part of plugin `Codex Security`.\",\"probability\":0.84},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_commit\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_commit\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch a commit with its metadata, diff, and canonical URL. This tool is part of plugin `Codex Security`.\",\"probability\":0.78}],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46794,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309325888,
+            "ran": 1791309325898,
+            "completed": 1791309325915
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_5e470bf1606b4931a7db5bbc",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "GitHub Actions workflow runs for commit"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch approved public GitHub repository resources and repository files. Supports repositories, directories, code and issue search, and blob or raw file URLs. Pull requests, issues, commits, branches, workflow runs, releases, Git data, commit statuses, and rulesets include their collections and subresources via GET only, including branch-protection and ruleset reads. The active connection's repository permissions still apply. Managed GitHub App installation connections exclude administration access, so they cannot read branch-protection endpoints that require that permission. Unlisted API endpoints and non-public-GitHub hosts are rejected. Sensitive endpoint families, such as user, organization, and secrets APIs, are not supported. Contents URLs without a ref use the repository's default branch. JSON responses are returned unchanged; oversized or non-UTF-8 responses are rejected, so binary downloads are not supported. This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_pr\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch a pull request with its diff, metadata, and optionally comments. This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_get_pr_info\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_get_pr_info\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nGet metadata (title, description, refs, and status) for a pull request. This action does *not* include the actual code changes. If you need the diff or per-file patches, call `fetch_pr_patch` instead (or use `get_users_recent_prs_in_repo` with ``include_diff=True`` when listing the user's own PRs). This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr_patch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_pr_patch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch the patch for a GitHub pull request across all changed-file pages. This tool is part of plugin `Codex Security`.\",\"probability\":0.92},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_commit_workflow_runs\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_commit_workflow_runs\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch GitHub Actions workflow runs associated with a commit SHA. This wrapper currently filters to pull-request-triggered runs and returns the first page only. Docs: https://docs.github.com/en/rest/actions/workflow-runs?apiVersion=2022-11-28#list-workflow-runs-for-a-repository. This tool is part of plugin `Codex Security`.\",\"probability\":0.9},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_get_pr_diff\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_get_pr_diff\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch just the diff or patch text for a pull request. This tool is part of plugin `Codex Security`.\",\"probability\":0.88},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr_file_patch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_pr_file_patch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch the patch for one validated changed file in an accessible pull request. Call `list_pr_changed_filenames` first, then pass an exact returned path. A valid pull request that does not contain the path returns `patch=null`. A 404 means GitHub could not resolve the repository or pull request; do not retry other paths. This tool is part of plugin `Codex Security`.\",\"probability\":0.84},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_commit\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch_commit\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch a commit with its metadata, diff, and canonical URL. This tool is part of plugin `Codex Security`.\",\"probability\":0.78}],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46794,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309325891,
+            "ran": 1791309325901,
+            "completed": 1791309325913
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 610,
+        "output": 32,
+        "reasoning": 38,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125b2666001q2yHdSYHeNz1jB",
+      "time": {
+        "created": 1791309330783,
+        "streamed": 1791309331730,
+        "completed": 1791309331740
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The relevant tools are:\n1. `mcp__codex_apps__github_get_pr_info` - metadata for PR 42\n2. `mcp__codex_apps__github_fetch_pr_patch` - patch for PR 42\n3. `mcp__codex_apps__github_fetch_commit_workflow_runs` - workflow runs for head commit\n\nLet me get the full schemas for these tools.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309330788,
+            "completed": 1791309331721
+          }
+        },
+        {
+          "type": "text",
+          "text": "I found the relevant tools. Let me load their schemas."
+        },
+        {
+          "type": "tool",
+          "id": "call_cba68388c5124056be00c083",
+          "name": "fixture_describe",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "ids": [
+                "[\"fixture\",\"mcp__codex_apps__github_get_pr_info\"]",
+                "[\"fixture\",\"mcp__codex_apps__github_fetch_pr_patch\"]",
+                "[\"fixture\",\"mcp__codex_apps__github_fetch_commit_workflow_runs\"]"
+              ]
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[{\"name\":\"mcp__codex_apps__github_get_pr_info\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nGet metadata (title, description, refs, and status) for a pull request. This action does *not* include the actual code changes. If you need the diff or per-file patches, call `fetch_pr_patch` instead (or use `get_users_recent_prs_in_repo` with ``include_diff=True`` when listing the user's own PRs). This tool is part of plugin `Codex Security`.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"pr_number\":{\"type\":\"number\",\"description\":\"Pull request number in the repository.\"},\"repository_full_name\":{\"type\":\"string\",\"description\":\"Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\"}},\"required\":[\"pr_number\",\"repository_full_name\"],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_get_pr_info\\\"]\",\"server\":\"fixture\"},{\"name\":\"mcp__codex_apps__github_fetch_pr_patch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch the patch for a GitHub pull request across all changed-file pages. This tool is part of plugin `Codex Security`.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"pr_number\":{\"type\":\"number\",\"description\":\"Pull request number in the repository.\"},\"repo_full_name\":{\"type\":\"string\",\"description\":\"Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\"}},\"required\":[\"pr_number\",\"repo_full_name\"],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_pr_patch\\\"]\",\"server\":\"fixture\"},{\"name\":\"mcp__codex_apps__github_fetch_commit_workflow_runs\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch GitHub Actions workflow runs associated with a commit SHA. This wrapper currently filters to pull-request-triggered runs and returns the first page only. Docs: https://docs.github.com/en/rest/actions/workflow-runs?apiVersion=2022-11-28#list-workflow-runs-for-a-repository. This tool is part of plugin `Codex Security`.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"commit_sha\":{\"type\":\"string\",\"description\":\"Commit SHA.\"},\"repo_full_name\":{\"type\":\"string\",\"description\":\"Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\"}},\"required\":[\"commit_sha\",\"repo_full_name\"],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch_commit_workflow_runs\\\"]\",\"server\":\"fixture\"}]"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309331664,
+            "ran": 1791309331726,
+            "completed": 1791309331737
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2272,
+        "output": 77,
+        "reasoning": 82,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125b3d290010eTsJevvYSH9Pl",
+      "time": {
+        "created": 1791309337082,
+        "streamed": 1791309337963,
+        "completed": 1791309337997
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now I'll fetch the PR metadata and patch in parallel (they're independent), then use the head commit SHA from the metadata to fetch workflow runs (dependent call).",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309337090,
+            "completed": 1791309337942
+          }
+        },
+        {
+          "type": "text",
+          "text": "Now I'll fetch the PR metadata and patch in parallel. The workflow runs call depends on the head commit SHA from the metadata, so it must wait."
+        },
+        {
+          "type": "tool",
+          "id": "call_4c2984a8a8b74e6ab8603b2a",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__codex_apps__github_get_pr_info\"]",
+              "arguments": {
+                "repository_full_name": "owner/example",
+                "pr_number": 42
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"fixture-author-alice\",\"receipt\":\"80751498-bd23-49b6-ac92-1a94ba03afb1\",\"author\":\"fixture-author-alice\",\"draft\":false,\"merged\":false,\"head_sha\":\"abc123fixture\",\"title\":\"Authentication migration\"}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309337116,
+            "ran": 1791309337948,
+            "completed": 1791309337989
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_f195a890b9f447e0abef8ad9",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__codex_apps__github_fetch_pr_patch\"]",
+              "arguments": {
+                "repo_full_name": "owner/example",
+                "pr_number": 42
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"fixture-auth-patch\",\"receipt\":\"016dd131-549c-47c5-951a-92197bf2676f\",\"patch\":\"diff --git a/auth.ts b/auth.ts\\n+// fixture-auth-patch\\n\"}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309337929,
+            "ran": 1791309337956,
+            "completed": 1791309337993
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 844,
+        "output": 123,
+        "reasoning": 33,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125b55a4001PnFnx6VY5ARdQ6",
+      "time": {
+        "created": 1791309343164,
+        "streamed": 1791309343734,
+        "completed": 1791309343748
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "I got:\n- PR metadata: title \"Authentication migration\", head_sha \"abc123fixture\", author fixture-author-alice, draft false, merged false\n- Patch: diff modifying auth.ts\n\nNow fetch the workflow runs for head commit \"abc123fixture\" in owner/example.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309343170,
+            "completed": 1791309343721
+          }
+        },
+        {
+          "type": "text",
+          "text": "I have the metadata (head SHA: `abc123fixture`) and the patch. Now let me fetch the workflow runs for that head commit."
+        },
+        {
+          "type": "tool",
+          "id": "call_c54e208c95f24499a43f1db0",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__codex_apps__github_fetch_commit_workflow_runs\"]",
+              "arguments": {
+                "commit_sha": "abc123fixture",
+                "repo_full_name": "owner/example"
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"fixture-ci-run-9001\",\"receipt\":\"0d42910f-b93b-4ef6-bc2d-316bdb8419ca\",\"workflow_runs\":[{\"id\":9001,\"name\":\"fixture-ci-run-9001\",\"head_sha\":\"abc123fixture\",\"status\":\"completed\",\"conclusion\":\"success\"}]}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309343708,
+            "ran": 1791309343727,
+            "completed": 1791309343744
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 292,
+        "output": 79,
+        "reasoning": 56,
+        "cache": {
+          "read": 3648,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125b6c14001zIF8ZHLAwiDqP1",
+      "time": {
+        "created": 1791309348725,
+        "streamed": 1791309354931,
+        "completed": 1791309354934
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "I have all the info. Now compose the answer with fixtureFacts verbatim and receipts.\n\nFixture facts (verbatim):\n- \"fixture-author-alice\" (from PR metadata)\n- \"fixture-auth-patch\" (from patch)\n- \"fixture-ci-run-9001\" (from workflow runs)\n\nReceipts:\n- 80751498-bd23-49b6-ac92-1a94ba03afb1\n- 016dd131-549c-47c5-951a-92197bf2676f\n- 0d42910f-b93b-4ef6-bc2d-316bdb8419ca",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309348729,
+            "completed": 1791309354923
+          }
+        },
+        {
+          "type": "text",
+          "text": "Here's the complete picture of PR #42 in owner/example:\n\n**PR metadata** (fixtureFact: fixture-author-alice)\n- **Title:** Authentication migration\n- **Author:** fixture-author-alice\n- **State:** Not a draft, not merged\n- **Head commit SHA:** `abc123fixture`\n\n**Patch** (fixtureFact: fixture-auth-patch)\n```diff\ndiff --git a/auth.ts b/auth.ts\n+// fixture-auth-patch\n```\nThe PR changes a single file, `auth.ts`, adding a comment line.\n\n**Workflow runs for head commit `abc123fixture`** (fixtureFact: fixture-ci-run-9001)\n- **Run ID:** 9001 — \"fixture-ci-run-9001\"\n- **Head SHA:** `abc123fixture`\n- **Status:** completed\n- **Conclusion:** success\n\nSummary: PR #42 \"Authentication migration\" by fixture-author-alice patches `auth.ts`, and its head commit has one PR-triggered workflow run (ID 9001) that completed successfully. (Note: the workflow-runs tool filters to PR-triggered runs and returns the first page only.)\n\n```json\n{\"answer\":\"PR 42 in owner/example: 'Authentication migration' by fixture-author-alice (not draft, not merged), head SHA abc123fixture. Patch modifies auth.ts only (adds '// fixture-auth-patch'). Workflow runs for head commit abc123fixture: run 9001 'fixture-ci-run-9001', status completed, conclusion success.\",\"receipts\":[\"80751498-bd23-49b6-ac92-1a94ba03afb1\",\"016dd131-549c-47c5-951a-92197bf2676f\",\"0d42910f-b93b-4ef6-bc2d-316bdb8419ca\"]}\n```"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 248,
+        "output": 393,
+        "reasoning": 144,
+        "cache": {
+          "read": 3904,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "id": "github.get_pr_info",
+      "args": {
+        "repository_full_name": "owner/example",
+        "pr_number": 42
+      },
+      "valid": true,
+      "receipt": "80751498-bd23-49b6-ac92-1a94ba03afb1",
+      "fact": "fixture-author-alice"
+    },
+    {
+      "id": "github.fetch_pr_patch",
+      "args": {
+        "repo_full_name": "owner/example",
+        "pr_number": 42
+      },
+      "valid": true,
+      "receipt": "016dd131-549c-47c5-951a-92197bf2676f",
+      "fact": "fixture-auth-patch"
+    },
+    {
+      "id": "github.fetch_commit_workflow_runs",
+      "args": {
+        "commit_sha": "abc123fixture",
+        "repo_full_name": "owner/example"
+      },
+      "valid": true,
+      "receipt": "0d42910f-b93b-4ef6-bc2d-316bdb8419ca",
+      "fact": "fixture-ci-run-9001"
+    }
+  ],
+  "answer": "I found the relevant tools. Let me load their schemas.\nNow I'll fetch the PR metadata and patch in parallel. The workflow runs call depends on the head commit SHA from the metadata, so it must wait.\nI have the metadata (head SHA: `abc123fixture`) and the patch. Now let me fetch the workflow runs for that head commit.\nHere's the complete picture of PR #42 in owner/example:\n\n**PR metadata** (fixtureFact: fixture-author-alice)\n- **Title:** Authentication migration\n- **Author:** fixture-author-alice\n- **State:** Not a draft, not merged\n- **Head commit SHA:** `abc123fixture`\n\n**Patch** (fixtureFact: fixture-auth-patch)\n```diff\ndiff --git a/auth.ts b/auth.ts\n+// fixture-auth-patch\n```\nThe PR changes a single file, `auth.ts`, adding a comment line.\n\n**Workflow runs for head commit `abc123fixture`** (fixtureFact: fixture-ci-run-9001)\n- **Run ID:** 9001 — \"fixture-ci-run-9001\"\n- **Head SHA:** `abc123fixture`\n- **Status:** completed\n- **Conclusion:** success\n\nSummary: PR #42 \"Authentication migration\" by fixture-author-alice patches `auth.ts`, and its head commit has one PR-triggered workflow run (ID 9001) that completed successfully. (Note: the workflow-runs tool filters to PR-triggered runs and returns the first page only.)\n\n```json\n{\"answer\":\"PR 42 in owner/example: 'Authentication migration' by fixture-author-alice (not draft, not merged), head SHA abc123fixture. Patch modifies auth.ts only (adds '// fixture-auth-patch'). Workflow runs for head commit abc123fixture: run 9001 'fixture-ci-run-9001', status completed, conclusion success.\",\"receipts\":[\"80751498-bd23-49b6-ac92-1a94ba03afb1\",\"016dd131-549c-47c5-951a-92197bf2676f\",\"0d42910f-b93b-4ef6-bc2d-316bdb8419ca\"]}\n```",
+  "usage": [
+    {
+      "tokens": {
+        "input": 610,
+        "output": 32,
+        "reasoning": 38,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 2272,
+        "output": 77,
+        "reasoning": 82,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 844,
+        "output": 123,
+        "reasoning": 33,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 292,
+        "output": 79,
+        "reasoning": 56,
+        "cache": {
+          "read": 3648,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 248,
+        "output": 393,
+        "reasoning": 144,
+        "cache": {
+          "read": 3904,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "search",
+      "query": "GitHub pull request metadata and patch",
+      "replayConditioningTask": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit."
+    },
+    {
+      "event": "search",
+      "query": "GitHub Actions workflow runs for commit",
+      "replayConditioningTask": "Inspect GitHub PR 42 in owner/example: read its metadata and patch, then find the workflow runs for its head commit."
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "github.get_pr_info",
+        "args": {
+          "repository_full_name": "owner/example",
+          "pr_number": 42
+        },
+        "valid": true,
+        "receipt": "80751498-bd23-49b6-ac92-1a94ba03afb1",
+        "fact": "fixture-author-alice"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "github.fetch_pr_patch",
+        "args": {
+          "repo_full_name": "owner/example",
+          "pr_number": 42
+        },
+        "valid": true,
+        "receipt": "016dd131-549c-47c5-951a-92197bf2676f",
+        "fact": "fixture-auth-patch"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "github.fetch_commit_workflow_runs",
+        "args": {
+          "commit_sha": "abc123fixture",
+          "repo_full_name": "owner/example"
+        },
+        "valid": true,
+        "receipt": "0d42910f-b93b-4ef6-bc2d-316bdb8419ca",
+        "fact": "fixture-ci-run-9001"
+      }
+    }
+  ],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "fixed task-level Jev replay",
+  "modelCostUsd": 0.00149672,
+  "jevCostUsd": 0.001965348,
+  "totalCostUsd": 0.003462068
+}

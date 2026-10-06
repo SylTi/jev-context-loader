@@ -1,0 +1,9 @@
+✓ Home Assistant moved out of core — installed the 'homeassistant' plugin from the catalog (HASS_TOKEN/HASS_URL, platforms.homeassistant and the ha_* tool names are unchanged).
+  ┊ 📖 Reading tool details · 1 tool  0.0s
+  ┊ 🔌 Linear · get issue  12.1s [Unexpected tool or incorrect fixture argument...]
+  ┊ 🔌 Linear · get issue  0.0s [Unexpected tool or incorrect fixture argument...]
+  ┊ 🔎 Searching tools · linear get issue details description  0.1s
+  ┊ 📖 Reading tool details · 2 tools  0.0s
+  ┊ 🔌 Linear · list issues  ENG-123  0.0s [Unexpected tool or incorrect fixture argument...]
+  ┊ 🔌 Linear · get issue  6.8s [Unexpected tool or incorrect fixture argument...]
+  ┊ 🔌 Linear · list comments  6.9s [Unexpected tool or incorrect fixture argument...]

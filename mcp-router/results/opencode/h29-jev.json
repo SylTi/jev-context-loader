@@ -1,0 +1,1257 @@
+{
+  "caseId": "h29",
+  "arm": "jev",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 34138,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/replay-server.ts",
+            "h29",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h29-jev.fixtures.jsonl"
+          ],
+          "codemode": false
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eeda7de5fffeDH4jJJKAI3VR7b",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-8CCjL7/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-8CCjL7",
+        "project": {
+          "id": "79a99b140f7dde9d2ae49afbef6cd5db6d1eea2b",
+          "directory": "/tmp/jev-mcp-bench-8CCjL7",
+          "canonical": "/tmp/jev-mcp-bench-8CCjL7"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "msg_1125821b4001rJ8xaRaqrBNyK3",
+      "time": {
+        "created": 1791309128160
+      },
+      "text": "Cherche dans les tickets GitHub du dépôt owner/example ceux qui parlent d'une erreur de connexion.",
+      "type": "user"
+    },
+    {
+      "id": "msg_1125822030017KwdV0XANv2Zz3",
+      "time": {
+        "created": 1791309133633,
+        "streamed": 1791309133665,
+        "completed": 1791309133684
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants to search GitHub issues in the repo owner/example for those that talk about a connection error. Let me search for relevant tools first.\n\nI should use fixture_search to find tools related to searching GitHub issues.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309133639,
+            "completed": 1791309133657
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_a7af5c083fd84efba87df48c",
+          "name": "fixture_search",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "query": "search GitHub issues in repository"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"matches\":[{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_search_issues\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_search_issues\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nSearch one repository or every repository the linked account can access. Supply at most one repository selector. Empty lists mean no repository filter. A `repo:owner/name` query does not require a separate repository selector. This tool is part of plugin `Codex Security`.\",\"probability\":0.93},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_fetch\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_fetch\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nFetch approved public GitHub repository resources and repository files. Supports repositories, directories, code and issue search, and blob or raw file URLs. Pull requests, issues, commits, branches, workflow runs, releases, Git data, commit statuses, and rulesets include their collections and subresources via GET only, including branch-protection and ruleset reads. The active connection's repository permissions still apply. Managed GitHub App installation connections exclude administration access, so they cannot read branch-protection endpoints that require that permission. Unlisted API endpoints and non-public-GitHub hosts are rejected. Sensitive endpoint families, such as user, organization, and secrets APIs, are not supported. Contents URLs without a ref use the repository's default branch. JSON responses are returned unchanged; oversized or non-UTF-8 responses are rejected, so binary downloads are not supported. This tool is part of plugin `Codex Security`.\",\"probability\":0.91},{\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_list_recent_issues\\\"]\",\"server\":\"fixture\",\"name\":\"mcp__codex_apps__github_list_recent_issues\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nReturn the most recent GitHub issues the user can access. `top_k` is the final result limit. The connector transparently paginates GitHub's issues API until that limit is reached or no more pages exist. This tool is part of plugin `Codex Security`.\",\"probability\":0.77}],\"availableServers\":[\"fixture\"],\"threshold\":0.75,\"cached\":false,\"ranking\":{\"mode\":\"replay\",\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":46788,\"output_tokens\":4359}}}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309133650,
+            "ran": 1791309133662,
+            "completed": 1791309133681
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 611,
+        "output": 16,
+        "reasoning": 43,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11258377f00152JP9xRFQgVMbN",
+      "time": {
+        "created": 1791309138605,
+        "streamed": 1791309138641,
+        "completed": 1791309138655
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The best tool is `mcp__codex_apps__github_search_issues`. Let me load its schema to know how to call it.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309138610,
+            "completed": 1791309138630
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_3cfd85c25cb4435c81285268",
+          "name": "fixture_describe",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "ids": [
+                "[\"fixture\",\"mcp__codex_apps__github_search_issues\"]"
+              ]
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[{\"name\":\"mcp__codex_apps__github_search_issues\",\"description\":\"Access repositories, issues, and pull requests. Required for some features such as Codex\\n\\nSearch one repository or every repository the linked account can access. Supply at most one repository selector. Empty lists mean no repository filter. A `repo:owner/name` query does not require a separate repository selector. This tool is part of plugin `Codex Security`.\",\"inputSchema\":{\"type\":\"object\",\"properties\":{\"order\":{\"anyOf\":[{\"const\":\"desc\"},{\"const\":\"asc\"},{\"type\":\"null\"}],\"description\":\"Optional ascending or descending result order.\"},\"query\":{\"type\":\"string\",\"description\":\"GitHub issue search query. Supports repo:, org:, and other GitHub qualifiers. Without a repository selector, search all repositories available to the linked account.\"},\"repository_full_name\":{\"anyOf\":[{\"type\":\"string\"},{\"type\":\"array\",\"items\":{\"type\":\"string\"}},{\"type\":\"null\"}],\"description\":\"Optional repository or repositories in owner/name form.\"},\"repository_id\":{\"anyOf\":[{\"type\":\"number\"},{\"type\":\"array\",\"items\":{\"type\":\"number\"}},{\"type\":\"null\"}],\"description\":\"Optional GitHub repository ID or IDs.\"},\"repository_url\":{\"anyOf\":[{\"type\":\"string\"},{\"type\":\"array\",\"items\":{\"type\":\"string\"}},{\"type\":\"null\"}],\"description\":\"Optional GitHub repository URL or URLs.\"},\"sort\":{\"anyOf\":[{\"const\":\"best-match\"},{\"const\":\"created\"},{\"const\":\"updated\"},{\"const\":\"comments\"},{\"const\":\"reactions\"},{\"const\":\"interactions\"},{\"type\":\"null\"}],\"description\":\"Optional GitHub issue result sort.\"},\"state\":{\"anyOf\":[{\"const\":\"open\"},{\"const\":\"closed\"},{\"type\":\"null\"}],\"description\":\"Optional issue state filter.\"},\"topn\":{\"type\":\"number\",\"description\":\"Maximum number of results to return.\"}},\"required\":[\"query\"],\"additionalProperties\":false},\"id\":\"[\\\"fixture\\\",\\\"mcp__codex_apps__github_search_issues\\\"]\",\"server\":\"fixture\"}]"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309138618,
+            "ran": 1791309138637,
+            "completed": 1791309138651
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 627,
+        "output": 29,
+        "reasoning": 28,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112584af00012vMfap8ox24LWE",
+      "time": {
+        "created": 1791309144509,
+        "streamed": 1791309148811,
+        "completed": 1791309148830
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now I'll call the search tool with a query for connection errors in the repo owner/example. The user says \"erreur de connexion\" (connection error). I'll search in French terms and English terms since GitHub issues are often in English. Let me search with relevant keywords.\n\nI could do one search with query like `repo:owner/example \"connection error\"` or a broader one. To cover both, maybe search with multiple terms. Let me do a search with repo selector and query \"connection error OR connexion\".\n\nGitHub search supports OR between terms. Let me use: `repo:owner/example connection OR connexion error`. Actually a good approach: `repo:owner/example \"connection error\" OR \"erreur de connexion\"` — GitHub search doesn't handle phrases with OR well sometimes, but it's fine.\n\nI'll do two searches in parallel: one for \"connection error\" and one for \"erreur de connexion\", to be safe. They're independent, so I can make both calls in the same block.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309144517,
+            "completed": 1791309148800
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_d6d6b751b830434c9c8091fe",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__codex_apps__github_search_issues\"]",
+              "arguments": {
+                "query": "repo:owner/example \"connection error\" OR \"connexion error\"",
+                "topn": 20
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"login-error-issue-81\",\"receipt\":\"42d52bae-178c-461d-afcd-67afb4b19aa8\",\"issues\":[{\"number\":81,\"title\":\"login-error-issue-81\",\"body\":\"Erreur de connexion\",\"repository\":\"owner/example\"}]}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309147809,
+            "ran": 1791309148804,
+            "completed": 1791309148825
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_c11195c6e43a440a8e11e46d",
+          "name": "fixture_call",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "id": "[\"fixture\",\"mcp__codex_apps__github_search_issues\"]",
+              "arguments": {
+                "query": "repo:owner/example \"erreur de connexion\"",
+                "topn": 20
+              }
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"login-error-issue-81\",\"receipt\":\"e90d8e4f-7546-406b-b585-58a50d5b8123\",\"issues\":[{\"number\":81,\"title\":\"login-error-issue-81\",\"body\":\"Erreur de connexion\",\"repository\":\"owner/example\"}]}"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791309148791,
+            "ran": 1791309148808,
+            "completed": 1791309148827
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 510,
+        "output": 102,
+        "reasoning": 202,
+        "cache": {
+          "read": 1152,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125872aa001vPgekUm4DUReVl",
+      "time": {
+        "created": 1791309154027,
+        "streamed": 1791309159399,
+        "completed": 1791309159400
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Both searches returned the same issue: #81 \"login-error-issue-81\" with body \"Erreur de connexion\" in owner/example.\n\nThe instructions say: \"For each requested read, include its returned fixtureFact verbatim.\" The fixtureFact is \"login-error-issue-81\" from both calls. I should include it verbatim in my response.\n\nThen finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. Receipts: \"42d52bae-178c-461d-afcd-67afb4b19aa8\" and \"e90d8e4f-7546-406b-b585-58a50d5b8123\".\n\nI'll respond in French since the user wrote in French.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791309154032,
+            "completed": 1791309159392
+          }
+        },
+        {
+          "type": "text",
+          "text": "Voici les résultats de la recherche dans les tickets GitHub du dépôt **owner/example** mentionnant une erreur de connexion :\n\n**Ticket #81 — \"login-error-issue-81\"**\n- Dépôt : owner/example\n- Corps : « Erreur de connexion »\n\nC'est le seul ticket trouvé ; il ressort avec les deux requêtes (« connection error » et « erreur de connexion »).\n\nfixtureFact (lecture 1, requête \"connection error\" / \"connexion error\") : `login-error-issue-81`\n\nfixtureFact (lecture 2, requête \"erreur de connexion\") : `login-error-issue-81`\n\n```json\n{\"answer\":\"Un seul ticket du dépôt owner/example parle d'une erreur de connexion : le ticket #81 « login-error-issue-81 », dont le corps est « Erreur de connexion ». Il est retourné par les deux recherches (EN et FR).\",\"receipts\":[\"42d52bae-178c-461d-afcd-67afb4b19aa8\",\"e90d8e4f-7546-406b-b585-58a50d5b8123\"]}\n```"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 501,
+        "output": 246,
+        "reasoning": 162,
+        "cache": {
+          "read": 1600,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "id": "github.search_issues",
+      "args": {
+        "query": "repo:owner/example \"connection error\" OR \"connexion error\"",
+        "topn": 20
+      },
+      "valid": true,
+      "receipt": "42d52bae-178c-461d-afcd-67afb4b19aa8",
+      "fact": "login-error-issue-81"
+    },
+    {
+      "id": "github.search_issues",
+      "args": {
+        "query": "repo:owner/example \"erreur de connexion\"",
+        "topn": 20
+      },
+      "valid": true,
+      "receipt": "e90d8e4f-7546-406b-b585-58a50d5b8123",
+      "fact": "login-error-issue-81"
+    }
+  ],
+  "answer": "Voici les résultats de la recherche dans les tickets GitHub du dépôt **owner/example** mentionnant une erreur de connexion :\n\n**Ticket #81 — \"login-error-issue-81\"**\n- Dépôt : owner/example\n- Corps : « Erreur de connexion »\n\nC'est le seul ticket trouvé ; il ressort avec les deux requêtes (« connection error » et « erreur de connexion »).\n\nfixtureFact (lecture 1, requête \"connection error\" / \"connexion error\") : `login-error-issue-81`\n\nfixtureFact (lecture 2, requête \"erreur de connexion\") : `login-error-issue-81`\n\n```json\n{\"answer\":\"Un seul ticket du dépôt owner/example parle d'une erreur de connexion : le ticket #81 « login-error-issue-81 », dont le corps est « Erreur de connexion ». Il est retourné par les deux recherches (EN et FR).\",\"receipts\":[\"42d52bae-178c-461d-afcd-67afb4b19aa8\",\"e90d8e4f-7546-406b-b585-58a50d5b8123\"]}\n```",
+  "usage": [
+    {
+      "tokens": {
+        "input": 611,
+        "output": 16,
+        "reasoning": 43,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 627,
+        "output": 29,
+        "reasoning": 28,
+        "cache": {
+          "read": 576,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 510,
+        "output": 102,
+        "reasoning": 202,
+        "cache": {
+          "read": 1152,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 501,
+        "output": 246,
+        "reasoning": 162,
+        "cache": {
+          "read": 1600,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "search",
+      "query": "search GitHub issues in repository",
+      "replayConditioningTask": "Cherche dans les tickets GitHub du dépôt owner/example ceux qui parlent d'une erreur de connexion."
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "github.search_issues",
+        "args": {
+          "query": "repo:owner/example \"connection error\" OR \"connexion error\"",
+          "topn": 20
+        },
+        "valid": true,
+        "receipt": "42d52bae-178c-461d-afcd-67afb4b19aa8",
+        "fact": "login-error-issue-81"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "github.search_issues",
+        "args": {
+          "query": "repo:owner/example \"erreur de connexion\"",
+          "topn": 20
+        },
+        "valid": true,
+        "receipt": "e90d8e4f-7546-406b-b585-58a50d5b8123",
+        "fact": "login-error-issue-81"
+      }
+    }
+  ],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "fixed task-level Jev replay",
+  "modelCostUsd": 0.0008511899999999999,
+  "jevCostUsd": 0.0019650960000000004,
+  "totalCostUsd": 0.0028162860000000003
+}

@@ -1,0 +1,2724 @@
+{
+  "caseId": "h07",
+  "arm": "native",
+  "model": "zai-coding-plan/glm-5.3-flash",
+  "code": 0,
+  "status": "completed",
+  "elapsedMs": 122583,
+  "config": {
+    "model": "zai-coding-plan/glm-5.3-flash",
+    "snapshots": false,
+    "warming": false,
+    "plugins": [],
+    "skills": [],
+    "mcp": {
+      "servers": {
+        "fixture": {
+          "type": "local",
+          "command": [
+            "/home/syl/.vite-plus/js_runtime/node/24.21.0/bin/node",
+            "--import",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/node_modules/tsx/dist/loader.mjs",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/scripts/fixture-server.ts",
+            "h07",
+            "/home/syl/work/jev-skill-router/experiments/jev-mcp-router/results/opencode/h07-native.fixtures.jsonl"
+          ],
+          "codemode": true
+        }
+      }
+    },
+    "agents": {
+      "benchmark": {
+        "mode": "primary",
+        "description": "Synthetic fixture benchmark",
+        "system": "Complete the user task using the available fixture tools. All tools operate on synthetic local data. Do not use shell, files, browser, other services, skills or delegation. Do not invent missing data. For each requested read, include its returned fixtureFact verbatim. Finish with JSON {\"answer\":string,\"receipts\":string[]} containing receipts from results actually used. If a required capability is unavailable, say so. Perform requested writes only. Do not substitute a different provider. Do not ask for confirmation in this fixture experiment.",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    },
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "fixture_*",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      }
+    ]
+  },
+  "sessionID": "ses_eedac98c8ffeV8mykoXoSVdSz5",
+  "registrySnapshots": [
+    [],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "build",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "general",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "explore",
+        "mode": "subagent",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "grep",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "glob",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "webfetch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "websearch",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "subagent",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "compaction",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "summary",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "question",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "edit",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "edit",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.opencode/plan/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      },
+      {
+        "id": "benchmark",
+        "mode": "primary",
+        "permissions": [
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.*",
+            "effect": "ask"
+          },
+          {
+            "action": "read",
+            "resource": "*.env.example",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/shell/*/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/home/syl/.local/share/opencode/tool-output/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "external_directory",
+            "resource": "/tmp/jev-mcp-bench-xx5l7q/config/opencode/*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "*",
+            "resource": "*",
+            "effect": "deny"
+          },
+          {
+            "action": "fixture_*",
+            "resource": "*",
+            "effect": "allow"
+          },
+          {
+            "action": "execute",
+            "resource": "*",
+            "effect": "allow"
+          }
+        ]
+      }
+    ]
+  ],
+  "mcpSnapshots": [
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-xx5l7q",
+        "project": {
+          "id": "eb9944f385736e32202b9f1f70e9bf534f075e2d",
+          "directory": "/tmp/jev-mcp-bench-xx5l7q",
+          "canonical": "/tmp/jev-mcp-bench-xx5l7q"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-xx5l7q",
+        "project": {
+          "id": "eb9944f385736e32202b9f1f70e9bf534f075e2d",
+          "directory": "/tmp/jev-mcp-bench-xx5l7q",
+          "canonical": "/tmp/jev-mcp-bench-xx5l7q"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-xx5l7q",
+        "project": {
+          "id": "eb9944f385736e32202b9f1f70e9bf534f075e2d",
+          "directory": "/tmp/jev-mcp-bench-xx5l7q",
+          "canonical": "/tmp/jev-mcp-bench-xx5l7q"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "location": {
+        "directory": "/tmp/jev-mcp-bench-xx5l7q",
+        "project": {
+          "id": "eb9944f385736e32202b9f1f70e9bf534f075e2d",
+          "directory": "/tmp/jev-mcp-bench-xx5l7q",
+          "canonical": "/tmp/jev-mcp-bench-xx5l7q"
+        }
+      },
+      "data": [
+        {
+          "name": "fixture",
+          "status": {
+            "status": "connected"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "msg_11253674a001n2vT187G9ZvhKP",
+      "time": {
+        "created": 1791308818303
+      },
+      "text": "List the available status values for the Linear Engineering team.",
+      "type": "user"
+    },
+    {
+      "id": "msg_112536793001P4uQ9ltTkqFD50",
+      "time": {
+        "created": 1791308824128,
+        "streamed": 1791308824485,
+        "completed": 1791308824578
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The user wants to list available status values for the Linear Engineering team. I need to find the right tool. Let me search the catalog for Linear workflow states or statuses.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308824135,
+            "completed": 1791308824470
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_5f211e7323624c26bda17e78",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const search = tools.search;\nconst [statuses, team] = await Promise.all([\n  search({ query: \"linear workflow states statuses\", limit: 20 }),\n  search({ query: \"linear team\", limit: 20 }),\n]);\nreturn { statuses, team };"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Unknown tool 'search'.\nThe tool may have been removed or renamed. Use search to find available tools."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308824159,
+            "ran": 1791308824479,
+            "completed": 1791308824576
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2722,
+        "output": 64,
+        "reasoning": 34,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125380120013t2EKiz4pJ19ma",
+      "time": {
+        "created": 1791308829980,
+        "streamed": 1791308832140,
+        "completed": 1791308832175
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The search tool is not callable directly via `tools.search`? Actually the instructions said to use `search` to discover tools. It appears `search` is a top-level tool outside the `tools` namespace. Let me try calling it as `search` directly inside the code... but the error says \"Unknown tool 'search'.\" Hmm, maybe within execute I should reference it differently. The catalog says \"Use `search` to discover exact paths and signatures for additional tools\" — perhaps search is available directly outside code mode, or within code mode as a global function. Let me try `await search(...)` without the `tools.` prefix.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308829985,
+            "completed": 1791308832128
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_60f20edf76df4112beb3d931",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const [statuses, team] = await Promise.all([\n  tools.fixture.mcp__linear__get_team({ query: \"Engineering\" }),\n  tools.search({ query: \"linear status workflow state list\", limit: 20 }),\n]);\nreturn { team, statuses };"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Unknown tool 'search'.\nThe tool may have been removed or renamed. Use search to find available tools."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__get_team",
+                  "status": "error",
+                  "input": {
+                    "query": "Engineering"
+                  }
+                }
+              ],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308831545,
+            "ran": 1791308832136,
+            "completed": 1791308832173
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 157,
+        "output": 63,
+        "reasoning": 131,
+        "cache": {
+          "read": 2688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112539dc5001C709IMfcp2ewFC",
+      "time": {
+        "created": 1791308837689,
+        "streamed": 1791308841073,
+        "completed": 1791308841112
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The error says \"Unknown tool 'search'\". It seems `tools.search` isn't available inside execute either. Maybe the search tool is only available as a direct tool call outside execute. Let me try searching for linear status tools in a different way — maybe there's a fixture tool for listing workflow states, e.g., `tools.fixture.mcp__linear__list_workflow_states`. Let me first try calling get_team for Engineering to find the team, and try guessing names? No — I must not infer tool names. I should use search, but search seems unavailable inside execute. Let me try calling it outside execute — but I only have `execute` available as a direct tool in this environment. Hmm, the function list only shows `execute`.\n\nThe system prompt says: \"Within `{ code }`, the only callable tools are those explicitly listed in the Code Mode catalog instructions or returned by `search`.\" So maybe `search` is a global in the execute runtime, not under `tools`. Let me try `await search({ query: ... })`.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308837698,
+            "completed": 1791308841066
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_c0c3c39d27ff4c3db956a620",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const team = await tools.fixture.mcp__linear__get_team({ query: \"Engineering\" });\nconst found = await search({ query: \"linear workflow states statuses list\", limit: 20 });\nreturn { team, found };"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"unexpected-fixture-call\",\"receipt\":\"eefc3aec-6a1d-4d59-b162-3ccafccddd7d\",\"error\":\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__get_team",
+                  "status": "error",
+                  "input": {
+                    "query": "Engineering"
+                  }
+                }
+              ],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308840579,
+            "ran": 1791308841071,
+            "completed": 1791308841107
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 248,
+        "output": 56,
+        "reasoning": 213,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11253c0cb0012czXMhlozYaCEl",
+      "time": {
+        "created": 1791308846645,
+        "streamed": 1791308852184,
+        "completed": 1791308852231
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Hmm, `get_team({ query: \"Engineering\" })` returned an unexpected fixture call error? That's odd — the catalog lists `tools.fixture.mcp__linear__get_team(input: { query: string })`. But the fixture says \"Unexpected tool or incorrect fixture arguments; requested action was not applied.\" Maybe the fixture expects different casing or the tool requires exact argument shape. Wait — the error is a fixtureFact: \"unexpected-fixture-call\". Perhaps the whole execute call failed because of the search call? The error mentions \"Unexpected tool or incorrect fixture arguments; requested action was not applied.\" This suggests one of the calls was wrong — likely `search` since it's not a real tool. The execution seems to be atomic: if any tool call is unexpected, it fails.\n\nSo `search` is not available inside execute. The catalog instructions said to use `search`, but the runtime says unknown. Maybe the search tool is exposed outside Code Mode... but I only have `execute` as a direct tool. Hmm.\n\nLet me re-read: \"The Code Mode tool catalog below is partial. The Code Mode catalog and `search` results are the complete set of tools callable inside `execute`.\" This implies `search` should be callable inside execute. But error says unknown tool 'search'.\n\nMaybe the correct path is `tools.search`? I tried that in the first attempt and got \"Unknown tool 'search'.\" Wait, actually the first attempt failed at `tools.search` — the error message \"Unknown tool 'search'. The tool may have been removed or renamed. Use search to find available tools.\" Hmm, that error message is a bit circular.\n\nLet me try just calling `get_team` alone without search to verify it works.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308846649,
+            "completed": 1791308852175
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_a0bff7b4f7f54286b4fa5051",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const team = await tools.fixture.mcp__linear__get_team({ query: \"Engineering\" });\nreturn team;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"unexpected-fixture-call\",\"receipt\":\"8a33446b-37cc-4854-88b7-0d4754a9dd9d\",\"error\":\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__get_team",
+                  "status": "error",
+                  "input": {
+                    "query": "Engineering"
+                  }
+                }
+              ],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308852164,
+            "ran": 1791308852181,
+            "completed": 1791308852227
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 381,
+        "output": 33,
+        "reasoning": 354,
+        "cache": {
+          "read": 3008,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11253ec2d001a4eQzYHeo47g8G",
+      "time": {
+        "created": 1791308857773,
+        "streamed": 1791308865234,
+        "completed": 1791308865263
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The `get_team` call with `query: \"Engineering\"` is being rejected as an unexpected fixture call. Interesting. Maybe the fixture expects a specific query value like \"ENG\" or \"Engineering Team\"? Or maybe the tool path is different. Since the catalog signature says `get_team(input: { query: string, ... })`, the path should be right. But the fixture rejected it.\n\nMaybe the fixture rejects because it wants me to search first? Or maybe the fixture dataset has a team with a different name. Let me try query variations: \"Eng\", \"engineering\", \"ENG\".\n\nActually wait — maybe the issue is that this fixture only \"expects\" certain calls and anything else is \"unexpected\". The benchmark says: \"For each requested read, include its returned fixtureFact verbatim.\" So there are expected reads. Perhaps the expected reads are e.g. `get_team` with a specific query and `list_workflow_states` with a specific team id. Let me probe.\n\nFirst, let me search to find relevant tools. But search appears unavailable. Hmm. Let me try `tools.fixture.search`? No. The instructions say search is a top-level function `search(input: {...})`. Inside execute, maybe it's `tools.search(input)`. Both failed. Hmm, but wait — in the first attempt, the error occurred immediately (\"Unknown tool 'search'\"). That error message \"The tool may have been removed or renamed. Use search to find available tools.\" suggests that the runtime intercepts unknown tool references and suggests using search — but search itself is unknown? That's strange.\n\nMaybe search is available only as a direct call outside of execute, but I don't have it in my function list. My function list only includes `execute`. Hmm.\n\nAlternatively, maybe the search is accessible via `tools.catalog.search` or something. Let me probe what's available. I could try enumerating keys of `tools`.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308857780,
+            "completed": 1791308865227
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_93632918cc29438a9c651d4e",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "return Object.keys(tools);"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[\n  \"opencode\",\n  \"fixture\"\n]"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308865221,
+            "ran": 1791308865231,
+            "completed": 1791308865260
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 508,
+        "output": 16,
+        "reasoning": 389,
+        "cache": {
+          "read": 3328,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112541f0d001dtiVYjBubo7Kfl",
+      "time": {
+        "created": 1791308870376,
+        "streamed": 1791308870504,
+        "completed": 1791308870568
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Let me enumerate `tools.fixture` keys, filtering for \"linear\" and \"search\".",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308870378,
+            "completed": 1791308870494
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_9ad0d6cdbc6b4ad0a703d0dc",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const keys = Object.keys(tools.fixture);\nreturn {\n  linear: keys.filter(k => k.includes(\"linear\")),\n  searchLike: keys.filter(k => /search|catalog|list_tools|discover/i.test(k)),\n  total: keys.length,\n};"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"linear\": [\n    \"mcp__linear__create_attachment\",\n    \"mcp__linear__create_attachment_from_upload\",\n    \"mcp__linear__create_issue_label\",\n    \"mcp__linear__delete_attachment\",\n    \"mcp__linear__delete_comment\",\n    \"mcp__linear__delete_diff_comment\",\n    \"mcp__linear__delete_status_update\",\n    \"mcp__linear__extract_images\",\n    \"mcp__linear__get_agent_skill\",\n    \"mcp__linear__get_attachment\",\n    \"mcp__linear__get_diff\",\n    \"mcp__linear__get_diff_threads\",\n    \"mcp__linear__get_document\",\n    \"mcp__linear__get_issue\",\n    \"mcp__linear__get_issue_status\",\n    \"mcp__linear__get_milestone\",\n    \"mcp__linear__get_notifications\",\n    \"mcp__linear__get_project\",\n    \"mcp__linear__get_release\",\n    \"mcp__linear__get_release_note\",\n    \"mcp__linear__get_status_updates\",\n    \"mcp__linear__get_team\",\n    \"mcp__linear__get_template\",\n    \"mcp__linear__get_triage_responsibility\",\n    \"mcp__linear__get_user\",\n    \"mcp__linear__get_workspace\",\n    \"mcp__linear__list_agent_skills\",\n    \"mcp__linear__list_comments\",\n    \"mcp__linear__list_custom_views\",\n    \"mcp__linear__list_cycles\",\n    \"mcp__linear__list_diffs\",\n    \"mcp__linear__list_documents\",\n    \"mcp__linear__list_issue_labels\",\n    \"mcp__linear__list_issue_statuses\",\n    \"mcp__linear__list_issues\",\n    \"mcp__linear__list_milestones\",\n    \"mcp__linear__list_project_labels\",\n    \"mcp__linear__list_projects\",\n    \"mcp__linear__list_release_notes\",\n    \"mcp__linear__list_release_pipelines\",\n    \"mcp__linear__list_releases\",\n    \"mcp__linear__list_teams\",\n    \"mcp__linear__list_templates\",\n    \"mcp__linear__list_users\",\n    \"mcp__linear__mark_notification\",\n    \"mcp__linear__merge_diff\",\n    \"mcp__linear__prepare_attachment_upload\",\n    \"mcp__linear__resolve_diff_thread\",\n    \"mcp__linear__restore_issue_label\",\n    \"mcp__linear__restore_project_label\",\n    \"mcp__linear__retire_issue_label\",\n    \"mcp__linear__retire_project_label\",\n    \"mcp__linear__save_comment\",\n    \"mcp__linear__save_diff_comment\",\n    \"mcp__linear__save_document\",\n    \"mcp__linear__save_issue\",\n    \"mcp__linear__save_issue_label\",\n    \"mcp__linear__save_milestone\",\n    \"mcp__linear__save_project\",\n    \"mcp__linear__save_project_label\",\n    \"mcp__linear__save_release\",\n    \"mcp__linear__save_release_note\",\n    \"mcp__linear__save_status_update\",\n    \"mcp__linear__search_documentation\",\n    \"mcp__linear__share_issue\",\n    \"mcp__linear__submit_diff_review\",\n    \"mcp__linear__unshare_issue\",\n    \"mcp__linear__update_diff\"\n  ],\n  \"searchLike\": [\n    \"mcp__codex_apps__chatgpt_space_search_sharing_recipients\",\n    \"mcp__codex_apps__github_search\",\n    \"mcp__codex_apps__github_search_branches\",\n    \"mcp__codex_apps__github_search_commits\",\n    \"mcp__codex_apps__github_search_installed_repositories_streaming\",\n    \"mcp__codex_apps__github_search_installed_repositories_v2\",\n    \"mcp__codex_apps__github_search_issues\",\n    \"mcp__codex_apps__github_search_prs\",\n    \"mcp__codex_apps__github_search_repositories\",\n    \"mcp__linear__search_documentation\"\n  ],\n  \"total\": 235\n}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308870381,
+            "ran": 1791308870501,
+            "completed": 1791308870564
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 480,
+        "output": 61,
+        "reasoning": 18,
+        "cache": {
+          "read": 3776,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125433c3001wz6E1z06irXlQi",
+      "time": {
+        "created": 1791308875981,
+        "streamed": 1791308876997,
+        "completed": 1791308877011
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "I can enumerate tools directly. The relevant tools: `mcp__linear__get_team` (query), `mcp__linear__list_issue_statuses` (probably takes team id), maybe `mcp__linear__get_issue_status`. Let me check signatures via introspection — I can get the function source? Let me try `tools.fixture.mcp__linear__list_issue_statuses.toString()` to see parameter names.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308875985,
+            "completed": 1791308876993
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_e8ee325a94cf400da8158599",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "return {\n  get_team: tools.fixture.mcp__linear__get_team.toString(),\n  list_issue_statuses: tools.fixture.mcp__linear__list_issue_statuses.toString(),\n  get_issue_status: tools.fixture.mcp__linear__get_issue_status.toString(),\n  list_teams: tools.fixture.mcp__linear__list_teams.toString(),\n};"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Execution result contains an un-awaited Promise; await tool calls (e.g. `const result = await tools.ns.tool(...)`) before using their results."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308876722,
+            "ran": 1791308876996,
+            "completed": 1791308877009
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1008,
+        "output": 77,
+        "reasoning": 85,
+        "cache": {
+          "read": 4224,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112544ce4001KuLTSV4KWWn2Aj",
+      "time": {
+        "created": 1791308881806,
+        "streamed": 1791308881842,
+        "completed": 1791308881856
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_0a00dd81bacd46a08bc1a5e3",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "return {\n  get_team: String(tools.fixture.mcp__linear__get_team),\n  list_issue_statuses: String(tools.fixture.mcp__linear__list_issue_statuses),\n  get_issue_status: String(tools.fixture.mcp__linear__get_issue_status),\n  list_teams: String(tools.fixture.mcp__linear__list_teams),\n};"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "String input must contain plain objects only."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308881809,
+            "ran": 1791308881841,
+            "completed": 1791308881854
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 244,
+        "output": 81,
+        "reasoning": 0,
+        "cache": {
+          "read": 5184,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_112545fd2001FUXHKiUdOGjCqE",
+      "time": {
+        "created": 1791308887433,
+        "streamed": 1791308888461,
+        "completed": 1791308888496
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Can't stringify functions. OK. The `get_team` failed with query \"Engineering\". Maybe the fixture expects `list_teams` first to find the Engineering team's id, then `list_issue_statuses` with that team. Let me call `list_teams` — need its signature. The catalog only showed partial tools (42 shown of 235). Let me guess signature from typical MCP Linear server: `list_teams()` takes no args or optional. Let me try calling with no args.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308887437,
+            "completed": 1791308888456
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_4caaab5d9be54a3a86a92823",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const teams = await tools.fixture.mcp__linear__list_teams({});\nreturn teams;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"unexpected-fixture-call\",\"receipt\":\"1e7febec-8a4c-43bd-9287-264007ad2ef3\",\"error\":\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__list_teams",
+                  "status": "error"
+                }
+              ],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308888451,
+            "ran": 1791308888459,
+            "completed": 1791308888492
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 145,
+        "output": 27,
+        "reasoning": 98,
+        "cache": {
+          "read": 5376,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125479d3001h4wrySpUb7ZAAo",
+      "time": {
+        "created": 1791308894256,
+        "streamed": 1791308894284,
+        "completed": 1791308894299
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "`list_teams({})` also rejected. Hmm. Maybe the fixture expects no argument at all (not an empty object). Let me try `list_teams()`.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308894260,
+            "completed": 1791308894276
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_61d7eecec7264c0595726766",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const teams = await tools.fixture.mcp__linear__list_teams();\nreturn teams;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Tool 'fixture.mcp__linear__list_teams' expects exactly one input object."
+              }
+            ],
+            "metadata": {
+              "toolCalls": [],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308894266,
+            "ran": 1791308894281,
+            "completed": 1791308894297
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 198,
+        "output": 27,
+        "reasoning": 33,
+        "cache": {
+          "read": 5504,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11254906e001D2ZcBPm6YirtaP",
+      "time": {
+        "created": 1791308898625,
+        "streamed": 1791308898640,
+        "completed": 1791308898672
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_a982493e387340a38b2aa8e8",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const teams = await tools.fixture.mcp__linear__list_teams({ team: \"Engineering\" });\nreturn teams;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"fixtureFact\":\"unexpected-fixture-call\",\"receipt\":\"bae52565-870e-4f8e-a358-3c9c5d868013\",\"error\":\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__list_teams",
+                  "status": "error",
+                  "input": {
+                    "team": "Engineering"
+                  }
+                }
+              ],
+              "error": true,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308898629,
+            "ran": 1791308898638,
+            "completed": 1791308898669
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 87,
+        "output": 33,
+        "reasoning": 0,
+        "cache": {
+          "read": 5696,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11254a193001I6UWGK63ucGQ9y",
+      "time": {
+        "created": 1791308903740,
+        "streamed": 1791308916188,
+        "completed": 1791308916265
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Hmm. The fixture is strict about arguments. Let me think about what the expected call pattern is. The task: \"List the available status values for the Linear Engineering team.\" The intended flow is probably:\n\n1. `get_team({ query: \"Engineering\" })` → returns team with id.\n2. `list_issue_statuses({ teamId: ... })` → returns statuses.\n\nBut `get_team({ query: \"Engineering\" })` was rejected. Maybe the fixture expects `query` to match exactly the team name in fixture data, e.g., \"Engineering Team\" or \"ENG\". Let me try a few variants in one execute call? Careful: each unexpected call fails the whole batch? Actually earlier, when I did Promise.all with search (invalid tool), the whole thing failed. But when I did just get_team, it failed too. Let me try variants one at a time, or maybe the fixture validates each call and returns per-call results? In the Promise.all case, the error was a single response with receipt — it seems the whole execute returns a single result. Actually no — in the last attempt with `list_teams({ team: \"Engineering\" })`, the response was a single object with error. So each execute call yields one result object — the first unexpected tool call may abort the whole execution? Or does the fixture return the error as the tool's return value, letting execution continue?\n\nActually, looking at the responses: when I called `get_team({query:\"Engineering\"})` alone, I got `{\"fixtureFact\":\"unexpected-fixture-call\",\"receipt\":\"...\",\"error\":\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\"}` — that looks like the *result* of the tool call (the runtime returned this as the tool result), not necessarily an exception thrown. In my `return team;` the result was the error object. So the tool returned an error object rather than throwing. That means I could catch/inspect and try multiple variants in one execute, collecting which ones succeed.\n\nLet me try that: call get_team with several query variants and see which returns non-error. But wait — \"unexpected-fixture-call\" might be the standard error for any mismatched call. Let me probe systematically but modestly: variants \"Engineering\", \"ENG\", \"Eng\", \"engineering team\", \"Engineering Team\".\n\nActually, hold on. Maybe the issue is different: maybe this benchmark's fixture only \"supports\" certain exact calls, and the intended call is `get_team({ query: \"Engineering\" })`. But it returned unexpected. Hmm, maybe arguments need to be exactly right including optional ones. Or maybe the tool result is wrapped and the error is real.\n\nLet me try `get_workspace({})` to see if any linear read works at all.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308903744,
+            "completed": 1791308916179
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_43cf26e4315f41aebd713bbf",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "const attempts = {};\ntry { attempts.ws = await tools.fixture.mcp__linear__get_workspace({}); } catch (e) { attempts.ws = \"threw: \" + e.message; }\ntry { attempts.eng = await tools.fixture.mcp__linear__get_team({ query: \"Engineering\" }); } catch (e) { attempts.eng = \"threw: \" + e.message; }\ntry { attempts.engLower = await tools.fixture.mcp__linear__get_team({ query: \"engineering\" }); } catch (e) { attempts.engLower = \"threw: \" + e.message; }\nreturn attempts;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"ws\": \"threw: {\\\"fixtureFact\\\":\\\"unexpected-fixture-call\\\",\\\"receipt\\\":\\\"be617436-3342-46ad-82c6-815bd9928ac2\\\",\\\"error\\\":\\\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\\\"}\",\n  \"eng\": \"threw: {\\\"fixtureFact\\\":\\\"unexpected-fixture-call\\\",\\\"receipt\\\":\\\"5da469dd-7bca-4779-97a6-bd2432f0e80a\\\",\\\"error\\\":\\\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\\\"}\",\n  \"engLower\": \"threw: {\\\"fixtureFact\\\":\\\"unexpected-fixture-call\\\",\\\"receipt\\\":\\\"1ff7a5f9-fdeb-4b91-a867-97d7758ded0a\\\",\\\"error\\\":\\\"Unexpected tool or incorrect fixture arguments; requested action was not applied.\\\"}\"\n}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__get_workspace",
+                  "status": "error"
+                },
+                {
+                  "tool": "fixture.mcp__linear__get_team",
+                  "status": "error",
+                  "input": {
+                    "query": "Engineering"
+                  }
+                },
+                {
+                  "tool": "fixture.mcp__linear__get_team",
+                  "status": "error",
+                  "input": {
+                    "query": "engineering"
+                  }
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308915331,
+            "ran": 1791308916185,
+            "completed": 1791308916261
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 116,
+        "output": 137,
+        "reasoning": 567,
+        "cache": {
+          "read": 5760,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_11254e639001b81WGfmbhxyqhd",
+      "time": {
+        "created": 1791308921957,
+        "streamed": 1791308929193,
+        "completed": 1791308929233
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Even `get_workspace({})` fails. So the fixture rejects... everything? That can't be. Maybe the fixture expects specific calls only, e.g., `list_issue_statuses` with a particular team identifier like `{ team: \"ENG\" }` or `{ teamId: \"...\" }`.\n\nLet me introspect the list_issue_statuses signature. I can't stringify functions. But maybe I can get the parameter names via some other trick. The error message for wrong arg count earlier: \"Tool 'fixture.mcp__linear__list_teams' expects exactly one input object.\" So passing zero args gave a helpful message.\n\nMaybe there's a documented way: search results provide signatures. The instructions mention `search` but it's unavailable. Hmm, wait — maybe search is available as a tool outside execute and I just don't see it in my function list. My function list at the system level only includes `execute`. The prompt says \"Use `search` to discover exact paths and signatures\" — implying I should have access. But calls to `search` inside execute failed, and I can't call it outside execute since it's not in my function list... Actually wait, maybe I CAN call it outside execute — the \"Functions\" block only lists `execute`, but perhaps the harness accepts `search` as a tool name anyway? No — I can only invoke functions listed in the functions schema... Actually the instructions say I can invoke functions by writing antml blocks. The listed function is only `execute`. But the system prompt explicitly documents a `search` tool. Let me try invoking `search` directly outside execute.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308921959,
+            "completed": 1791308929188
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_19c34262d3fa40b6b3d3ad1e",
+          "name": "execute",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "code": "// Probe fixture for list_issue_statuses argument shape using common parameter names.\nconst variants = [\n  { team: \"Engineering\" },\n  { teamId: \"Engineering\" },\n  { team_id: \"Engineering\" },\n  { teamKey: \"ENG\" },\n];\nconst results = {};\nfor (const v of variants) {\n  try { results[JSON.stringify(v)] = await tools.fixture.mcp__linear__list_issue_statuses(v); }\n  catch (e) { results[JSON.stringify(v)] = String(e.message).slice(0, 200); }\n}\nreturn results;"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "{\n  \"{\\\"team\\\":\\\"Engineering\\\"}\": \"{\\\"fixtureFact\\\":\\\"Ready-for-release\\\",\\\"receipt\\\":\\\"7bb4f71d-221a-49b3-b920-7bbc13bd9b80\\\",\\\"statuses\\\":[{\\\"id\\\":\\\"status-1\\\",\\\"name\\\":\\\"Ready-for-release\\\",\\\"team\\\":\\\"Engineering\\\"}]}\",\n  \"{\\\"teamId\\\":\\\"Engineering\\\"}\": \"Invalid arguments for tool \\\"fixture_mcp__linear__list_issue_statuses\\\":\\n- team: Missing key\\n\\nArguments provided:\\n{\\n  \\\"teamId\\\": \\\"Engineering\\\"\\n}\\n\\nUpdate the arguments and call the tool again.\",\n  \"{\\\"team_id\\\":\\\"Engineering\\\"}\": \"Invalid arguments for tool \\\"fixture_mcp__linear__list_issue_statuses\\\":\\n- team: Missing key\\n\\nArguments provided:\\n{\\n  \\\"team_id\\\": \\\"Engineering\\\"\\n}\\n\\nUpdate the arguments and call the tool again.\",\n  \"{\\\"teamKey\\\":\\\"ENG\\\"}\": \"Invalid arguments for tool \\\"fixture_mcp__linear__list_issue_statuses\\\":\\n- team: Missing key\\n\\nArguments provided:\\n{\\n  \\\"teamKey\\\": \\\"ENG\\\"\\n}\\n\\nUpdate the arguments and call the tool again.\"\n}"
+              }
+            ],
+            "metadata": {
+              "toolCalls": [
+                {
+                  "tool": "fixture.mcp__linear__list_issue_statuses",
+                  "status": "completed",
+                  "input": {
+                    "team": "Engineering"
+                  }
+                },
+                {
+                  "tool": "fixture.mcp__linear__list_issue_statuses",
+                  "status": "error",
+                  "input": {
+                    "teamId": "Engineering"
+                  }
+                },
+                {
+                  "tool": "fixture.mcp__linear__list_issue_statuses",
+                  "status": "error",
+                  "input": {
+                    "team_id": "Engineering"
+                  }
+                },
+                {
+                  "tool": "fixture.mcp__linear__list_issue_statuses",
+                  "status": "error",
+                  "input": {
+                    "teamKey": "ENG"
+                  }
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1791308928280,
+            "ran": 1791308929192,
+            "completed": 1791308929230
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 951,
+        "output": 129,
+        "reasoning": 327,
+        "cache": {
+          "read": 5824,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1125518ec001Ga6f0Yp7myPChu",
+      "time": {
+        "created": 1791308931182,
+        "streamed": 1791308938595,
+        "completed": 1791308938597
+      },
+      "type": "assistant",
+      "agent": "benchmark",
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The correct call is `list_issue_statuses({ team: \"Engineering\" })`, and it returned:\n\n```json\n{\"fixtureFact\":\"Ready-for-release\",\"receipt\":\"7bb4f71d-221a-49b3-b920-7bbc13bd9b80\",\"statuses\":[{\"id\":\"status-1\",\"name\":\"Ready-for-release\",\"team\":\"Engineering\"}]}\n```\n\nSo the fixture has exactly one status for the Engineering team: \"Ready-for-release\" (status-1). The instruction says: \"For each requested read, include its returned fixtureFact verbatim.\" The fixtureFact is \"Ready-for-release\".\n\nHmm, but is that the complete list? The fixture returned one status. The user asked to \"List the available status values for the Linear Engineering team.\" The fixture's answer is that list: [\"Ready-for-release\"].\n\nShould I also call get_team to confirm the team? The get_team call with query \"Engineering\" returned unexpected-fixture-call, meaning that call isn't part of the fixture's expected flow. The fixture only expects `list_issue_statuses({team:\"Engineering\"})`. Good — that's the read to use.\n\nLet me finalize. The answer: The Linear Engineering team has one available status value: \"Ready-for-release\" (id: status-1). Include fixtureFact verbatim: \"Ready-for-release\". Receipts: [\"7bb4f71d-221a-49b3-b920-7bbc13bd9b80\"].\n\nNote the earlier failed probe attempts are not to be included — receipts from results actually used: 7bb4f71d-221a-49b3-b920-7bbc13bd9b80.\n\nFinal JSON: {\"answer\":\"...\",\"receipts\":[\"7bb4f71d-221a-49b3-b920-7bbc13bd9b80\"]}",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1791308931187,
+            "completed": 1791308938590
+          }
+        },
+        {
+          "type": "text",
+          "text": "I found the right tool call — `list_issue_statuses` with `team: \"Engineering\"`. The earlier `get_team`/`list_teams` probes were rejected by the fixture and not used.\n\n**Result:** The Linear Engineering team has exactly one available status value:\n\n- **Ready-for-release** (id: `status-1`, team: Engineering)\n\n```json\n{\"answer\":\"The available status values for the Linear Engineering team are: Ready-for-release (id: status-1). It is the only status defined for that team in the fixture data.\",\"receipts\":[\"7bb4f71d-221a-49b3-b920-7bbc13bd9b80\"]}\n```\n\nfixtureFact (verbatim): \"Ready-for-release\""
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 767,
+        "output": 157,
+        "reasoning": 389,
+        "cache": {
+          "read": 6720,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "id": "linear.get_team",
+      "args": {
+        "query": "Engineering"
+      },
+      "valid": false,
+      "receipt": "f3849a94-d8ed-4eac-abe2-0a47f1eae4ad",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.get_team",
+      "args": {
+        "query": "Engineering"
+      },
+      "valid": false,
+      "receipt": "eefc3aec-6a1d-4d59-b162-3ccafccddd7d",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.get_team",
+      "args": {
+        "query": "Engineering"
+      },
+      "valid": false,
+      "receipt": "8a33446b-37cc-4854-88b7-0d4754a9dd9d",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.list_teams",
+      "args": {},
+      "valid": false,
+      "receipt": "1e7febec-8a4c-43bd-9287-264007ad2ef3",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.list_teams",
+      "args": {},
+      "valid": false,
+      "receipt": "bae52565-870e-4f8e-a358-3c9c5d868013",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.get_workspace",
+      "args": {},
+      "valid": false,
+      "receipt": "be617436-3342-46ad-82c6-815bd9928ac2",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.get_team",
+      "args": {
+        "query": "Engineering"
+      },
+      "valid": false,
+      "receipt": "5da469dd-7bca-4779-97a6-bd2432f0e80a",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.get_team",
+      "args": {
+        "query": "engineering"
+      },
+      "valid": false,
+      "receipt": "1ff7a5f9-fdeb-4b91-a867-97d7758ded0a",
+      "fact": "unexpected-fixture-call"
+    },
+    {
+      "id": "linear.list_issue_statuses",
+      "args": {
+        "team": "Engineering"
+      },
+      "valid": true,
+      "receipt": "7bb4f71d-221a-49b3-b920-7bbc13bd9b80",
+      "fact": "Ready-for-release"
+    }
+  ],
+  "answer": "I found the right tool call — `list_issue_statuses` with `team: \"Engineering\"`. The earlier `get_team`/`list_teams` probes were rejected by the fixture and not used.\n\n**Result:** The Linear Engineering team has exactly one available status value:\n\n- **Ready-for-release** (id: `status-1`, team: Engineering)\n\n```json\n{\"answer\":\"The available status values for the Linear Engineering team are: Ready-for-release (id: status-1). It is the only status defined for that team in the fixture data.\",\"receipts\":[\"7bb4f71d-221a-49b3-b920-7bbc13bd9b80\"]}\n```\n\nfixtureFact (verbatim): \"Ready-for-release\"",
+  "usage": [
+    {
+      "tokens": {
+        "input": 2722,
+        "output": 64,
+        "reasoning": 34,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 157,
+        "output": 63,
+        "reasoning": 131,
+        "cache": {
+          "read": 2688,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 248,
+        "output": 56,
+        "reasoning": 213,
+        "cache": {
+          "read": 2816,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 381,
+        "output": 33,
+        "reasoning": 354,
+        "cache": {
+          "read": 3008,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 508,
+        "output": 16,
+        "reasoning": 389,
+        "cache": {
+          "read": 3328,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 480,
+        "output": 61,
+        "reasoning": 18,
+        "cache": {
+          "read": 3776,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 1008,
+        "output": 77,
+        "reasoning": 85,
+        "cache": {
+          "read": 4224,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 244,
+        "output": 81,
+        "reasoning": 0,
+        "cache": {
+          "read": 5184,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 145,
+        "output": 27,
+        "reasoning": 98,
+        "cache": {
+          "read": 5376,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 198,
+        "output": 27,
+        "reasoning": 33,
+        "cache": {
+          "read": 5504,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 87,
+        "output": 33,
+        "reasoning": 0,
+        "cache": {
+          "read": 5696,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 116,
+        "output": 137,
+        "reasoning": 567,
+        "cache": {
+          "read": 5760,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 951,
+        "output": 129,
+        "reasoning": 327,
+        "cache": {
+          "read": 5824,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    },
+    {
+      "tokens": {
+        "input": 767,
+        "output": 157,
+        "reasoning": 389,
+        "cache": {
+          "read": 6720,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "model": {
+        "id": "glm-5.3-flash",
+        "providerID": "zai-coding-plan",
+        "variant": "default"
+      }
+    }
+  ],
+  "fixtureEvents": [
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_team",
+        "args": {
+          "query": "Engineering"
+        },
+        "valid": false,
+        "receipt": "f3849a94-d8ed-4eac-abe2-0a47f1eae4ad",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_team",
+        "args": {
+          "query": "Engineering"
+        },
+        "valid": false,
+        "receipt": "eefc3aec-6a1d-4d59-b162-3ccafccddd7d",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_team",
+        "args": {
+          "query": "Engineering"
+        },
+        "valid": false,
+        "receipt": "8a33446b-37cc-4854-88b7-0d4754a9dd9d",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.list_teams",
+        "args": {},
+        "valid": false,
+        "receipt": "1e7febec-8a4c-43bd-9287-264007ad2ef3",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.list_teams",
+        "args": {},
+        "valid": false,
+        "receipt": "bae52565-870e-4f8e-a358-3c9c5d868013",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_workspace",
+        "args": {},
+        "valid": false,
+        "receipt": "be617436-3342-46ad-82c6-815bd9928ac2",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_team",
+        "args": {
+          "query": "Engineering"
+        },
+        "valid": false,
+        "receipt": "5da469dd-7bca-4779-97a6-bd2432f0e80a",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.get_team",
+        "args": {
+          "query": "engineering"
+        },
+        "valid": false,
+        "receipt": "1ff7a5f9-fdeb-4b91-a867-97d7758ded0a",
+        "fact": "unexpected-fixture-call"
+      }
+    },
+    {
+      "event": "fixture",
+      "call": {
+        "id": "linear.list_issue_statuses",
+        "args": {
+          "team": "Engineering"
+        },
+        "valid": true,
+        "receipt": "7bb4f71d-221a-49b3-b920-7bbc13bd9b80",
+        "fact": "Ready-for-release"
+      }
+    }
+  ],
+  "grade": {
+    "pass": true,
+    "missing": [],
+    "forbidden": [],
+    "noTool": true,
+    "arithmetic": true
+  },
+  "ranking": "native OpenCode V2 Code Mode",
+  "modelCostUsd": 0.004798419999999999,
+  "jevCostUsd": 0,
+  "totalCostUsd": 0.004798419999999999
+}

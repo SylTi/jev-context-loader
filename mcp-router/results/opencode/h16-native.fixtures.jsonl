@@ -1,0 +1,1 @@
+{"event":"fixture","call":{"id":"spaces.get_page_sharing","args":{"page_id":"page-example"},"valid":true,"receipt":"df3d7d3f-4216-4d13-9224-3ed77b02e19d","fact":"reader@example.test"}}

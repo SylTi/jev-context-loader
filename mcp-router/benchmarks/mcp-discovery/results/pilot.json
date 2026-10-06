@@ -1,0 +1,9 @@
+{
+  "source": "TypeSafe playground UI, pilot only; excluded from benchmark scoring",
+  "state": {"task": "Check whether an update is available for the Codex desktop app."},
+  "model": "jev-1.13.0",
+  "answers": {"pilot": {"type": "noul", "noul": 0.97, "stats": {}}},
+  "usage": {"input_tokens": 371, "output_tokens": 21},
+  "request_id": "playground_12717edf32c71b84448adaf20dd01d55775",
+  "evaluation_time_ms": 59.80033000014373
+}
