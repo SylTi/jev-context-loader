@@ -1,0 +1,40 @@
+name: Check jev-skills-router
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm exec --yes --package=skills -- skills --help
+      - run: npm run test:install
+  wsl:
+    runs-on: windows-2022
+    defaults:
+      run:
+        shell: wsl-bash {0}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Vampire/setup-wsl@v7
+        with:
+          distribution: Ubuntu-24.04
+          wsl-version: 2
+          additional-packages: nodejs npm
+      - run: npm exec --yes --package=node@22 -- npm ci
+      - run: npm exec --yes --package=node@22 -- npm run typecheck
+      - run: npm exec --yes --package=node@22 -- npm test
+      - run: npm exec --yes --package=node@22 -- npm run build
+      - run: npm exec --yes --package=node@22 -- npm exec --yes --package=skills -- skills --help
+      - run: npm exec --yes --package=node@22 -- npm run test:install

@@ -1,0 +1,36 @@
+{
+  "name": "jev-skills-router",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "jev-skills-router": "scripts/jev-skills-router.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "references/",
+    "scripts/jev-skills-router.mjs",
+    "scripts/route.mjs"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prepack": "npm run build",
+    "build": "tsc -p tsconfig.build.json && node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/router.test.ts test/cli.test.ts test/description.test.ts test/management.test.ts test/application.test.ts",
+    "route": "node scripts/route.mjs",
+    "test:install": "node --import tsx --test test/install.test.ts"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "0.6.0",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
